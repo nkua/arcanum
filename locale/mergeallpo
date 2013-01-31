@@ -1,0 +1,11 @@
+#!/bin/sh
+for dir in `ls -1d ../locale/??_??`
+do
+	mv $dir/LC_MESSAGES/arcanum.po $dir/LC_MESSAGES/arcanum.po.bak
+	echo "msgmerge $dir/LC_MESSAGES/arcanum.po.bak arcanum.pot > $dir/LC_MESSAGES/arcanum.po";
+	msgmerge --no-fuzzy-matching $dir/LC_MESSAGES/arcanum.po.bak arcanum.pot > $dir/LC_MESSAGES/arcanum.po
+	
+    mv $dir/LC_MESSAGES/password_strength_check.po $dir/LC_MESSAGES/password_strength_check.po.bak
+	echo "msgmerge $dir/LC_MESSAGES/password_strength_check.po.bak password_strength_check.pot > $dir/LC_MESSAGES/password_strength_check.po";
+	msgmerge $dir/LC_MESSAGES/password_strength_check.po.bak password_strength_check.pot > $dir/LC_MESSAGES/password_strength_check.po
+done

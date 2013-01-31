@@ -1,0 +1,8 @@
+#!/bin/sh
+for dir in `ls -1d ../locale/??_??`
+do
+    echo "Running msgfmt -o $dir/LC_MESSAGES/arcanum.mo $dir/LC_MESSAGES/arcanum.po"
+    msgfmt -c -v -o $dir/LC_MESSAGES/arcanum.mo $dir/LC_MESSAGES/arcanum.po
+    msgfmt -c -v -o $dir/LC_MESSAGES/password_strength_check.mo  $dir/LC_MESSAGES/password_strength_check.po 
+done
+

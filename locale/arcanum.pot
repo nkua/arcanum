@@ -1,0 +1,1942 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 12:04+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Users"
+msgstr ""
+
+msgid "Administrators who can change users' passwords"
+msgstr ""
+
+msgid "Administrations who can change the policy as well"
+msgstr ""
+
+msgid "Temporarirly inactive passwords (user must change password)"
+msgstr ""
+
+msgid "Locked accounts by administrator (user cannot login)"
+msgstr ""
+
+msgid "Accounts with failed login attempts"
+msgstr ""
+
+msgid "Users without the required ObjectClass"
+msgstr ""
+
+msgid "Users with no password filled in"
+msgstr ""
+
+msgid "Users with no NT hash filled in"
+msgstr ""
+
+msgid "Users with no digest HA1 filled in"
+msgstr ""
+
+msgid "Users with no &ldquo;CTP&rdquo; filled in"
+msgstr ""
+
+#, php-format
+msgid ""
+"Users with secondary account information filled in, for password recovery "
+"&mdash; method: %s"
+msgstr ""
+
+#, php-format
+msgid "LDAP size limit was exceeded; displaying only the first %s entries"
+msgstr ""
+
+#, php-format
+msgid ""
+"The required objectclass (GUExtendedAuthentication) was added to %s entries"
+msgstr ""
+
+msgid "No entries in which to add Samba NT Hash"
+msgstr ""
+
+#, php-format
+msgid "Samba NT Hash added to %s entries"
+msgstr ""
+
+#, php-format
+msgid ""
+"In %s entries the cleartext password cannot be retrieved. To add the %s, the "
+"password must be manually resetted, or the user has to change the password."
+msgstr ""
+
+msgid "No entries in which to add the Digest HA1."
+msgstr ""
+
+#, php-format
+msgid "Digest HA1 was added to %s entries."
+msgstr ""
+
+msgid "No entries in which to add the CTP."
+msgstr ""
+
+#, php-format
+msgid "CTP was added to %s entries."
+msgstr ""
+
+#, php-format
+msgid "Changed password for user %s successfully"
+msgstr ""
+
+#, php-format
+msgid "Could not force user to change pasword. (User's dn: %s)"
+msgstr ""
+
+msgid "Username not found."
+msgstr ""
+
+msgid "Multiple entries with the same username found"
+msgstr ""
+
+#, php-format
+msgid "Policy Update failed &mdash; %s"
+msgstr ""
+
+msgid "Policy Updated."
+msgstr ""
+
+#, php-format
+msgid "LDAP Error: %s"
+msgstr ""
+
+msgid "Account has been modified successfully."
+msgstr ""
+
+msgid "Username not found"
+msgstr ""
+
+msgid "All users"
+msgstr ""
+
+msgid "Users with username starting with a"
+msgstr ""
+
+msgid "Users that are allowed to receive SMS"
+msgstr ""
+
+msgid "Your old password is not correct."
+msgstr ""
+
+msgid ""
+"This is an automated notification to inform you that your password was just "
+"changed. - "
+msgstr ""
+
+#, php-format
+msgid ""
+"Attention: your record in the directory server cannot be modified. Please "
+"contact your administrator. (LDAP Error: %s)"
+msgstr ""
+
+msgid "Please enter your password to register any of these attributes."
+msgstr ""
+
+msgid ""
+"Your password is not correct. Please try again. If the password has expired, "
+"you will have to change it first."
+msgstr ""
+
+msgid "Please type in the two scrambled words in order to login."
+msgstr ""
+
+msgid "You did not enter the two scrambled words correctly."
+msgstr ""
+
+msgid ""
+"Some of the information you entered was invalid (e.g. wrong username, wrong "
+"mobile number, not registered e-mail address)."
+msgstr ""
+
+msgid "Required information was not filled in"
+msgstr ""
+
+msgid "Please type the two words in the box."
+msgstr ""
+
+msgid ""
+"Captcha verification failed; please retry typing the two words in the box."
+msgstr ""
+
+msgid "You did not fill in a required field. Please try again."
+msgstr ""
+
+msgid "Could not connect to the account database. Please try again later."
+msgstr ""
+
+msgid ""
+"There is insufficient information to continue the reset password process via "
+"this method. (E.g. you had't filled in your e-mail address or your mobile "
+"phone number in the past)."
+msgstr ""
+
+#, php-format
+msgid "Password reset for your account at %s"
+msgstr ""
+
+msgid ""
+"Your details have been confirmed. You will receive an e-mail with further "
+"instructions on how to enter a new password."
+msgstr ""
+
+msgid "Checklist"
+msgstr ""
+
+msgid "Basic Setup"
+msgstr ""
+
+msgid "LDAP Connection"
+msgstr ""
+
+msgid "CAPTCHA Setup"
+msgstr ""
+
+msgid "E-mail Dispatch"
+msgstr ""
+
+msgid "SMS Gateway"
+msgstr ""
+
+msgid "Confirm Configuration"
+msgstr ""
+
+msgid "Password Administrators"
+msgstr ""
+
+msgid "Configuration file saved successfully"
+msgstr ""
+
+msgid "Error while saving"
+msgstr ""
+
+#, php-format
+msgid ""
+"Web Installer has been deactivated. %sContinue by logging in to the "
+"application.</a>"
+msgstr ""
+
+msgid ""
+"(To reactivate the web installer, delete the file config/"
+"web_installer_disabled.php)"
+msgstr ""
+
+msgid ""
+"PHP module &quot;gettext&quot; is required. Edit the file <tt>/etc/php5/"
+"apache2/php.ini</tt> and add the line <pre>extension=gettext.so</pre>"
+msgstr ""
+
+#, php-format
+msgid "PHP module &quot;%s&quot; is required; Run (as root): %s"
+msgstr ""
+
+#, php-format
+msgid "Then, make sure variable cache is enabled in file %s:"
+msgstr ""
+
+#, php-format
+msgid ""
+"Cannot save configuration file due to file permissions.. Run (as root): %s"
+msgstr ""
+
+msgid "The cron job for sending password reminders has not been installed."
+msgstr ""
+
+msgid "Password Management Service"
+msgstr ""
+
+msgid "Your password has expired!"
+msgstr ""
+
+msgid "Change Password"
+msgstr ""
+
+msgid "year"
+msgstr ""
+
+msgid "years"
+msgstr ""
+
+msgid "Month"
+msgstr ""
+
+msgid "Months"
+msgstr ""
+
+msgid "week"
+msgstr ""
+
+msgid "weeks"
+msgstr ""
+
+msgid "day"
+msgstr ""
+
+msgid "days"
+msgstr ""
+
+msgid "hour"
+msgstr ""
+
+msgid "hours"
+msgstr ""
+
+msgid "minute"
+msgstr ""
+
+msgid "minutes"
+msgstr ""
+
+msgid "second"
+msgstr ""
+
+msgid "seconds"
+msgstr ""
+
+msgid "Information about the Expiration of your Password"
+msgstr ""
+
+#, php-format
+msgid "Your password expires in %s"
+msgstr ""
+
+msgid "a week"
+msgstr ""
+
+msgid "two days"
+msgstr ""
+
+#, php-format
+msgid ""
+"The secondary e-mail address cannot contain the domain name %s, it must be "
+"an external / third party e-mail."
+msgstr ""
+
+msgid "Invalid E-mail Address"
+msgstr ""
+
+msgid "Invalid OpenID URL"
+msgstr ""
+
+#, php-format
+msgid ""
+"Wrong mobile phone number. The number must consist of %s digits, e.g. "
+"6931234567"
+msgstr ""
+
+msgid "Duplicate (or no) login entries detected, cannot change password."
+msgstr ""
+
+#, php-format
+msgid "Could not bind to LDAP server as %s; LDAP error: %s"
+msgstr ""
+
+msgid ""
+"Account has been temporarily locked manually by an administrator, to force "
+"change of password."
+msgstr ""
+
+msgid "Account is active."
+msgstr ""
+
+msgid "No dates registered."
+msgstr ""
+
+msgid "Password history is empty."
+msgstr ""
+
+#, php-format
+msgid "%s-encoded password, set on %s"
+msgstr ""
+
+#, php-format
+msgid "Cleartext password, set on %s"
+msgstr ""
+
+msgid "Unreadable or not set."
+msgstr ""
+
+#, php-format
+msgid "%s-encoded password"
+msgstr ""
+
+#, php-format
+msgid "Cleartext password; hover to reveal"
+msgstr ""
+
+msgid "Default or unspecified policy."
+msgstr ""
+
+#, php-format
+msgid "Specific Policy: %s"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Yes; user will be prompted to change it immediately."
+msgstr ""
+
+msgid "Empty username."
+msgstr ""
+
+msgid "Could not resolve username to an entry in LDAP directory."
+msgstr ""
+
+msgid "You must type in your old password."
+msgstr ""
+
+msgid "You must type in your new password."
+msgstr ""
+
+msgid "The password contains invalid characters."
+msgstr ""
+
+msgid ""
+"The new password is the same as your previous password. You are required to "
+"change the password."
+msgstr ""
+
+msgid "Your new password does not match the verify password."
+msgstr ""
+
+msgid "Make sure you use the same case in both input boxes."
+msgstr ""
+
+#, php-format
+msgid "Could not set pwdReset flag: %s"
+msgstr ""
+
+#, php-format
+msgid ""
+"Password change failed. You have probably already used this same password "
+"recently, or it is still too early to change the password again. Try "
+"entering a different password."
+msgstr ""
+
+#, php-format
+msgid "Password change failed: %s"
+msgstr ""
+
+msgid "GUnet Unique ID"
+msgstr ""
+
+msgid ""
+"A unique identifier for a user of the entire organization. It is usually the "
+"department code concatenated with the registration number."
+msgstr ""
+
+msgid "Student Registration #"
+msgstr ""
+
+msgid "The student registration number."
+msgstr ""
+
+msgid "Department ID"
+msgstr ""
+
+msgid "Numerical code that identifies the department."
+msgstr ""
+
+msgid "Department Name"
+msgstr ""
+
+msgid "First Name"
+msgstr ""
+
+msgid "First / given name; can contain second (middle) name"
+msgstr ""
+
+msgid "Last Name"
+msgstr ""
+
+msgid "Full Name"
+msgstr ""
+
+msgid "Account Status"
+msgstr ""
+
+msgid "Whether your account is active or locked for some administrative reason"
+msgstr ""
+
+msgid "Student Status"
+msgstr ""
+
+msgid "Semester"
+msgstr ""
+
+msgid "Semester number"
+msgstr ""
+
+msgid "Username"
+msgstr ""
+
+msgid "Username or userid"
+msgstr ""
+
+msgid "Password"
+msgstr ""
+
+msgid "Primary Affiliation"
+msgstr ""
+
+msgid ""
+"The primary affiliation of this user in this educational organization (e.g. "
+"student, staff, faculty)"
+msgstr ""
+
+msgid "Personal Title"
+msgstr ""
+
+msgid "Student Type"
+msgstr ""
+
+msgid "Whether the student is undergraduate, postgraduate, doctoral"
+msgstr ""
+
+msgid "Organization"
+msgstr ""
+
+msgid "Name of organization"
+msgstr ""
+
+msgid "E-Mail"
+msgstr ""
+
+msgid "Alternative E-mails"
+msgstr ""
+
+msgid ""
+"Alternative e-mail addresses where the user can receive e-mail messages."
+msgstr ""
+
+msgid "Authorized E-mails"
+msgstr ""
+
+msgid "Authorized e-mail addresses that user can use to send e-mail from."
+msgstr ""
+
+msgid "Affiliation"
+msgstr ""
+
+msgid "Academic affiliation"
+msgstr ""
+
+msgid "Organization Distinguished Name"
+msgstr ""
+
+msgid "Business Category"
+msgstr ""
+
+msgid "Organizational Unit"
+msgstr ""
+
+msgid "The last time the entry's password was changed"
+msgstr ""
+
+msgid ""
+"This attribute specifies the last time the entry's password was changed.  "
+"This is used by the password expiration policy.  If this attribute does not "
+"exist, the password will never expire."
+msgstr ""
+
+msgid "Account locked"
+msgstr ""
+
+msgid ""
+"This attribute holds the time that the user's account was locked.  A locked "
+"account means that the password may no longer be used to authenticate.  A "
+"000001010000Z value means that the account has been locked permanently, and "
+"that only a password administrator can unlock the account."
+msgstr ""
+
+msgid "Authentication failures"
+msgstr ""
+
+msgid ""
+"This attribute holds the timestamps of the consecutive authentication "
+"failures."
+msgstr ""
+
+msgid "History of previously used passwords"
+msgstr ""
+
+msgid "This attribute holds a history of previously used passwords."
+msgstr ""
+
+msgid "Timestamps of grace authentications"
+msgstr ""
+
+msgid ""
+"This attribute holds the timestamps of grace authentications after a "
+"password has expired."
+msgstr ""
+
+msgid "Password updated by administrator"
+msgstr ""
+
+msgid ""
+"This attribute holds a flag to indicate (when TRUE) that the password has "
+"been updated by the password administrator and must be changed by the user."
+msgstr ""
+
+msgid "Specific policy in effect"
+msgstr ""
+
+msgid ""
+"This attribute points to the pwdPolicy subentry in effect for this object."
+msgstr ""
+
+msgid "Password Start Time"
+msgstr ""
+
+msgid ""
+"This attribute specifies the time the entry's password becomes valid for "
+"authentication.  Authentication attempts made before this time will fail.  "
+"If this attribute does not exist, then no restriction applies."
+msgstr ""
+
+msgid "Password End Time"
+msgstr ""
+
+msgid ""
+"This attribute specifies the time the entry's password becomes invalid for "
+"authentication.  Authentication attempts made after this time will fail, "
+"regardless of expiration or grace settings.  If this attribute does not "
+"exist, then this restriction does not apply."
+msgstr ""
+
+msgid "Last successful authentication"
+msgstr ""
+
+msgid ""
+"This attribute holds the timestamp of the last successful authentication."
+msgstr ""
+
+msgid "Minimum Age"
+msgstr ""
+
+msgid ""
+"This attribute holds the number of seconds that must elapse between "
+"modifications to the password.  If this attribute is not present, 0 seconds "
+"is assumed."
+msgstr ""
+
+msgid "Maximum Age"
+msgstr ""
+
+msgid ""
+"This attribute holds the number of seconds after which a modified password "
+"will expire. If this attribute is not present, or if the value is 0 the "
+"password does not expire.  If not 0, the value must be greater than or equal "
+"to the value of the pwdMinAge."
+msgstr ""
+
+msgid "Passwords to keep in History"
+msgstr ""
+
+msgid ""
+"This attribute specifies the maximum number of used passwords stored in the "
+"pwdHistory attribute. If this attribute is not present, or if the value is "
+"0, used passwords are not stored in the pwdHistory attribute and thus may be "
+"reused."
+msgstr ""
+
+msgid "Enable Quality Check"
+msgstr ""
+
+msgid ""
+"This attribute indicates how the password quality will be verified while "
+"being modified or added.  If this attribute is not present, or if the value "
+"is '0', quality checking will not be enforced.  A value of '1' indicates "
+"that the server will check the quality, and if the server is unable to check "
+"it (due to a hashed password or other reasons) it will be accepted.  A value "
+"of '2' indicates that the server will check the quality, and if the server "
+"is unable to verify it, it will return an error refusing the password."
+msgstr ""
+
+msgid "Minimum Length"
+msgstr ""
+
+msgid ""
+"When quality checking is enabled, this attribute holds the minimum number of "
+"characters that must be used in a password.  If this attribute is not "
+"present, no minimum password length will be enforced.  If the server is "
+"unable to check the length (due to a hashed password or otherwise), the "
+"server will, depending on the value of the pwdCheckQuality attribute, either "
+"accept the password without checking it ('0' or '1') or refuse it ('2')."
+msgstr ""
+
+msgid "Maximum Length"
+msgstr ""
+
+msgid ""
+"When quality checking is enabled, this attribute holds the maximum number of "
+"characters that may be used in a password.  If this attribute is not "
+"present, no maximum password length will be enforced.  If the server is "
+"unable to check the length (due to a hashed password or otherwise), the "
+"server will, depending on the value of the pwdCheckQuality attribute, either "
+"accept the password without checking it ('0' or '1') or refuse it ('2')."
+msgstr ""
+
+msgid "Expiration Warning Time"
+msgstr ""
+
+msgid ""
+"This attribute specifies the maximum number of seconds before a password is "
+"due to expire that expiration warning messages will be returned to an "
+"authenticating user. If this attribute is not present, or if the value is 0 "
+"no warnings will be returned.  If not 0, the value must be smaller than the "
+"value of the pwdMaxAge attribute."
+msgstr ""
+
+msgid "Number of times an expired password can be used"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of times an expired password can be used "
+"to authenticate.  If this attribute is not present or if the value is 0, "
+"authentication will fail."
+msgstr ""
+
+msgid "Grace authentications time"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of seconds the grace authentications are "
+"valid.  If this attribute is not present or if the value is 0, there is no "
+"time limit on the grace authentications."
+msgstr ""
+
+msgid "Enable Lockout"
+msgstr ""
+
+msgid ""
+"This attribute indicates, when its value is 'TRUE', that the password may "
+"not be used to authenticate after a specified number of consecutive failed "
+"bind attempts.  The maximum number of consecutive failed bind attempts is "
+"specified in pwdMaxFailure. If this attribute is not present, or if the "
+"value is 'FALSE', the password may be used to authenticate when the number "
+"of failed bind attempts has been reached."
+msgstr ""
+
+msgid "Lockout Duration"
+msgstr ""
+
+msgid ""
+"This attribute holds the number of seconds that the password cannot be used "
+"to authenticate due to too many failed bind attempts.  If this attribute is "
+"not present, or if the value is 0 the password cannot be used to "
+"authenticate until reset by a password administrator."
+msgstr ""
+
+msgid "Maximum failures allowed"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of consecutive failed bind attempts "
+"after which the password may not be used to authenticate. If this attribute "
+"is not present, or if the value is 0, this policy is not checked, and the "
+"value of pwdLockout will be ignored."
+msgstr ""
+
+msgid "Interval for failure counter"
+msgstr ""
+
+msgid ""
+"This attribute holds the number of seconds after which the password failures "
+"are purged from the failure counter, even though no successful "
+"authentication occurred. If this attribute is not present, or if its value "
+"is 0, the failure counter is only reset by a successful authentication."
+msgstr ""
+
+msgid "Enable Force Change"
+msgstr ""
+
+msgid ""
+"This attribute specifies with a value of 'TRUE' that users must change their "
+"passwords when they first bind to the directory after a password is set or "
+"reset by a password administrator.  If this attribute is not present, or if "
+"the value is 'FALSE', users are not required to change their password upon "
+"binding after the password administrator sets or resets the password.  This "
+"attribute is not set due to any actions specified by this document, it is "
+"typically set by a password administrator after resetting a user's password."
+msgstr ""
+
+msgid "Enable Password change by user"
+msgstr ""
+
+msgid ""
+"This attribute indicates whether users can change their own passwords, "
+"although the change operation is still subject to access control.  If this "
+"attribute is not present, a value of 'TRUE' is assumed.  This attribute is "
+"intended to be used in the absence of an access control mechanism."
+msgstr ""
+
+msgid "Require old password when changing"
+msgstr ""
+
+msgid ""
+"This attribute specifies whether or not the existing password must be sent "
+"along with the new password when being changed.  If this attribute is not "
+"present, a 'FALSE' value is assumed."
+msgstr ""
+
+msgid "Minimum Delay between auth attempts"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of seconds to delay responding to the "
+"first failed authentication attempt.  If this attribute is not set or is 0, "
+"no delays will be used. pwdMaxDelay must also be specified if pwdMinDelay is "
+"set."
+msgstr ""
+
+msgid "Maximum Delay between auth attempts"
+msgstr ""
+
+msgid ""
+"This attribute specifies the maximum number of seconds to delay when "
+"responding to a failed authentication attempt.  The time specified in "
+"pwdMinDelay is used as the starting time and is then doubled on each failure "
+"until the delay time is greater than or equal to pwdMaxDelay (or a "
+"successful authentication occurs, which resets the failure counter). "
+"pwdMinDelay must be specified if pwdMaxDelay is set."
+msgstr ""
+
+msgid "Maximum account idle time"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of seconds an account may remain unused "
+"before it becomes locked.  If this attribute is not set or is 0, no check is "
+"performed."
+msgstr ""
+
+msgid ""
+"Could not accomodate your request due to a technical issue. Please try again "
+"later."
+msgstr ""
+
+#, php-format
+msgid "No account found for your mobile. Register your mobile at %s"
+msgstr ""
+
+#, php-format
+msgid ""
+"Failed to change the password of your account %s. Please try again later."
+msgstr ""
+
+#, php-format
+msgid "Please use the number %s"
+msgstr ""
+
+#, php-format
+msgid "%s for %s"
+msgstr ""
+
+#, php-format
+msgid "You have %s accounts; send %s"
+msgstr ""
+
+msgid "Session has timed out."
+msgstr ""
+
+msgid "Username or password is incorrect."
+msgstr ""
+
+msgid "There was a server error in the password management service."
+msgstr ""
+
+msgid "The password recovery token was incorrect."
+msgstr ""
+
+msgid "Access denied."
+msgstr ""
+
+msgid "Account is locked by an administrator."
+msgstr ""
+
+msgid "You have not logged in the central authentication service."
+msgstr ""
+
+msgid "Seconds"
+msgstr ""
+
+msgid "Minutes"
+msgstr ""
+
+msgid "Hours"
+msgstr ""
+
+msgid "Days"
+msgstr ""
+
+msgid "Examples"
+msgstr ""
+
+msgid "Attention: Locked Account."
+msgstr ""
+
+msgid "Your account has been locked by an administrator"
+msgstr ""
+
+#, php-format
+msgid "Your account was locked by an administrator on %s"
+msgstr ""
+
+msgid "and cannot be used for authenticating to services any more."
+msgstr ""
+
+msgid "You will have to contact your administrator to address this issue."
+msgstr ""
+
+msgid "Enter Password:"
+msgstr ""
+
+msgid "Verify"
+msgstr ""
+
+msgid "Generate a Random Password"
+msgstr ""
+
+msgid ""
+"Click to automatically generate a random password, which will pass the "
+"password strength requirements and will be relatively easy to pronounce"
+msgstr ""
+
+msgid "New password will be:"
+msgstr ""
+
+msgid ""
+"Please make sure that you have noted down the password, or have provided it "
+"to the user, before moving on."
+msgstr ""
+
+msgid ""
+"Temporary password &mdash; this password will work temporarily for logging "
+"on a web service, but user will be notified to change it immediately."
+msgstr ""
+
+msgid "Return to Change Password Page"
+msgstr ""
+
+msgid "Simple Search"
+msgstr ""
+
+msgid "Advanced Search"
+msgstr ""
+
+msgid "Search users by name, surname, username / e-mail, ID"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Enter LDAP filter"
+msgstr ""
+
+msgid "Copy one from these readily availabe filters for starters:"
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+#, php-format
+msgid "Found %s user entries"
+msgstr ""
+
+msgid ""
+"For the users listed above, you can massively change, in one go, the "
+"following attributes:"
+msgstr ""
+
+msgid "Particular Policy"
+msgstr ""
+
+msgid "No Change"
+msgstr ""
+
+msgid "Default or Unspecified Policy"
+msgstr ""
+
+msgid "Lock Account"
+msgstr ""
+
+msgid "Lock All Accounts"
+msgstr ""
+
+msgid "Unlock All Accounts"
+msgstr ""
+
+msgid "Force Password Change"
+msgstr ""
+
+msgid "All Accounts change password upon next login"
+msgstr ""
+
+msgid "Don't request password change upon next login"
+msgstr ""
+
+msgid "Apply These Changes"
+msgstr ""
+
+msgid "There are no defined password policies on the LDAP Server."
+msgstr ""
+
+msgid "Create a new policy with some predefined values:"
+msgstr ""
+
+msgid "Create New Policy"
+msgstr ""
+
+msgid "Return to summary"
+msgstr ""
+
+msgid "Massive Changes to LDAP Users"
+msgstr ""
+
+#, php-format
+msgid "The results of the massive changes to be applied to %s users are:"
+msgstr ""
+
+#, php-format
+msgid "%s entries have been successfully modified."
+msgstr ""
+
+#, php-format
+msgid ""
+"%s entries have remained the same (no need to remove attribute that did not "
+"exist"
+msgstr ""
+
+#, php-format
+msgid "%s entries have been succesfully modified (attribute deletion)."
+msgstr ""
+
+#, php-format
+msgid "%s entries have failed to modify due to LDAP error."
+msgstr ""
+
+msgid "Back to initial search users page"
+msgstr ""
+
+msgid "Active Notifications"
+msgstr ""
+
+msgid ""
+"This table shows the active notifications and reminders that are being sent "
+"via e-mail to users, before their passwords have expired."
+msgstr ""
+
+#, php-format
+msgid ""
+"To change these notifications, please edit the file %s. If the file does not "
+"exist, create it using this as template: %s."
+msgstr ""
+
+msgid "Show Details per User"
+msgstr ""
+
+msgid ""
+"The following table shows which users have already received some password "
+"expiry reminder notifications via e-mail."
+msgstr ""
+
+msgid "Showing Notification Message"
+msgstr ""
+
+msgid "To change this message, please edit the file:"
+msgstr ""
+
+#, php-format
+msgid "If the file does not exist, use the file %s as a template"
+msgstr ""
+
+msgid "Back to Notifications"
+msgstr ""
+
+msgid "Active Sessions"
+msgstr ""
+
+msgid ""
+"The following table shows who is using the password management web "
+"application at this moment."
+msgstr ""
+
+msgid "Access Level"
+msgstr ""
+
+msgid "Actions"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Administrator"
+msgstr ""
+
+msgid "Password Reset"
+msgstr ""
+
+msgid "My Account"
+msgstr ""
+
+msgid "Password Recovery Procedure"
+msgstr ""
+
+msgid "Details"
+msgstr ""
+
+msgid "Active Mail Tokens for Password Reset (Duration: 1 hour)"
+msgstr ""
+
+msgid "Active SMS Tokens for Password Reset (Duration: 10 minutes)"
+msgstr ""
+
+msgid ""
+"There are no active tokens which were requested for immediate password "
+"change at this point."
+msgstr ""
+
+#, php-format
+msgid "%s Policies available in the server:"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "dn"
+msgstr ""
+
+msgid "# of users"
+msgstr ""
+
+msgid "Unnamed Policy"
+msgstr ""
+
+msgid "Show &amp; Edit"
+msgstr ""
+
+msgid "Back to Policies List"
+msgstr ""
+
+msgid "Basic Policies"
+msgstr ""
+
+msgid "Advanced Policies"
+msgstr ""
+
+msgid "Unsupported Policies"
+msgstr ""
+
+msgid ""
+"(*) Note: This attribute is not used by the supporting applications "
+"(Arcanum, CAS); however, it can be used by other third-party applications "
+"which also make use of this LDAP Password Policy."
+msgstr ""
+
+msgid "Current Value"
+msgstr ""
+
+msgid "New Value"
+msgstr ""
+
+msgid "Description"
+msgstr ""
+
+msgid "passwords"
+msgstr ""
+
+msgid "Checked"
+msgstr ""
+
+msgid "Enforced"
+msgstr ""
+
+msgid "Not Enforced"
+msgstr ""
+
+msgid "characters"
+msgstr ""
+
+msgid "seconds before current password expires"
+msgstr ""
+
+msgid "tries"
+msgstr ""
+
+msgid "times"
+msgstr ""
+
+#, php-format
+msgid "Recommended Value: %s"
+msgstr ""
+
+msgid "Update Policy"
+msgstr ""
+
+msgid "At a Glance"
+msgstr ""
+
+msgid "Refresh"
+msgstr ""
+
+msgid "Fix&hellip;"
+msgstr ""
+
+msgid "Search for users&hellip;"
+msgstr ""
+
+msgid "Secondary Accounts"
+msgstr ""
+
+msgid "Possible Problems"
+msgstr ""
+
+msgid "Unlock account"
+msgstr ""
+
+msgid "Change Password upon Next Login"
+msgstr ""
+
+msgid "Account Information"
+msgstr ""
+
+msgid "Password-related Attributes"
+msgstr ""
+
+msgid "Change password upon next login"
+msgstr ""
+
+msgid "Cancel compulsory password change"
+msgstr ""
+
+msgid "Mobile / SMS"
+msgstr ""
+
+msgid "OpenID"
+msgstr ""
+
+msgid "#"
+msgstr ""
+
+msgid "Errors encountered. Please correct the following and try again:"
+msgstr ""
+
+#, php-format
+msgid "Allowed characters: %s"
+msgstr ""
+
+msgid "Password must consist of at least 6 characters; "
+msgstr ""
+
+msgid "Must contain at least one number or symbol"
+msgstr ""
+
+msgid "More information about password safety &gt;"
+msgstr ""
+
+msgid "Password:"
+msgstr ""
+
+msgid "New Password:"
+msgstr ""
+
+msgid "Confirm New Password:"
+msgstr ""
+
+msgid "Save"
+msgstr ""
+
+msgid "Warning: Inactive Account due to Expired Password"
+msgstr ""
+
+msgid ""
+"Your password has remained unchanged for a long time and thus has expired. "
+"You must enter a new, different password. After you change your password, "
+"you will be able to log in to the provided services."
+msgstr ""
+
+msgid "Warning: Inactive Account"
+msgstr ""
+
+msgid ""
+"The current password can only be used to enter a new, personalized password. "
+"Once you change your password, you will be able to log in to services again."
+msgstr ""
+
+msgid "Your password has been updated."
+msgstr ""
+
+#, php-format
+msgid ""
+"You will be redirected to the login page, where you'll need to login with "
+"your new password, in %s seconds."
+msgstr ""
+
+msgid "(Click here if you do not wish to wait."
+msgstr ""
+
+#, php-format
+msgid ""
+"You will be redirected to the login page in %s seconds. If you need to make "
+"further changes, please login again."
+msgstr ""
+
+msgid "Back to Change Password Home"
+msgstr ""
+
+msgid "Password Recovery Information"
+msgstr ""
+
+msgid "Your information has been updated."
+msgstr ""
+
+msgid ""
+"For the case that you ever forget your password, you should register a "
+"secondary e-mail address or a mobile phone number with us; this way, you can "
+"reset your password easily."
+msgstr ""
+
+msgid "Secondary e-mail address:"
+msgstr ""
+
+msgid "Mobile phone number:"
+msgstr ""
+
+msgid "Skip"
+msgstr ""
+
+msgid "Disable reminder"
+msgstr ""
+
+#, php-format
+msgid "for the next %s days"
+msgstr ""
+
+msgid "An error has been encountered:"
+msgstr ""
+
+msgid "Technical information about this error:"
+msgstr ""
+
+#, php-format
+msgid "File %s, line %s"
+msgstr ""
+
+#, php-format
+msgid "Backtrace: %s"
+msgstr ""
+
+msgid "Please press &quot;back&quot; in your browser and try again."
+msgstr ""
+
+msgid "If the problem persists, contact your local administrator."
+msgstr ""
+
+msgid "Available Functions"
+msgstr ""
+
+msgid ""
+"The password management serice allows you to reset your forgotten password "
+"or change your password safely."
+msgstr ""
+
+msgid "The following functionality is available:"
+msgstr ""
+
+msgid "Reset password in case you have forgotten your original password"
+msgstr ""
+
+msgid ""
+"Register a mobile phone number or a secondary e-mail address, for password "
+"recovery"
+msgstr ""
+
+msgid "Logged in as:"
+msgstr ""
+
+msgid "Logout"
+msgstr ""
+
+msgid ""
+"Your password has expired. In order to continue using the provided services, "
+"you have to change your password."
+msgstr ""
+
+msgid "Please log in with your old password and change it with a new one."
+msgstr ""
+
+msgid "Welcome to the User Password Management Service."
+msgstr ""
+
+msgid "Here you can change or recover your password."
+msgstr ""
+
+msgid "News &amp; Announcements"
+msgstr ""
+
+msgid "Login"
+msgstr ""
+
+msgid "Username:"
+msgstr ""
+
+msgid "I have forgotten my password"
+msgstr ""
+
+#, php-format
+msgid "Active account. Password expires in %s."
+msgstr ""
+
+msgid "Warning: Inactive Password"
+msgstr ""
+
+msgid "Warning: Inactive Account."
+msgstr ""
+
+msgid ""
+"Your current password cannot be used to authenticate you to services, "
+"probably due to having expired."
+msgstr ""
+
+msgid "Please change your password immediately."
+msgstr ""
+
+msgid "Warning: Password has expired and must be changed!"
+msgstr ""
+
+msgid ""
+"Your current password has expired and you must change it immediately. If you "
+"don't change it, it won't be possible to authenticate you to services."
+msgstr ""
+
+msgid "Active Account."
+msgstr ""
+
+msgid "Failed Login Attempts"
+msgstr ""
+
+msgid ""
+"The following failed login attempts (incorrect or expired password) have "
+"been recorded:"
+msgstr ""
+
+msgid "Date &amp; Time"
+msgstr ""
+
+msgid ""
+"Note: the failed login attempt history is deleted immediately after the "
+"first successful login."
+msgstr ""
+
+#, php-format
+msgid "To change your password, click %s"
+msgstr ""
+
+msgid "Home"
+msgstr ""
+
+msgid "Password Safety"
+msgstr ""
+
+msgid "Terms of Service"
+msgstr ""
+
+msgid "Privacy Policy"
+msgstr ""
+
+msgid "Summary"
+msgstr ""
+
+msgid "Policy"
+msgstr ""
+
+msgid "Notifications"
+msgstr ""
+
+msgid "Sessions"
+msgstr ""
+
+msgid "Setup"
+msgstr ""
+
+msgid "About my Administrative Account"
+msgstr ""
+
+msgid "Change my Password"
+msgstr ""
+
+msgid "Confirm your account information to reset your password"
+msgstr ""
+
+msgid "Unfortunately your details could not be confirmed."
+msgstr ""
+
+msgid "Try again."
+msgstr ""
+
+msgid ""
+"If you cannot recall your password recovery information, you will have to "
+"contact the helpdesk to acquire a new password."
+msgstr ""
+
+msgid ""
+"If you have forgotten your password, you'll need to confirm your password "
+"recovery preferences first before we allow you to reset your password."
+msgstr ""
+
+msgid "Enter your username:"
+msgstr ""
+
+msgid "Choose one of the following password recovery methods:"
+msgstr ""
+
+msgid "Send via e-mail"
+msgstr ""
+
+msgid "Enter your surname:"
+msgstr ""
+
+msgid "Enter the secondary e-mail that you have registered:"
+msgstr ""
+
+msgid "Send via SMS"
+msgstr ""
+
+msgid "Enter the mobile phone number that you have registered:"
+msgstr ""
+
+msgid "Finally, please enter these two words:"
+msgstr ""
+
+msgid "Continue &rarr;"
+msgstr ""
+
+msgid "Please send the following text message via your mobile phone."
+msgstr ""
+
+msgid "Text message:"
+msgstr ""
+
+msgid "Recipient number:"
+msgstr ""
+
+msgid "* Standard text message cost"
+msgstr ""
+
+msgid "QR Code"
+msgstr ""
+
+msgid "Waiting to receive text message&hellip;"
+msgstr ""
+
+msgid "Your details have been confirmed."
+msgstr ""
+
+msgid ""
+"Enter the verification number that we just sent to your mobile, in order to "
+"reset your password:"
+msgstr ""
+
+msgid "Tips to choose a safe password"
+msgstr ""
+
+msgid ""
+"For your safety, choose a password that you can remember easily but one you "
+"cannot find in dictionaries. Passwords that include a number or symbol are "
+"better and less likely to get cracked."
+msgstr ""
+
+msgid "Your password must:"
+msgstr ""
+
+#, php-format
+msgid "Consist of at least %s characters"
+msgstr ""
+
+msgid "Contain at least 1 number or symbol"
+msgstr ""
+
+#, php-format
+msgid "Contain at least %s different characters"
+msgstr ""
+
+msgid "Not be too similar to your username"
+msgstr ""
+
+msgid "Not contain 3 or more successive numbers"
+msgstr ""
+
+msgid "Setup Password Management Application"
+msgstr ""
+
+msgid "The existing configuration file, config/config.php, is being edited."
+msgstr ""
+
+msgid ""
+"To save your changes in each page, click &ldquo;Save&rdquo; at the end of "
+"each page."
+msgstr ""
+
+msgid "Disable Web Setup"
+msgstr ""
+
+msgid "Cancel Changes and Restart Setup"
+msgstr ""
+
+msgid "LDAP server is installed and operational."
+msgstr ""
+
+#, php-format
+msgid "You have installed %s and %s in LDAP server"
+msgstr ""
+
+#, php-format
+msgid "OpenLDAP Configuration example (%s)"
+msgstr ""
+
+msgid "You have set the proper LDAP ACLs and Policy Module Settings."
+msgstr ""
+
+msgid "Proceed"
+msgstr ""
+
+msgid "Basic Information"
+msgstr ""
+
+msgid "Website Home address URL"
+msgstr ""
+
+msgid "Name of Organization"
+msgstr ""
+
+msgid "Domain Name of Organization"
+msgstr ""
+
+msgid "Page Title (e.g. Truncated Organization Name)"
+msgstr ""
+
+msgid "Page Subtitle (e.g. Description of Service)"
+msgstr ""
+
+msgid ""
+"Page Logo. Either full URL or relative path to image location. <small>"
+"(Optional)</small>"
+msgstr ""
+
+msgid "Message of the Day"
+msgstr ""
+
+msgid ""
+"This text will appear in the login page. It is meant for important "
+"announcements."
+msgstr ""
+
+msgid "URL of Terms of Service"
+msgstr ""
+
+msgid "URL of Privacy Policy"
+msgstr ""
+
+msgid "PHP Settings"
+msgstr ""
+
+msgid ""
+"PHP Session Name (if there are a lot of installations of this application in "
+"the same host)"
+msgstr ""
+
+msgid "Note: if you change this attribute, you will have to relogin."
+msgstr ""
+
+msgid "LDAP Server Connection"
+msgstr ""
+
+msgid "LDAP Host or LDAP URI, e.g. ldaps://host:636"
+msgstr ""
+
+msgid "LDAP Base DN"
+msgstr ""
+
+msgid "Bind DN"
+msgstr ""
+
+msgid "Bind Password"
+msgstr ""
+
+msgid "CAS (Login) Server Connection"
+msgstr ""
+
+msgid "CAS Host"
+msgstr ""
+
+msgid "CAS Port"
+msgstr ""
+
+msgid "CAS URI Path"
+msgstr ""
+
+msgid "LDAP Configuration with regard to Passwords"
+msgstr ""
+
+msgid "LDAP Password Hash"
+msgstr ""
+
+msgid ""
+"Note: affects only newly created passwords; existing passwords will remain "
+"as they are"
+msgstr ""
+
+msgid "NT Hash attribute (optional)"
+msgstr ""
+
+msgid "Attribute for symmetrically encrypted cleartext password (optional)"
+msgstr ""
+
+msgid "24-byte key for symmetric password encryption"
+msgstr ""
+
+msgid "Attribute for asymmetrically encrypted cleartext password (optional)"
+msgstr ""
+
+msgid "Feature not implemented yet"
+msgstr ""
+
+msgid ""
+"Attribute for Time-Based OTP Init Key (format: base-32-encoded) (optional)"
+msgstr ""
+
+msgid "Attribute for storage of One-Time Backup Passwords (optional)"
+msgstr ""
+
+msgid "DigestHA1 Attribute (optional)"
+msgstr ""
+
+msgid "DigestHA1 Realm (optional)"
+msgstr ""
+
+msgid ""
+"LDAP Attributes for storing secondary account information, intended for "
+"forgotten password functionality"
+msgstr ""
+
+msgid "Attribute for mobile phone number, for recovery via SMS text message"
+msgstr ""
+
+msgid "(Leave blank to disable this password reset method)"
+msgstr ""
+
+msgid "Attribute for <strong>secondary</strong> e-mail address"
+msgstr ""
+
+msgid "Attribute for OpenID account"
+msgstr ""
+
+msgid "LDAP Filters and Administrators"
+msgstr ""
+
+msgid "Filter for finding out actual users."
+msgstr ""
+
+#, php-format
+msgid "The %s will be substituted by the username."
+msgstr ""
+
+msgid ""
+"Filter to determine which users are allowed to receive SMS text messages."
+msgstr ""
+
+msgid ""
+"Filter to determine the password administrator(s) of this application. A "
+"password administrator can change passwords and lock accounts for everyone "
+"in this directory."
+msgstr ""
+
+msgid ""
+"Filter to determine the global policy administrator(s) for this application. "
+"A policy administrator, in addition to changing users' passwords and locking "
+"accounts, can also change the password policy that is in effect (e.g. the "
+"maximum password age)."
+msgstr ""
+
+msgid "Usage of ReCAPTCHA Service"
+msgstr ""
+
+msgid ""
+"This application can use the ReCAPTCHA Service  to protect login forms from "
+"robots and dictionary attacks."
+msgstr ""
+
+#, php-format
+msgid ""
+"To enable, go to the page %s, choose %s and create an API key for this site."
+msgstr ""
+
+msgid "Then, enter your Public and Private keys here:"
+msgstr ""
+
+msgid "Public Key"
+msgstr ""
+
+msgid "Private Key"
+msgstr ""
+
+msgid "E-mail Settings"
+msgstr ""
+
+msgid ""
+"Here you can set up the e-mail submission settings. The e-mail messages that "
+"are sent from this application can be instant notifications (&ldquo;Your "
+"password has just changed&rdquo;), password reset requests (&ldquo;Click "
+"here to reset your password&rdquo;) or periodical notifications (&ldquo;"
+"Attention, your password expires in one week&rdquo;)."
+msgstr ""
+
+msgid "Mail Host (SMTP / Submission)"
+msgstr ""
+
+msgid "Mail From: Address"
+msgstr ""
+
+msgid "Mail From: Name"
+msgstr ""
+
+msgid "Mail Reply-To: address (optional)"
+msgstr ""
+
+msgid "SSL"
+msgstr ""
+
+msgid "SMTP Port"
+msgstr ""
+
+msgid "SMTP authentication (optional, enter 'login' to perform authentication)"
+msgstr ""
+
+msgid "SMTP username (optional)"
+msgstr ""
+
+msgid "SMTP password (optional)"
+msgstr ""
+
+msgid "SMS Gateway Settings"
+msgstr ""
+
+msgid "Operator Number"
+msgstr ""
+
+msgid "SMS Gateway Host"
+msgstr ""
+
+msgid "Port"
+msgstr ""
+
+msgid "URI (path)"
+msgstr ""
+
+msgid "SMS Accounting (MySQL Database; optional)"
+msgstr ""
+
+msgid "Host"
+msgstr ""
+
+msgid "Database name"
+msgstr ""
+
+msgid "Confirm and Save"
+msgstr ""
+
+#, php-format
+msgid "Your settings will be saved in file %s."
+msgstr ""
+
+msgid ""
+"Afterwards, you will be redirected to the login page where you can log in "
+"with an LDAP account."
+msgstr ""
+
+msgid ""
+"We recommend that you log in with a &ldquo;policy administrator&rdquo; "
+"account so that you will continue with the service setup (e.g. setup "
+"password policies, define additional password administrators per department, "
+"setup users' accounts etc.)."
+msgstr ""
+
+msgid "Save configuration File"
+msgstr ""
+
+#, php-format
+msgid ""
+"From now on, these settings will be accessible from inside the application. "
+"Just log in as a password policy administrator and go to Setup tab. You can "
+"reenable the installer by removing the file %s."
+msgstr ""
+
+msgid ""
+"In this page, you can define administrators who can manage users' passwords, "
+"per organizational unit or user group."
+msgstr ""
+
+msgid ""
+"Administrator(s) are defined according to the <em>Administration Filter</em>."
+msgstr ""
+
+msgid ""
+"These administrators can change the password of the users, who are defined "
+"according to the <em>Apply to Users Filter</em>."
+msgstr ""
+
+msgid "Add new Administrator(s)"
+msgstr ""
+
+msgid "Identifier"
+msgstr ""
+
+msgid "Administrator Filter"
+msgstr ""
+
+msgid "Apply to Users Filter"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "You have signed out successfully."
+msgstr ""
+
+#, php-format
+msgid "The password of the account %s has been successfully changed."
+msgstr ""
+
+#, php-format
+msgid ""
+"<a href=\"%s\">Continue to service %s</a> (you will be asked to reenter your "
+"password)"
+msgstr ""
+
+msgid "Login Page"
+msgstr ""
+
+#, php-format
+msgid ""
+"Note: The server has reported this error message: %s. Please contact your "
+"administrator and mention this message."
+msgstr ""

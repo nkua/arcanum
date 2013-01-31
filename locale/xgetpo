@@ -1,0 +1,19 @@
+#!/bin/sh
+
+echo -n "Building template... "
+xgettext -L PHP --keyword=_ --no-location --from-code=UTF-8 --default-domain=arcanum \
+	../*.php \
+	../include/*.php \
+	../include/Arcanum/*.php \
+	../include/Arcanum/Setup/*.php \
+	../include/Arcanum/Token/*.php \
+	../include/Arcanum/ViewHelper/*.php \
+	../templates/*.php \
+	-o arcanum.pot
+echo "Done."
+
+echo -n "Building template for password_strength_check..."
+xgettext -L PHP --keyword=_ --no-location --default-domain=password_strength_check \
+	../lib/password_strength_check/*.php \
+	-o password_strength_check.pot
+echo "Done."

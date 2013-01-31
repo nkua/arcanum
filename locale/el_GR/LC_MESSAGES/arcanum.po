@@ -1,0 +1,2150 @@
+# arcanum greek locale
+msgid ""
+msgstr ""
+"Project-Id-Version: arcanum 2.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 12:04+0200\n"
+"PO-Revision-Date: 2012-02-21 16:30+0200\n"
+"Last-Translator: Alexandros Vellis <avel@noc.uoa.gr>\n"
+"Language-Team: greek <el@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "Users"
+msgstr "Χρήστες"
+
+msgid "Administrators who can change users' passwords"
+msgstr "Διαχειριστές που μπορούν να αλλάξουν κωδικούς χρηστών"
+
+msgid "Administrations who can change the policy as well"
+msgstr "Διαχειριστές που μπορούν να αλλάξουν και την πολιτική"
+
+msgid "Temporarirly inactive passwords (user must change password)"
+msgstr ""
+"Προσωρινά Ανενεργοί Κωδικοί (πρέπει να αλλάξει ο κωδικός από τον χρήστη)"
+
+msgid "Locked accounts by administrator (user cannot login)"
+msgstr ""
+"Κλειδωμένοι Λογαριασμοί από Διαχειριστή (ο χρήστης δε μπορεί να κάνει login)"
+
+msgid "Accounts with failed login attempts"
+msgstr "Λογαριασμοί με αποτυχημένες προσπάθειες εισόδου"
+
+msgid "Users without the required ObjectClass"
+msgstr "Χρήστες χωρίς την απαιτούμενη ObjectClass"
+
+msgid "Users with no password filled in"
+msgstr "Χρήστες χωρίς συμπληρωμένο password"
+
+msgid "Users with no NT hash filled in"
+msgstr "Χρήστες χωρίς συμπληρωμένο NT Hash"
+
+msgid "Users with no digest HA1 filled in"
+msgstr "Χρήστες χωρίς συμπληρωμένο digest HA1"
+
+msgid "Users with no &ldquo;CTP&rdquo; filled in"
+msgstr "Χρήστες χωρίς συμπληρωμένο &ldquo;CTP&rdquo;"
+
+#, php-format
+msgid ""
+"Users with secondary account information filled in, for password recovery "
+"&mdash; method: %s"
+msgstr ""
+"Λογαριασμοί με συμπληρωμένο δευτερεύον account για password recovery &mdash; "
+"μέθοδος: %s"
+
+#, php-format
+msgid "LDAP size limit was exceeded; displaying only the first %s entries"
+msgstr ""
+"Το όριο αποτελεσμάτων του LDAP ξεπεράστηκε. Εμφανίζονται μόνον οι πρώτες %s "
+"εγγραφές."
+
+#, php-format
+msgid ""
+"The required objectclass (GUExtendedAuthentication) was added to %s entries"
+msgstr ""
+"Σε %s εγγραφές προστέθηκε επιτυχώς το GUExtendedAuthentication Object Class."
+
+msgid "No entries in which to add Samba NT Hash"
+msgstr "Δεν υπάρχουν εγγραφές στις οποίες να προστεθεί το Samba NT Hash."
+
+#, php-format
+msgid "Samba NT Hash added to %s entries"
+msgstr "Σε %s εγγραφές προστέθηκε επιτυχώς το Samba NT Hash."
+
+#, php-format
+msgid ""
+"In %s entries the cleartext password cannot be retrieved. To add the %s, the "
+"password must be manually resetted, or the user has to change the password."
+msgstr ""
+"Σε %s εγγραφές δε μπορεί να ανακτηθεί το cleartext password. Συνεπώς για να "
+"προστεθεί το %s, πρέπει να γίνει reset ο κωδικός ή να τον αλλάξει ο χρήστης."
+
+msgid "No entries in which to add the Digest HA1."
+msgstr "Δεν υπάρχουν εγγραφές στις οποίες να προστεθεί το DigestHA1."
+
+#, php-format
+msgid "Digest HA1 was added to %s entries."
+msgstr "Σε %s εγγραφές προστέθηκε επιτυχώς το DigestHA1."
+
+msgid "No entries in which to add the CTP."
+msgstr "Δεν υπάρχουν εγγραφές στις οποίες να προστεθεί το CTP."
+
+#, php-format
+msgid "CTP was added to %s entries."
+msgstr "Σε %s εγγραφές προστέθηκε επιτυχώς το CTP."
+
+#, php-format
+msgid "Changed password for user %s successfully"
+msgstr "Αλλαγή μυστικού κωδικού για τον χρήστη %s επιτυχής"
+
+#, php-format
+msgid "Could not force user to change pasword. (User's dn: %s)"
+msgstr "Δεν ήταν δυνατός ο εξαναγκασμός αλλαγής του κωδικού. (dn: %s)"
+
+msgid "Username not found."
+msgstr "Δε βρέθηκε αυτό το username."
+
+msgid "Multiple entries with the same username found"
+msgstr "Βρέθηκαν πολλαπλές εγγραφές με αυτό το username."
+
+#, php-format
+msgid "Policy Update failed &mdash; %s"
+msgstr "Ενημέρωση Πολιτικής Απέτυχε &mdash; %s"
+
+msgid "Policy Updated."
+msgstr "Ενημέρωση Πολιτικής Επιτυχής"
+
+#, php-format
+msgid "LDAP Error: %s"
+msgstr "Σφάλμα LDAP: %s"
+
+msgid "Account has been modified successfully."
+msgstr "Ο λογαριασμός τροποποιήθηκε επιτυχώς."
+
+msgid "Username not found"
+msgstr "Δε βρέθηκε χρήστης με αυτό το username"
+
+msgid "All users"
+msgstr "Όλοι οι Χρήστες"
+
+msgid "Users with username starting with a"
+msgstr "Χρήστες όπου το username ξεκινάει με a"
+
+msgid "Users that are allowed to receive SMS"
+msgstr "Χρήστες που επιτρέπεται να δέχονται SMS"
+
+msgid "Your old password is not correct."
+msgstr "Ο παλιός σας κωδικός δεν είναι σωστός."
+
+msgid ""
+"This is an automated notification to inform you that your password was just "
+"changed. - "
+msgstr ""
+"Αυτή είναι μία αυτόματη ειδοποίηση για να σας πληροφορήσει ότι ο κωδικός σας "
+"μόλις άλλαξε."
+
+#, php-format
+msgid ""
+"Attention: your record in the directory server cannot be modified. Please "
+"contact your administrator. (LDAP Error: %s)"
+msgstr ""
+"Προσοχή: η εγγραφή σας στον εξυπηρετητή καταλόγου δεν μπορεί να αλλάξει. "
+"Παρακαλώ επικοινωνήστε με τον διαχειριστή. (Σφάλμα LDAP: %s)"
+
+msgid "Please enter your password to register any of these attributes."
+msgstr ""
+"Παρακαλώ εισάγετε τον κωδικό σας για να καταχωρήσετε κάποιο από τα στοιχεία."
+
+msgid ""
+"Your password is not correct. Please try again. If the password has expired, "
+"you will have to change it first."
+msgstr ""
+"Ο κωδικός σας δεν είναι σωστός. Παρακαλούμε ξαναδοκιμάστε. Εάν η ισχύς του "
+"κωδικού έχει λήξει, θα πρέπει να τον αλλάξετε πρώτα."
+
+msgid "Please type in the two scrambled words in order to login."
+msgstr ""
+"Παρακαλώ εισάγετε τις δύο δυσδιάκριτες λέξεις (CAPTCHA) ώστε να κάνετε "
+"είσοδο."
+
+msgid "You did not enter the two scrambled words correctly."
+msgstr "Δεν εισάγατε σωστά τις δύο δυσδιάκριτες λέξεις."
+
+msgid ""
+"Some of the information you entered was invalid (e.g. wrong username, wrong "
+"mobile number, not registered e-mail address)."
+msgstr ""
+"Κάποιες από τις πληροφορίες που εισάγατε δεν ήταν σωστές (π.χ. λάθος όνομα "
+"χρήστη, λάθος αριθμός τηλεφώνου, μη καταχωρημένη διεύθυνση e-mail."
+
+msgid "Required information was not filled in"
+msgstr "Κάποιες απαιτούμενες πληροφορίες δε συμπληρώθηκαν"
+
+msgid "Please type the two words in the box."
+msgstr "Παρακαλώ εισάγετε τις δύο λέξεις στο κουτί."
+
+msgid ""
+"Captcha verification failed; please retry typing the two words in the box."
+msgstr ""
+"Η επιβεβαίωση του Captcha απέτυχε. Παρακαλούμε ξαναπροσπαθήστε να εισάγετε "
+"τις δύο δυσδιάκριτες λέξεις."
+
+msgid "You did not fill in a required field. Please try again."
+msgstr "Δεν συμπληρώσατε ένα απαιτούμενο πεδίο. Παρακαλούμε ξαναπροσπαθήστε."
+
+msgid "Could not connect to the account database. Please try again later."
+msgstr ""
+"Δεν ήταν δυνατή η σύνδεση στη βάση δεδομένων των χρηστών. Παρακαλώ "
+"ξαναπροσπαθήστε αργότερα."
+
+msgid ""
+"There is insufficient information to continue the reset password process via "
+"this method. (E.g. you had't filled in your e-mail address or your mobile "
+"phone number in the past)."
+msgstr ""
+"Δεν υπάρχουν επαρκή στοιχεία για να συνεχίσετε τη διαδικασία επανάκτησης "
+"κωδικού με αυτή τη μέθοδο. (Π.χ. δεν είχατε εισάγει στο παρελθόν μία "
+"εναλλακτική e-mail διεύθυνση ή έναν αριθμό κινητού τηλεφώνου)."
+
+#, php-format
+msgid "Password reset for your account at %s"
+msgstr "Επαναφορά κωδικού για τον λογαριασμό σας στο %s"
+
+msgid ""
+"Your details have been confirmed. You will receive an e-mail with further "
+"instructions on how to enter a new password."
+msgstr ""
+"Η επιβεβαίωση των στοιχείων σας πραγματοποιήθηκε επιτυχώς!<br /><br /> Θα "
+"λάβετε στο email σας οδηγίες για την εισαγωγή νέου κωδικού."
+
+msgid "Checklist"
+msgstr "Λίστα Ελέγχου"
+
+msgid "Basic Setup"
+msgstr "Βασικές Ρυθμίσεις"
+
+msgid "LDAP Connection"
+msgstr "Ρύθμιση LDAP"
+
+msgid "CAPTCHA Setup"
+msgstr "Ρύθμιση CAPTCHA"
+
+msgid "E-mail Dispatch"
+msgstr "Αποστολή E-mail"
+
+msgid "SMS Gateway"
+msgstr "Ρύθμιση του SMS Gateway"
+
+msgid "Confirm Configuration"
+msgstr "Επιβεβαίωση Ρυθμίσεων"
+
+msgid "Password Administrators"
+msgstr "Διαχειριστές Κωδικών"
+
+msgid "Configuration file saved successfully"
+msgstr "Το αρχείο ρυθμίσεων αποθηκεύθηκε επιτυχώς"
+
+msgid "Error while saving"
+msgstr "Λάθος κατά την αποθήκευση"
+
+#, php-format
+msgid ""
+"Web Installer has been deactivated. %sContinue by logging in to the "
+"application.</a>"
+msgstr "Ο web installer απενεργοποιήθηκε. %sΣυνεχίστε στην εφαρμογή</a>."
+
+msgid ""
+"(To reactivate the web installer, delete the file config/"
+"web_installer_disabled.php)"
+msgstr ""
+"Για να επαναενεργοποιήσετε τον installer, διαγράψτε το αρχείο config/"
+"web_installer_disabled.php.)"
+
+msgid ""
+"PHP module &quot;gettext&quot; is required. Edit the file <tt>/etc/php5/"
+"apache2/php.ini</tt> and add the line <pre>extension=gettext.so</pre>"
+msgstr ""
+"Απαιτείται το PHP module &quot;gettext&quot;. Κάντε edit στο αρχείο <tt>/etc/"
+"php5/apache2/php.ini</tt> και προσθέστε τη γραμμή: <pre>extension=gettext."
+"so</pre>"
+
+#, php-format
+msgid "PHP module &quot;%s&quot; is required; Run (as root): %s"
+msgstr ""
+"Απαιτείται το PHP module &quot;%s&quot;. Τρέξτε την εντολή (ως root): %s"
+
+#, php-format
+msgid "Then, make sure variable cache is enabled in file %s:"
+msgstr ""
+"Στη συνέχεια, βεβαιωθείτε ότι η variable cache είναι ενεργοποιημένη στο "
+"αρχείο %s:"
+
+#, php-format
+msgid ""
+"Cannot save configuration file due to file permissions.. Run (as root): %s"
+msgstr ""
+"Δεν υπάρχουν κατάλληλα permissions για την αποθήκευση του configuration. "
+"Τρέξτε την εντολή (ως root): %s"
+
+msgid "The cron job for sending password reminders has not been installed."
+msgstr ""
+"Δεν έχει εγκατασταθεί το cron job για την υπενθύμιση των χρηστών σχετικά με "
+"κωδικούς που λήγουν."
+
+msgid "Password Management Service"
+msgstr "Υπηρεσία Διαχείρισης Κωδικού Χρήστη"
+
+msgid "Your password has expired!"
+msgstr "Ο κωδικός σας έχει λήξει!"
+
+msgid "Change Password"
+msgstr "Αλλαγή Κωδικού"
+
+msgid "year"
+msgstr "χρόνος"
+
+msgid "years"
+msgstr "χρόνια"
+
+msgid "Month"
+msgstr "Μήνας"
+
+msgid "Months"
+msgstr "Μήνες"
+
+msgid "week"
+msgstr "εβδομάδα"
+
+msgid "weeks"
+msgstr "εβδομάδες"
+
+msgid "day"
+msgstr "ημέρα"
+
+msgid "days"
+msgstr "ημέρες"
+
+msgid "hour"
+msgstr "ώρα"
+
+msgid "hours"
+msgstr "ώρες"
+
+msgid "minute"
+msgstr "λεπτό"
+
+msgid "minutes"
+msgstr "λεπτά"
+
+msgid "second"
+msgstr "δευτερόλεπτο"
+
+msgid "seconds"
+msgstr "δευτερόλεπτα"
+
+msgid "Information about the Expiration of your Password"
+msgstr "Ενημέρωση για την Ισχύ του Κωδικού του Λογαριασμού σας"
+
+#, php-format
+msgid "Your password expires in %s"
+msgstr "Ο κωδικός σας λήγει σε %s"
+
+msgid "a week"
+msgstr "μία εβδομάδα"
+
+msgid "two days"
+msgstr "δύο ημέρες"
+
+#, php-format
+msgid ""
+"The secondary e-mail address cannot contain the domain name %s, it must be "
+"an external / third party e-mail."
+msgstr ""
+"Η δευτερεύουσα e-mail διεύθυνση δε μπορεί να περιέχει το %s, αλλά πρέπει να "
+"είναι μία εξωτερική e-mail διεύθυνση από άλλον παροχέα."
+
+msgid "Invalid E-mail Address"
+msgstr "Δεν εισάγατε έγκυρη e-mail διεύθυνση"
+
+msgid "Invalid OpenID URL"
+msgstr "Δεν εισάγατε έγκυρο OpenID"
+
+#, php-format
+msgid ""
+"Wrong mobile phone number. The number must consist of %s digits, e.g. "
+"6931234567"
+msgstr ""
+"Λάθος μορφή τηλεφωνικού αριθμού. Ο αριθμός πρέπει να είναι της μορφής "
+"6931234567 (%s ψηφία)."
+
+msgid "Duplicate (or no) login entries detected, cannot change password."
+msgstr ""
+
+#, php-format
+msgid "Could not bind to LDAP server as %s; LDAP error: %s"
+msgstr ""
+
+msgid ""
+"Account has been temporarily locked manually by an administrator, to force "
+"change of password."
+msgstr ""
+
+msgid "Account is active."
+msgstr ""
+
+msgid "No dates registered."
+msgstr ""
+
+msgid "Password history is empty."
+msgstr ""
+
+#, php-format
+msgid "%s-encoded password, set on %s"
+msgstr "Κωδικοποιημένος με %s κωδικός, τέθηκε στις %s"
+
+#, php-format
+msgid "Cleartext password, set on %s"
+msgstr "Cleartext κωδικός, τέθηκε στις %s"
+
+msgid "Unreadable or not set."
+msgstr ""
+
+#, php-format
+msgid "%s-encoded password"
+msgstr ""
+
+#, php-format
+msgid "Cleartext password; hover to reveal"
+msgstr ""
+
+msgid "Default or unspecified policy."
+msgstr ""
+
+#, php-format
+msgid "Specific Policy: %s"
+msgstr ""
+
+msgid "No"
+msgstr ""
+
+msgid "Yes; user will be prompted to change it immediately."
+msgstr ""
+
+msgid "Empty username."
+msgstr ""
+
+msgid "Could not resolve username to an entry in LDAP directory."
+msgstr ""
+
+msgid "You must type in your old password."
+msgstr ""
+
+msgid "You must type in your new password."
+msgstr ""
+
+msgid "The password contains invalid characters."
+msgstr "Ο κωδικός περιέχει άκυρους χαρακτήρες."
+
+msgid ""
+"The new password is the same as your previous password. You are required to "
+"change the password."
+msgstr ""
+"Ο νέος κωδικός είναι ο ίδιος με τον προηγούμενο. Απαιτείται να αλλάξετε τον "
+"κωδικό σας."
+
+msgid "Your new password does not match the verify password."
+msgstr "Δεν εισάγατε τον ίδιο κωδικό και τις δύο φορές."
+
+msgid "Make sure you use the same case in both input boxes."
+msgstr ""
+"Βεβαιωθείτε ότι χρησιμοποιείτε τα ίδια κεφαλαία / μικρά στις δύο εισαγωγές "
+"κωδικού."
+
+#, php-format
+msgid "Could not set pwdReset flag: %s"
+msgstr "Αποτυχία κατά τον ορισμό του pwdReset flag: %s"
+
+#, php-format
+msgid ""
+"Password change failed. You have probably already used this same password "
+"recently, or it is still too early to change the password again. Try "
+"entering a different password."
+msgstr ""
+
+#, php-format
+msgid "Password change failed: %s"
+msgstr "Αλλαγή κωδικού απέτυχε: %s"
+
+msgid "GUnet Unique ID"
+msgstr ""
+
+msgid ""
+"A unique identifier for a user of the entire organization. It is usually the "
+"department code concatenated with the registration number."
+msgstr ""
+"Ένα ID (χαρακτηριστικό) που είναι μοναδικό για ολόκληρο τον οργανισμό. "
+"Περιλαμβάνει συνήθως τον αριθμό μητρώου μαζί με έναν κωδικό τμήματος, ή έναν "
+"αριθμό μητρώου μοναδικό για ολόκληρο το ίδρυμα."
+
+msgid "Student Registration #"
+msgstr "Α.Μ. Φοιτητή"
+
+msgid "The student registration number."
+msgstr "Ο αριθμός μητρώου του φοιτητή."
+
+msgid "Department ID"
+msgstr "Κωδικός Τμήματος"
+
+msgid "Numerical code that identifies the department."
+msgstr "Ο αριθμητικός κωδικός που χαρακτηρίζει το τμήμα."
+
+msgid "Department Name"
+msgstr "Όνομα Τμήματος"
+
+msgid "First Name"
+msgstr "Μικρό Όνομα"
+
+msgid "First / given name; can contain second (middle) name"
+msgstr "Μικρό όνομα. Μπορεί να περιλαμβάνει και δεύτερο μικρό όνομα."
+
+msgid "Last Name"
+msgstr "Επώνυμο"
+
+msgid "Full Name"
+msgstr "Oνοματεπώνυμο"
+
+msgid "Account Status"
+msgstr "Κατάσταση Λογαριασμού"
+
+msgid "Whether your account is active or locked for some administrative reason"
+msgstr ""
+"Εάν ο λογαριασμός είναι ενεργός ή κλειδωμένος για κάποιον λόγο (π.χ. "
+"διαχειριστικός λόγος, έχει διαρρεύσει ο μυστικός κωδικός, ο χρήστης έχει "
+"κάνει κάποια κατάχρηση πόρων κ.λπ.)"
+
+msgid "Student Status"
+msgstr "Κατάσταση Φοιτητή"
+
+msgid "Semester"
+msgstr "Εξάμηνο"
+
+msgid "Semester number"
+msgstr ""
+"Αριθμός Εξαμήνου Σπουδών. Για Επί Πτυχίω φοιτητές, ο αριθμός αυτός θα πρέπει "
+"να συνεχίζεται μετά το τελευταίο εξάμηνο σπουδών. Π.χ. 9, 10, 11, 12, ...."
+
+msgid "Username"
+msgstr "Όνομα Χρήστη"
+
+msgid "Username or userid"
+msgstr ""
+"Το username (userid) που γνωρίζει ο χρήστης για είσοδο σε ηλεκτρονικές "
+"υπηρεσίες."
+
+msgid "Password"
+msgstr "Κωδικός"
+
+msgid "Primary Affiliation"
+msgstr "Πρωτεύουσα Ιδιότητα"
+
+msgid ""
+"The primary affiliation of this user in this educational organization (e.g. "
+"student, staff, faculty)"
+msgstr ""
+"Κύρια Ιδιότητα. Συνήθως, student, για προπτυχιακούς και μεταπτυχιακούς "
+"φοιτητές."
+
+msgid "Personal Title"
+msgstr "Τίτλος / Ιδιότητα"
+
+msgid "Student Type"
+msgstr "Ιδιότητα Φοιτητή"
+
+msgid "Whether the student is undergraduate, postgraduate, doctoral"
+msgstr ""
+"Τύπος, όσον αφορά τη φοιτητική ιδιότητα. Π.χ. προπτυχιακός / μεταπτυχιακός / "
+"διδακτορικός"
+
+msgid "Organization"
+msgstr "Οργανισμός / Ίδρυμα"
+
+msgid "Name of organization"
+msgstr "Το όνομα του Ιδρύματος."
+
+msgid "E-Mail"
+msgstr "E-Mail"
+
+msgid "Alternative E-mails"
+msgstr "Εναλλακτικά E-Mail"
+
+msgid ""
+"Alternative e-mail addresses where the user can receive e-mail messages."
+msgstr "Εναλλακτικές E-Mail διευθύνσεις χρήστη."
+
+msgid "Authorized E-mails"
+msgstr "Επιτρεπόμενα E-Mail"
+
+msgid "Authorized e-mail addresses that user can use to send e-mail from."
+msgstr "Επιτρεπόμενες E-Mail διευθύνσεις χρήστη για αποστολή."
+
+msgid "Affiliation"
+msgstr "Πανεπιστημιακή Ιδιότητα"
+
+msgid "Academic affiliation"
+msgstr "Πανεπιστημιακή Ιδιότητα"
+
+msgid "Organization Distinguished Name"
+msgstr "Distinguished Name Ιδρύματος"
+
+msgid "Business Category"
+msgstr "Επαγγελματική Κατηγορία"
+
+msgid "Organizational Unit"
+msgstr "Οργανωτική Μονάδα"
+
+msgid "The last time the entry's password was changed"
+msgstr "Πότε άλλαξε τελευταία φορά ο κωδικός της εγγραφής"
+
+msgid ""
+"This attribute specifies the last time the entry's password was changed.  "
+"This is used by the password expiration policy.  If this attribute does not "
+"exist, the password will never expire."
+msgstr ""
+
+msgid "Account locked"
+msgstr "Λογαριασμός κλειδωμένος"
+
+msgid ""
+"This attribute holds the time that the user's account was locked.  A locked "
+"account means that the password may no longer be used to authenticate.  A "
+"000001010000Z value means that the account has been locked permanently, and "
+"that only a password administrator can unlock the account."
+msgstr ""
+
+msgid "Authentication failures"
+msgstr "Αποτυχημένες προσπάθειες εισόδου"
+
+msgid ""
+"This attribute holds the timestamps of the consecutive authentication "
+"failures."
+msgstr ""
+
+msgid "History of previously used passwords"
+msgstr "Ιστορικό προηγουμένως χρησιμοποιημένων κωδικών"
+
+msgid "This attribute holds a history of previously used passwords."
+msgstr ""
+
+msgid "Timestamps of grace authentications"
+msgstr "Ημερομηνίες χαριστικών επιτυχημένων εισόδων"
+
+msgid ""
+"This attribute holds the timestamps of grace authentications after a "
+"password has expired."
+msgstr ""
+
+msgid "Password updated by administrator"
+msgstr "Κωδικός ενημερώθηκε από διαχειριστή"
+
+msgid ""
+"This attribute holds a flag to indicate (when TRUE) that the password has "
+"been updated by the password administrator and must be changed by the user."
+msgstr ""
+
+msgid "Specific policy in effect"
+msgstr "Συγκεκριμένη πολιτική εν ισχύ"
+
+msgid ""
+"This attribute points to the pwdPolicy subentry in effect for this object."
+msgstr ""
+
+msgid "Password Start Time"
+msgstr "Έναρξη Ισχύος Κωδικού"
+
+msgid ""
+"This attribute specifies the time the entry's password becomes valid for "
+"authentication.  Authentication attempts made before this time will fail.  "
+"If this attribute does not exist, then no restriction applies."
+msgstr ""
+
+msgid "Password End Time"
+msgstr "Λήξη Ισχύος Κωδικού"
+
+msgid ""
+"This attribute specifies the time the entry's password becomes invalid for "
+"authentication.  Authentication attempts made after this time will fail, "
+"regardless of expiration or grace settings.  If this attribute does not "
+"exist, then this restriction does not apply."
+msgstr ""
+
+msgid "Last successful authentication"
+msgstr "Τελευταία επιτυχημένη είσοδος"
+
+msgid ""
+"This attribute holds the timestamp of the last successful authentication."
+msgstr ""
+
+msgid "Minimum Age"
+msgstr ""
+
+msgid ""
+"This attribute holds the number of seconds that must elapse between "
+"modifications to the password.  If this attribute is not present, 0 seconds "
+"is assumed."
+msgstr ""
+
+msgid "Maximum Age"
+msgstr ""
+
+msgid ""
+"This attribute holds the number of seconds after which a modified password "
+"will expire. If this attribute is not present, or if the value is 0 the "
+"password does not expire.  If not 0, the value must be greater than or equal "
+"to the value of the pwdMinAge."
+msgstr ""
+
+msgid "Passwords to keep in History"
+msgstr ""
+
+msgid ""
+"This attribute specifies the maximum number of used passwords stored in the "
+"pwdHistory attribute. If this attribute is not present, or if the value is "
+"0, used passwords are not stored in the pwdHistory attribute and thus may be "
+"reused."
+msgstr ""
+
+msgid "Enable Quality Check"
+msgstr ""
+
+msgid ""
+"This attribute indicates how the password quality will be verified while "
+"being modified or added.  If this attribute is not present, or if the value "
+"is '0', quality checking will not be enforced.  A value of '1' indicates "
+"that the server will check the quality, and if the server is unable to check "
+"it (due to a hashed password or other reasons) it will be accepted.  A value "
+"of '2' indicates that the server will check the quality, and if the server "
+"is unable to verify it, it will return an error refusing the password."
+msgstr ""
+
+msgid "Minimum Length"
+msgstr ""
+
+msgid ""
+"When quality checking is enabled, this attribute holds the minimum number of "
+"characters that must be used in a password.  If this attribute is not "
+"present, no minimum password length will be enforced.  If the server is "
+"unable to check the length (due to a hashed password or otherwise), the "
+"server will, depending on the value of the pwdCheckQuality attribute, either "
+"accept the password without checking it ('0' or '1') or refuse it ('2')."
+msgstr ""
+
+msgid "Maximum Length"
+msgstr ""
+
+msgid ""
+"When quality checking is enabled, this attribute holds the maximum number of "
+"characters that may be used in a password.  If this attribute is not "
+"present, no maximum password length will be enforced.  If the server is "
+"unable to check the length (due to a hashed password or otherwise), the "
+"server will, depending on the value of the pwdCheckQuality attribute, either "
+"accept the password without checking it ('0' or '1') or refuse it ('2')."
+msgstr ""
+
+msgid "Expiration Warning Time"
+msgstr ""
+
+msgid ""
+"This attribute specifies the maximum number of seconds before a password is "
+"due to expire that expiration warning messages will be returned to an "
+"authenticating user. If this attribute is not present, or if the value is 0 "
+"no warnings will be returned.  If not 0, the value must be smaller than the "
+"value of the pwdMaxAge attribute."
+msgstr ""
+
+msgid "Number of times an expired password can be used"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of times an expired password can be used "
+"to authenticate.  If this attribute is not present or if the value is 0, "
+"authentication will fail."
+msgstr ""
+
+msgid "Grace authentications time"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of seconds the grace authentications are "
+"valid.  If this attribute is not present or if the value is 0, there is no "
+"time limit on the grace authentications."
+msgstr ""
+
+msgid "Enable Lockout"
+msgstr ""
+
+msgid ""
+"This attribute indicates, when its value is 'TRUE', that the password may "
+"not be used to authenticate after a specified number of consecutive failed "
+"bind attempts.  The maximum number of consecutive failed bind attempts is "
+"specified in pwdMaxFailure. If this attribute is not present, or if the "
+"value is 'FALSE', the password may be used to authenticate when the number "
+"of failed bind attempts has been reached."
+msgstr ""
+
+msgid "Lockout Duration"
+msgstr ""
+
+msgid ""
+"This attribute holds the number of seconds that the password cannot be used "
+"to authenticate due to too many failed bind attempts.  If this attribute is "
+"not present, or if the value is 0 the password cannot be used to "
+"authenticate until reset by a password administrator."
+msgstr ""
+
+msgid "Maximum failures allowed"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of consecutive failed bind attempts "
+"after which the password may not be used to authenticate. If this attribute "
+"is not present, or if the value is 0, this policy is not checked, and the "
+"value of pwdLockout will be ignored."
+msgstr ""
+
+msgid "Interval for failure counter"
+msgstr ""
+
+msgid ""
+"This attribute holds the number of seconds after which the password failures "
+"are purged from the failure counter, even though no successful "
+"authentication occurred. If this attribute is not present, or if its value "
+"is 0, the failure counter is only reset by a successful authentication."
+msgstr ""
+
+msgid "Enable Force Change"
+msgstr ""
+
+msgid ""
+"This attribute specifies with a value of 'TRUE' that users must change their "
+"passwords when they first bind to the directory after a password is set or "
+"reset by a password administrator.  If this attribute is not present, or if "
+"the value is 'FALSE', users are not required to change their password upon "
+"binding after the password administrator sets or resets the password.  This "
+"attribute is not set due to any actions specified by this document, it is "
+"typically set by a password administrator after resetting a user's password."
+msgstr ""
+
+msgid "Enable Password change by user"
+msgstr ""
+
+msgid ""
+"This attribute indicates whether users can change their own passwords, "
+"although the change operation is still subject to access control.  If this "
+"attribute is not present, a value of 'TRUE' is assumed.  This attribute is "
+"intended to be used in the absence of an access control mechanism."
+msgstr ""
+
+msgid "Require old password when changing"
+msgstr ""
+
+msgid ""
+"This attribute specifies whether or not the existing password must be sent "
+"along with the new password when being changed.  If this attribute is not "
+"present, a 'FALSE' value is assumed."
+msgstr ""
+
+msgid "Minimum Delay between auth attempts"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of seconds to delay responding to the "
+"first failed authentication attempt.  If this attribute is not set or is 0, "
+"no delays will be used. pwdMaxDelay must also be specified if pwdMinDelay is "
+"set."
+msgstr ""
+
+msgid "Maximum Delay between auth attempts"
+msgstr ""
+
+msgid ""
+"This attribute specifies the maximum number of seconds to delay when "
+"responding to a failed authentication attempt.  The time specified in "
+"pwdMinDelay is used as the starting time and is then doubled on each failure "
+"until the delay time is greater than or equal to pwdMaxDelay (or a "
+"successful authentication occurs, which resets the failure counter). "
+"pwdMinDelay must be specified if pwdMaxDelay is set."
+msgstr ""
+
+msgid "Maximum account idle time"
+msgstr ""
+
+msgid ""
+"This attribute specifies the number of seconds an account may remain unused "
+"before it becomes locked.  If this attribute is not set or is 0, no check is "
+"performed."
+msgstr ""
+
+msgid ""
+"Could not accomodate your request due to a technical issue. Please try again "
+"later."
+msgstr ""
+"Δε μπορέσαμε να εξυπηρετήσουμε το αίτημά σας λόγω τεχνικού προβλήματος. "
+"Παρακαλώ ξαναπροσπαθήστε αργότερα."
+
+#, php-format
+msgid "No account found for your mobile. Register your mobile at %s"
+msgstr ""
+"Δε βρέθηκε λογαριασμός για το κινητό σας. Καταχωρήστε το κινητό σας στο %s"
+
+#, php-format
+msgid ""
+"Failed to change the password of your account %s. Please try again later."
+msgstr ""
+"Δεν μπορέσαμε να αλλάξουμε τον κωδικό του λογαριασμού %s. Παρακαλώ "
+"ξαναπροσπαθήστε αργότερα."
+
+#, php-format
+msgid "Please use the number %s"
+msgstr "Παρακαλώ χρησιμοποιήστε τον αριθμό %s"
+
+#, php-format
+msgid "%s for %s"
+msgstr ""
+
+#, php-format
+msgid "You have %s accounts; send %s"
+msgstr "Έχετε %s λογαριασμούς. Στείλτε %s"
+
+msgid "Session has timed out."
+msgstr "Η συνεδρία έχει λήξει."
+
+msgid "Username or password is incorrect."
+msgstr "Το όνομα χρήστη ή ο κωδικός δεν είναι σωστά."
+
+msgid "There was a server error in the password management service."
+msgstr "Παρουσιάστηκε ένα πρόβλημα με το σύστημα αλλαγής κωδικού."
+
+msgid "The password recovery token was incorrect."
+msgstr "Ο κωδικός επαναφοράς δεν είναι σωστός."
+
+msgid "Access denied."
+msgstr "Η πρόσβαση σε αυτή τη σελίδα δεν επιτρέπεται."
+
+msgid "Account is locked by an administrator."
+msgstr "Ο λογαριασμός είναι κλειδωμένος από τον διαχειριστή."
+
+msgid "You have not logged in the central authentication service."
+msgstr ""
+"Δεν έχετε πραγματοποιήσει επιτυχή είσοδο στο κεντρικό σύστημα πιστοποίησης."
+
+msgid "Seconds"
+msgstr "Δευτερόλεπτα"
+
+msgid "Minutes"
+msgstr "Λεπτά"
+
+msgid "Hours"
+msgstr "Ώρες"
+
+msgid "Days"
+msgstr "Ημέρες"
+
+msgid "Examples"
+msgstr "Παραδείγματα"
+
+msgid "Attention: Locked Account."
+msgstr "Προσοχή: Κλειδωμένος Λογαριασμός."
+
+msgid "Your account has been locked by an administrator"
+msgstr "Ο λογαριασμός σας έχει κλειδωθεί από τον διαχειριστή"
+
+#, php-format
+msgid "Your account was locked by an administrator on %s"
+msgstr "Ο λογαριασμός σας κλειδώθηκε από τον διαχειριστή στις %s"
+
+msgid "and cannot be used for authenticating to services any more."
+msgstr "και δε μπορεί να χρησιμοποιηθεί πλέον για ταυτοποίηση σε υπηρεσίες."
+
+msgid "You will have to contact your administrator to address this issue."
+msgstr ""
+"Πρέπει να επικοινωνήσετε με τον διαχειριστή ή τον υπεύθυνο του λογαριασμού "
+"σας για τη διευθέτηση του ζητήματος."
+
+msgid "Enter Password:"
+msgstr "Εισαγωγή Κωδικού:"
+
+msgid "Verify"
+msgstr "Επιβεβαίωση"
+
+msgid "Generate a Random Password"
+msgstr "Δημιουργία ενός τυχαίου κωδικού"
+
+msgid ""
+"Click to automatically generate a random password, which will pass the "
+"password strength requirements and will be relatively easy to pronounce"
+msgstr ""
+"Κάντε κλικ για να δημιουργηθεί ένας τυχαίος κωδικός, που περνάει τους "
+"ελέγχους για ασφαλείς κωδικούς και είναι σχετικά εύκολος στην προφορά"
+
+msgid "New password will be:"
+msgstr "Ο νέος κωδικός θα είναι: "
+
+msgid ""
+"Please make sure that you have noted down the password, or have provided it "
+"to the user, before moving on."
+msgstr ""
+"Παρακαλούμε βεβαιωθείτε ότι έχετε αντιγράψει τον κωδικό σε ασφαλές μέρος ή "
+"τον έχετε μεταφέρει στον χρήστη πριν προχωρήσετε."
+
+msgid ""
+"Temporary password &mdash; this password will work temporarily for logging "
+"on a web service, but user will be notified to change it immediately."
+msgstr ""
+"Προσωρινός Κωδικός &mdash; ο παραπάνω κωδικός θα λειτουργήσει προσωρινά για "
+"είσοδο σε υπηρεσία μέσω web, αλλά ο χρήστης θα λάβει μήνυμα ότι πρέπει να "
+"τον αλλάξει άμεσα."
+
+msgid "Return to Change Password Page"
+msgstr "Επιστροφή στη σελίδα Αλλαγής Κωδικού"
+
+msgid "Simple Search"
+msgstr "Απλή Αναζήτηση"
+
+msgid "Advanced Search"
+msgstr "Σύνθετη Αναζήτηση"
+
+msgid "Search users by name, surname, username / e-mail, ID"
+msgstr ""
+"Αναζητήστε χρήστες με βάση όνομα, επίθετο, username / e-mail, αριθμό μητρώου"
+
+msgid "Search"
+msgstr "Αναζήτηση"
+
+msgid "Enter LDAP filter"
+msgstr "Εισάγετε το LDAP φίλτρο που επιθυμείτε"
+
+msgid "Copy one from these readily availabe filters for starters:"
+msgstr "Επιλέξτε ένα από τα έτοιμα φίλτρα για διευκόλυνση:"
+
+msgid "Copy"
+msgstr "Αντιγραφή"
+
+#, php-format
+msgid "Found %s user entries"
+msgstr "Βρέθηκαν %s εγγραφές χρηστών"
+
+msgid ""
+"For the users listed above, you can massively change, in one go, the "
+"following attributes:"
+msgstr ""
+"Για τους παραπάνω χρήστες, μπορείτε να αλλάξετε μαζικά κάποιο από τα "
+"παρακάτω στοιχεία:"
+
+msgid "Particular Policy"
+msgstr "Συγκεκριμένη Πολιτική"
+
+msgid "No Change"
+msgstr "Καμμία Αλλαγή"
+
+msgid "Default or Unspecified Policy"
+msgstr "Προκαθορισμένη ή μη ορισμένη Πολιτική"
+
+msgid "Lock Account"
+msgstr "Κλείδωμα Λογαριασμού"
+
+msgid "Lock All Accounts"
+msgstr "Κλείδωμα όλων των Λογαριασμών"
+
+msgid "Unlock All Accounts"
+msgstr "Ξεκλείδωμα όλων των Λογαριασμών"
+
+msgid "Force Password Change"
+msgstr "Εξαναγκασμός Αλλαγής Κωδικού"
+
+msgid "All Accounts change password upon next login"
+msgstr "Όλοι οι Λογαριασμοί να αλλάξουν κωδικό με το επόμενο login"
+
+msgid "Don't request password change upon next login"
+msgstr "Να μην απαιτηθεί η αλλαγή κωδικού"
+
+msgid "Apply These Changes"
+msgstr "Εφαρμογή των παραπάνω αλλαγών"
+
+msgid "There are no defined password policies on the LDAP Server."
+msgstr "Δεν υπάρχουν ορισμένες πολιτικές κωδικών στον εξυπηρετητή LDAP."
+
+msgid "Create a new policy with some predefined values:"
+msgstr ""
+"Δημιουργήστε μία νέα πολιτική με κάποιες προτεινόμενες, προκαθορισμένες "
+"τιμές:"
+
+msgid "Create New Policy"
+msgstr "Δημιουργία Νέας Πολιτικής"
+
+msgid "Return to summary"
+msgstr "Επιστροφή στη σύνοψη"
+
+msgid "Massive Changes to LDAP Users"
+msgstr "Μαζικές Αλλαγές σε Χρήστες LDAP"
+
+#, php-format
+msgid "The results of the massive changes to be applied to %s users are:"
+msgstr ""
+"Τα αποτελέσματα των μαζικών μεταβολών στις %s εγγραφές που ταιριάζουν, είναι:"
+
+#, php-format
+msgid "%s entries have been successfully modified."
+msgstr "%s εγγραφές μεταβλήθηκαν επιτυχώς (προσθήκη / μεταβολή LDAP attribute)"
+
+#, php-format
+msgid ""
+"%s entries have remained the same (no need to remove attribute that did not "
+"exist"
+msgstr ""
+"%s εγγραφές έμειναν αμετάβλητες (δε χρειαζόταν να διαγραφεί attribute που "
+"δεν υπήρχε)"
+
+#, php-format
+msgid "%s entries have been succesfully modified (attribute deletion)."
+msgstr "%s εγγραφές μεταβλήθηκαν επιτυχώς (διαγραφή attribute)"
+
+#, php-format
+msgid "%s entries have failed to modify due to LDAP error."
+msgstr "%s εγγραφές παρουσίασαν σφάλμα LDAP κατά τη μεταβολή"
+
+msgid "Back to initial search users page"
+msgstr "Επιστροφή στην αρχική σελίδα αναζήτησης χρηστών"
+
+msgid "Active Notifications"
+msgstr "Ενεργές Ειδοποιήσεις"
+
+msgid ""
+"This table shows the active notifications and reminders that are being sent "
+"via e-mail to users, before their passwords have expired."
+msgstr ""
+"Ο πίνακας αυτός δείχνει τις ενεργές ειδοποιήσεις που στέλνονται μέσω e-mail "
+"στους χρήστες, κάποιο χρονικό διάστημα πριν λήξει ο κωδικός τους."
+
+#, php-format
+msgid ""
+"To change these notifications, please edit the file %s. If the file does not "
+"exist, create it using this as template: %s."
+msgstr ""
+"Για να αλλάξετε αυτές τις ειδοποιήσεις, επεξεργαστείτε το αρχείο %s. Αν δεν "
+"υπάρχει το αρχείο, δημιουργήστε το χρησιμοποιώντας αυτό σαν πρότυπο: %s."
+
+msgid "Show Details per User"
+msgstr "Εμφάνιση Λεπτομερειών ανά Χρήστη"
+
+msgid ""
+"The following table shows which users have already received some password "
+"expiry reminder notifications via e-mail."
+msgstr ""
+"Ο παρακάτω πίνακας δείχνει ποιοι χρήστες έχουν λάβει ήδη κάποια από τις "
+"ειδοποιήσεις λήξης κωδικού μέσω e-mail"
+
+msgid "Showing Notification Message"
+msgstr "Εμφάνιση Μηνύματος Ειδοποίησης"
+
+msgid "To change this message, please edit the file:"
+msgstr "Για να αλλάξετε αυτό το μήνυμα, επεξεργαστείτε το αρχείο:"
+
+#, php-format
+msgid "If the file does not exist, use the file %s as a template"
+msgstr "(Αν δεν υπάρχει, χρησιμοποιήστε το %s για να ξεκινήσετε)"
+
+msgid "Back to Notifications"
+msgstr "Πίσω στις ειδοποιήσεις"
+
+msgid "Active Sessions"
+msgstr "Ενεργές Συνεδρίες"
+
+msgid ""
+"The following table shows who is using the password management web "
+"application at this moment."
+msgstr ""
+"Ο παρακάτω πίνακας δείχνει ποιοι χρησιμοποιούν την εφαρμογή διαχείρισης "
+"κωδικού αυτή τη στιγμή."
+
+msgid "Access Level"
+msgstr "Πρόσβαση"
+
+msgid "Actions"
+msgstr "Ενέργειες"
+
+msgid "Unknown"
+msgstr "Άγνωστο"
+
+msgid "Administrator"
+msgstr "Διαχειριστής"
+
+msgid "Password Reset"
+msgstr "Επαναφορά Κωδικού"
+
+msgid "My Account"
+msgstr "Ο Λογαριασμός Μου"
+
+msgid "Password Recovery Procedure"
+msgstr "Διαδικασία Επαναφοράς Κωδικού"
+
+msgid "Details"
+msgstr "Λεπτομέρειες"
+
+msgid "Active Mail Tokens for Password Reset (Duration: 1 hour)"
+msgstr "Ενεργά Mail Tokens για Αλλαγή Κωδικού (Διάρκεια: 1 ώρα)"
+
+msgid "Active SMS Tokens for Password Reset (Duration: 10 minutes)"
+msgstr "Ενεργά SMS Tokens για Αλλαγή Κωδικού (Διάρκεια: 10 λεπτά)"
+
+msgid ""
+"There are no active tokens which were requested for immediate password "
+"change at this point."
+msgstr ""
+"Δεν υπάρχουν ενεργά tokens που να ζητήθηκαν από τον Login Server για άμεση "
+"αλλαγή password αυτή τη στιγμή."
+
+#, php-format
+msgid "%s Policies available in the server:"
+msgstr "%s Πολιτικές διαθέσιμες στον εξυπηρετητή:"
+
+msgid "Name"
+msgstr "Όνομα"
+
+msgid "dn"
+msgstr "dn"
+
+msgid "# of users"
+msgstr "αρ. χρηστών"
+
+msgid "Unnamed Policy"
+msgstr "Πολιτική χωρίς όνομα"
+
+msgid "Show &amp; Edit"
+msgstr "Εμφάνιση &amp; Επεξεργασία"
+
+msgid "Back to Policies List"
+msgstr "Πίσω στη λίστα με όλες τις πολιτικές"
+
+msgid "Basic Policies"
+msgstr "Βασικές Πολιτικές"
+
+msgid "Advanced Policies"
+msgstr "Ειδικότερες Πολιτικές"
+
+msgid "Unsupported Policies"
+msgstr "Μη Υποστηριζόμενες Πολιτικές"
+
+msgid ""
+"(*) Note: This attribute is not used by the supporting applications "
+"(Arcanum, CAS); however, it can be used by other third-party applications "
+"which also make use of this LDAP Password Policy."
+msgstr ""
+"(*) Σημ. Το attribute αυτό δε λαμβάνεται υπ όψη στις υποστηριζόμενες "
+"εφαρμογές (Arcanum, CAS), μπορεί ωστόσο να λαμβάνεται υπ όψη από τρίτες "
+"εφαρμογές που χρησιμοποιείτε και που υποστηρίζουν την Πολιτική Κωδικών του "
+"LDAP."
+
+msgid "Current Value"
+msgstr "Τρέχουσα Τιμή"
+
+msgid "New Value"
+msgstr "Νέα Τιμή"
+
+msgid "Description"
+msgstr "Αναλυτική Περιγραφή"
+
+msgid "passwords"
+msgstr "κωδικοί"
+
+msgid "Checked"
+msgstr "Ελέγχθηκε"
+
+msgid "Enforced"
+msgstr "Εφαρμόζεται"
+
+msgid "Not Enforced"
+msgstr "Δεν Εφαρμόζεται"
+
+msgid "characters"
+msgstr "χαρακτήρες"
+
+msgid "seconds before current password expires"
+msgstr "δευτερόλεπτα πριν τη λήξη του τρέχοντος κωδικού"
+
+msgid "tries"
+msgstr "προσπάθειες"
+
+msgid "times"
+msgstr "φορές"
+
+#, php-format
+msgid "Recommended Value: %s"
+msgstr "Προτεινόμενη Τιμή: %s"
+
+msgid "Update Policy"
+msgstr "Ενημέρωση Πολιτικής"
+
+msgid "At a Glance"
+msgstr "Με μια Ματιά"
+
+msgid "Refresh"
+msgstr "Ανανέωση"
+
+msgid "Fix&hellip;"
+msgstr "Διόρθωση&hellip;"
+
+msgid "Search for users&hellip;"
+msgstr "Αναζήτηση για χρήστες&hellip;"
+
+msgid "Secondary Accounts"
+msgstr "Δευτερεύοντες Λογαριασμοί"
+
+msgid "Possible Problems"
+msgstr "Πιθανά Προβλήματα"
+
+msgid "Unlock account"
+msgstr "Ξεκλείδωμα Λογαριασμού"
+
+msgid "Change Password upon Next Login"
+msgstr "Αλλαγή Κωδικού με το επόμενο login"
+
+msgid "Account Information"
+msgstr "Πληροφορίες Λογαριασμού"
+
+msgid "Password-related Attributes"
+msgstr "Στοιχεία σχετικά με Κωδικούς"
+
+msgid "Change password upon next login"
+msgstr "Αλλαγή Κωδικού με το επόμενο login"
+
+msgid "Cancel compulsory password change"
+msgstr "Ακύρωση Αναγκαστικής Αλλαγής"
+
+msgid "Mobile / SMS"
+msgstr "Κινητό / SMS"
+
+msgid "OpenID"
+msgstr "OpenID"
+
+msgid "#"
+msgstr "α/α"
+
+msgid "Errors encountered. Please correct the following and try again:"
+msgstr ""
+"Παρουσιάστηκαν σφάλματα. Παρακαλούμε διορθώστε τα παρακάτω και "
+"ξαναπροσπαθήστε:"
+
+#, php-format
+msgid "Allowed characters: %s"
+msgstr "Επιτρεπτοί Χαρακτήρες: %s"
+
+msgid "Password must consist of at least 6 characters; "
+msgstr "Ο κωδικός σας πρέπει να αποτελείται τουλάχιστον από 6 χαρακτήρες,"
+
+msgid "Must contain at least one number or symbol"
+msgstr "Να περιέχει τουλάχιστον 1 αριθμό ή σύμβολο"
+
+msgid "More information about password safety &gt;"
+msgstr "Περισσότερα για την ασφάλεια κωδικού &gt;"
+
+msgid "Password:"
+msgstr "Κωδικός:"
+
+msgid "New Password:"
+msgstr "Νέος κωδικός:"
+
+msgid "Confirm New Password:"
+msgstr "Επιβεβαίωση νέου κωδικού:"
+
+msgid "Save"
+msgstr "Αποθήκευση"
+
+msgid "Warning: Inactive Account due to Expired Password"
+msgstr "Προσοχή: Ανενεργός Κωδικός λόγω Λήξης."
+
+msgid ""
+"Your password has remained unchanged for a long time and thus has expired. "
+"You must enter a new, different password. After you change your password, "
+"you will be able to log in to the provided services."
+msgstr ""
+"Ο κωδικός σας έχει μείνει για μεγάλο χρονικό διάστημα χωρίς αλλαγή και έχει "
+"λήξει η ισχύς του. Πρέπει να εισάγετε έναν νέο κωδικό, διαφορετικό από τον "
+"προηγούμενο. Με την αλλαγή του κωδικού, ο λογαριασμός σας θα μπορεί να "
+"χρησιμοποιηθεί ξανά για ταυτοποίηση σε υπηρεσίες."
+
+msgid "Warning: Inactive Account"
+msgstr "Προσοχή: Ανενεργός Λογαριασμός"
+
+msgid ""
+"The current password can only be used to enter a new, personalized password. "
+"Once you change your password, you will be able to log in to services again."
+msgstr ""
+"Ο τρέχων μυστικός κωδικός σας μπορεί να χρησιμοποιηθεί μόνο για να εισάγετε "
+"έναν νέο, δικό σας κωδικό. Με την αλλαγή του κωδικού, ο λογαριασμός σας θα "
+"μπορεί να χρησιμοποιηθεί ξανά για ταυτοποίηση σε υπηρεσίες."
+
+msgid "Your password has been updated."
+msgstr "Ο κωδικός σας ενημερώθηκε επιτυχώς."
+
+#, php-format
+msgid ""
+"You will be redirected to the login page, where you'll need to login with "
+"your new password, in %s seconds."
+msgstr ""
+"Θα μεταφερθείτε αυτόματα πίσω στη σελίδα εισόδου για να πραγματοποιήσετε "
+"είσοδο με τον νέο σας κωδικό, σε %s δευτερόλεπτα."
+
+msgid "(Click here if you do not wish to wait."
+msgstr "(Αν δεν επιθυμείτε να περιμένετε, κάντε κλικ εδώ)."
+
+#, php-format
+msgid ""
+"You will be redirected to the login page in %s seconds. If you need to make "
+"further changes, please login again."
+msgstr ""
+"Θα μεταφερθείτε αυτόματα πίσω στη σε %s δευτερόλεπτα. Εάν επιθυμείτε να "
+"κάνετε περαιτέρω αλλαγές, πρέπει να κάνετε είσοδο εκ νέου."
+
+msgid "Back to Change Password Home"
+msgstr "Επιστροφή στη σελίδα Αλλαγής Κωδικού"
+
+msgid "Password Recovery Information"
+msgstr "Καταχώρηση στοιχείων"
+
+msgid "Your information has been updated."
+msgstr "Τα στοιχεία σας ενημερώθηκαν επιτυχώς."
+
+msgid ""
+"For the case that you ever forget your password, you should register a "
+"secondary e-mail address or a mobile phone number with us; this way, you can "
+"reset your password easily."
+msgstr ""
+"Σε περίπτωση που ξεχάσετε τον κωδικό σας, θα πρέπει να έχετε καταχωρημένο "
+"ένα δευτερεύον email ή τον αριθμό του κινητού σας τηλεφώνου για να γίνει η "
+"επιβεβαίωση στοιχείων χρήστη και να μπορέσετε να προχωρήσετε στην εισαγωγή "
+"νέου κωδικού."
+
+msgid "Secondary e-mail address:"
+msgstr "Δευτερεύον email:"
+
+msgid "Mobile phone number:"
+msgstr "Αριθμός κινητού τηλεφώνου:"
+
+msgid "Skip"
+msgstr "Παράβλεψη"
+
+msgid "Disable reminder"
+msgstr "Απενεργοποίηση υπενθύμισης "
+
+#, php-format
+msgid "for the next %s days"
+msgstr "για τις επόμενες %s ημέρες"
+
+msgid "An error has been encountered:"
+msgstr "Παρουσιάστηκε Σφάλμα:"
+
+msgid "Technical information about this error:"
+msgstr "Τεχνικές λεπτομέρειες σφάλματος:"
+
+#, php-format
+msgid "File %s, line %s"
+msgstr "Αρχείο %s, γραμμή %s"
+
+#, php-format
+msgid "Backtrace: %s"
+msgstr "Backtrace: %s"
+
+msgid "Please press &quot;back&quot; in your browser and try again."
+msgstr ""
+"Παρακαλούμε πατήστε &quot;Πίσω&quot; στον Browser σας και ξαναπροσπαθήστε."
+
+msgid "If the problem persists, contact your local administrator."
+msgstr ""
+
+msgid "Available Functions"
+msgstr "Διαθέσιμες Λειτουργίες"
+
+msgid ""
+"The password management serice allows you to reset your forgotten password "
+"or change your password safely."
+msgstr ""
+"Η Υπηρεσία Διαχείρισης κωδικού χρήστη σας παρέχει τη δυνατότητα ανάκτησης "
+"κωδικού σε περίπτωση που τον έχετε ξεχάσει ή αλλαγής του κωδικού σας με "
+"ασφαλή τρόπο."
+
+msgid "The following functionality is available:"
+msgstr ""
+"Συγκεκριμένα μέσω της Υπηρεσίας Διαχείρισης κωδικού χρήστης είναι διαθέσιμες "
+"οι ακόλουθες λειτουργίες:"
+
+msgid "Reset password in case you have forgotten your original password"
+msgstr "Εισαγωγή νέου κωδικού σε περίπτωση που έχετε ξεχάσει τον κωδικό σας"
+
+msgid ""
+"Register a mobile phone number or a secondary e-mail address, for password "
+"recovery"
+msgstr ""
+"Καταχώρηση email ή αριθμού κινητού τηλεφώνου, έτσι ώστε σε περίπτωση που "
+"ξεχάσετε τον κωδικό σας να μπορούμε να τον ανακτήσουμε άμεσα"
+
+msgid "Logged in as:"
+msgstr "Συνδεθήκατε ως: "
+
+msgid "Logout"
+msgstr "Αποσύνδεση"
+
+msgid ""
+"Your password has expired. In order to continue using the provided services, "
+"you have to change your password."
+msgstr ""
+"Ο κωδικός σας έχει λήξει. Για να συνεχίσετε να χρησιμοποιείτε τις "
+"παρεχόμενες υπηρεσίες, πρέπει να τον αλλάξετε."
+
+msgid "Please log in with your old password and change it with a new one."
+msgstr ""
+"Παρακαλούμε πραγματοποιήστε είσοδο με τον παλιό κωδικό σας και στη συνέχεια "
+"αλλάξτε τον με έναν καινούριο."
+
+msgid "Welcome to the User Password Management Service."
+msgstr "Καλωσήλθατε στην Υπηρεσία Διαχείρισης κωδικού χρήστη!"
+
+msgid "Here you can change or recover your password."
+msgstr ""
+"H Υπηρεσία Διαχείρισης κωδικού χρήστη σας παρέχει τη δυνατότητα εισαγωγής "
+"νέου κωδικού σε περίπτωση που τον έχετε ξεχάσει και αλλαγής του κωδικού σας "
+"με ασφαλή τρόπο."
+
+msgid "News &amp; Announcements"
+msgstr "Νέα &amp; Ανακοινώσεις:"
+
+msgid "Login"
+msgstr "Είσοδος"
+
+msgid "Username:"
+msgstr "Όνομα Χρήστη:"
+
+msgid "I have forgotten my password"
+msgstr "Έχω ξεχάσει τον κωδικό μου"
+
+#, php-format
+msgid "Active account. Password expires in %s."
+msgstr "Ενεργός Κωδικός. Λήξη ισχύος τρέχοντος κωδικού σε %s"
+
+msgid "Warning: Inactive Password"
+msgstr "Προσοχή: Ανενεργός Κωδικός"
+
+msgid "Warning: Inactive Account."
+msgstr "Προσοχή: Ανενεργός Λογαριασμός."
+
+msgid ""
+"Your current password cannot be used to authenticate you to services, "
+"probably due to having expired."
+msgstr ""
+"Ο μυστικός κωδικός σας δεν μπορεί να χρησιμοποιηθεί για ταυτοποίηση σε "
+"υπηρεσίες, πιθανόν λόγω λήξης της ισχύος του."
+
+msgid "Please change your password immediately."
+msgstr "Παρακαλούμε αλλάξτε άμεσα τον κωδικό σας."
+
+msgid "Warning: Password has expired and must be changed!"
+msgstr "Προσοχή: Ο κωδικός έχει λήξει και πρέπει να αλλαχθεί!"
+
+msgid ""
+"Your current password has expired and you must change it immediately. If you "
+"don't change it, it won't be possible to authenticate you to services."
+msgstr ""
+"Ο μυστικός κωδικός σας έχει λήξει και πρέπει να τον αλλάξετε άμεσα. Αν δεν "
+"τον αλλάξετε, πολύ σύντομα δε θα μπορεί να χρησιμοποιηθεί για ταυτοποίηση σε "
+"υπηρεσίες."
+
+msgid "Active Account."
+msgstr "Ενεργός Λογαριασμός"
+
+msgid "Failed Login Attempts"
+msgstr "Αποτυχημένες Προσπάθειες Εισόδου"
+
+msgid ""
+"The following failed login attempts (incorrect or expired password) have "
+"been recorded:"
+msgstr ""
+"Έχουν καταγραφεί οι ακόλουθες αποτυχημένες προσπάθειες εισόδου (εισαγωγή "
+"λάθος κωδικού ή ληγμένος κωδικός):"
+
+msgid "Date &amp; Time"
+msgstr "Ημερομηνία &amp; ώρα"
+
+msgid ""
+"Note: the failed login attempt history is deleted immediately after the "
+"first successful login."
+msgstr ""
+"Σημείωση: οι καταγραφές των αποτυχημένων προσπαθειών εισόδου διαγράφονται "
+"αμέσως, μετά το πρώτο επιτυχές login."
+
+#, php-format
+msgid "To change your password, click %s"
+msgstr "Για να αλλάξετε τον κωδικό σας επιλέξτε %s"
+
+msgid "Home"
+msgstr "Αρχική"
+
+msgid "Password Safety"
+msgstr "Ασφάλεια κωδικού"
+
+msgid "Terms of Service"
+msgstr "Όροι Χρήσης"
+
+msgid "Privacy Policy"
+msgstr "Πολιτική προστασίας προσωπικών δεδομένων"
+
+msgid "Summary"
+msgstr "Σύνοψη"
+
+msgid "Policy"
+msgstr "Πολιτική"
+
+msgid "Notifications"
+msgstr "Ειδοποιήσεις"
+
+msgid "Sessions"
+msgstr "Συνεδρίες"
+
+msgid "Setup"
+msgstr "Ρυθμίσεις"
+
+msgid "About my Administrative Account"
+msgstr "Πληροφορίες για το Διαχειριστικό Λογαριασμό μου"
+
+msgid "Change my Password"
+msgstr "Αλλαγή του Κωδικού μου"
+
+msgid "Confirm your account information to reset your password"
+msgstr "Επιβεβαίωση στοιχείων χρήστη για εισαγωγή νέου κωδικού"
+
+msgid "Unfortunately your details could not be confirmed."
+msgstr "Δυστυχώς η επιβεβαίωση των στοιχείων που εισάγατε απέτυχε."
+
+msgid "Try again."
+msgstr "Προσπαθήστε ξανά"
+
+msgid ""
+"If you cannot recall your password recovery information, you will have to "
+"contact the helpdesk to acquire a new password."
+msgstr ""
+"Σε περίπτωση που δε θυμάστε τα στοιχεία που έχετε καταχωρήσει θα πρέπει να "
+"απευθυνθείτε στη Γραμματεία του Τμήματός σας για να προμηθευτείτε νέο κωδικό "
+"πρόσβασης."
+
+msgid ""
+"If you have forgotten your password, you'll need to confirm your password "
+"recovery preferences first before we allow you to reset your password."
+msgstr ""
+"Σε περίπτωση που έχετε ξεχάσει τον κωδικό σας, απαιτείται να γίνει "
+"επιβεβαίωση των στοιχείων σας για λόγους ασφαλείας και στη συνέχεια θα "
+"προχωρήσετε στην Εισαγωγή νέου κωδικού."
+
+msgid "Enter your username:"
+msgstr "Εισάγετε όνομα χρήστη:"
+
+msgid "Choose one of the following password recovery methods:"
+msgstr "Επιλέξτε έναν από τους παρακάτω τρόπους αποστολής του κωδικού σας"
+
+msgid "Send via e-mail"
+msgstr "Αποστολή με e-mail"
+
+msgid "Enter your surname:"
+msgstr "Εισάγετε το επίθετό σας:"
+
+msgid "Enter the secondary e-mail that you have registered:"
+msgstr "Εισάγετε το δευτερεύον email που έχετε καταχωρήσει:"
+
+msgid "Send via SMS"
+msgstr "Αποστολή με sms"
+
+msgid "Enter the mobile phone number that you have registered:"
+msgstr "Εισάγετε τον αριθμό κινητού τηλεφώνου που έχετε καταχωρήσει:"
+
+msgid "Finally, please enter these two words:"
+msgstr "Τέλος, εισάγετε τις δύο λέξεις:"
+
+msgid "Continue &rarr;"
+msgstr "Συνέχεια &rarr;"
+
+msgid "Please send the following text message via your mobile phone."
+msgstr ""
+"Παρακαλούμε στείλτε το παρακάτω μήνυμα SMS στον αριθμό που αναγράφεται."
+
+msgid "Text message:"
+msgstr "Περιεχόμενο sms:"
+
+msgid "Recipient number:"
+msgstr "Στον αριθμό: "
+
+msgid "* Standard text message cost"
+msgstr "* Χρέωση απλού μηνύματος SMS"
+
+msgid "QR Code"
+msgstr "QR Κώδικας για σκανάρισμα από κινητό"
+
+msgid "Waiting to receive text message&hellip;"
+msgstr "Αναμονή για SMS..."
+
+msgid "Your details have been confirmed."
+msgstr "Η επιβεβαίωση των στοιχείων σας πραγματοποιήθηκε επιτυχώς!"
+
+msgid ""
+"Enter the verification number that we just sent to your mobile, in order to "
+"reset your password:"
+msgstr ""
+"Εισάγετε τον κωδικό επιβεβαίωσης που έχει σταλεί στο κινητό σας και πατήστε "
+"Συνέχεια για να προχωρήσετε στην Εισαγωγή νέου κωδικού:"
+
+msgid "Tips to choose a safe password"
+msgstr "Συμβουλές για επιλογή ασφαλούς κωδικού"
+
+msgid ""
+"For your safety, choose a password that you can remember easily but one you "
+"cannot find in dictionaries. Passwords that include a number or symbol are "
+"better and less likely to get cracked."
+msgstr ""
+"Για την ασφάλειά σας, επιλέξτε έναν κωδικό που μπορείτε να θυμάστε εύκολα "
+"και δεν βρίσκεται σε λεξικά. Κωδικοί μαζί με κάποιον αριθμό ή σύμβολο "
+"θεωρούνται γενικά πιο ασφαλείς και δύσκολο να μαντευτούν από κάποιο "
+"κακόβουλο χρήστη"
+
+msgid "Your password must:"
+msgstr "Ο κωδικός σας πρέπει:"
+
+#, php-format
+msgid "Consist of at least %s characters"
+msgstr "Να αποτελείται τουλάχιστον από %s χαρακτήρες"
+
+msgid "Contain at least 1 number or symbol"
+msgstr "Να περιέχει τουλάχιστον 1 αριθμό ή σύμβολο"
+
+#, php-format
+msgid "Contain at least %s different characters"
+msgstr "Να περιέχει τουλάχιστον %s διαφορετικούς χαρακτήρες"
+
+msgid "Not be too similar to your username"
+msgstr "Δεν πρέπει να μοιάζει πολύ με το όνομα χρήστη"
+
+msgid "Not contain 3 or more successive numbers"
+msgstr "Δεν πρέπει να έχει 3 ή περισσότερα νούμερα διαδοχικά σε αύξουσα σειρά"
+
+msgid "Setup Password Management Application"
+msgstr "Εγκατάσταση Εφαρμογής Διαχείρισης Κωδικών"
+
+msgid "The existing configuration file, config/config.php, is being edited."
+msgstr "Γίνεται επεξεργασία του υπάρχοντος configuration (config/config.php)."
+
+msgid ""
+"To save your changes in each page, click &ldquo;Save&rdquo; at the end of "
+"each page."
+msgstr ""
+"Για να αποθηκεύετε τις αλλαγές σας σε κάθε σελίδα, επιλέξτε &ldquo;"
+"Αποθήκευση&rdquo; στο τέλος της φόρμας."
+
+msgid "Disable Web Setup"
+msgstr "Απενεργοποίηση Εγκατάστασης μέσω Web"
+
+msgid "Cancel Changes and Restart Setup"
+msgstr "Ακύρωση Αλλαγών και Επανέναρξη Installer"
+
+msgid "LDAP server is installed and operational."
+msgstr "Ο LDAP server είναι εγκατεστημένος και λειτουργεί."
+
+#, php-format
+msgid "You have installed %s and %s in LDAP server"
+msgstr "Έχετε εγκαταστήσει το %s καθώς και τα %s στον LDAP server."
+
+#, php-format
+msgid "OpenLDAP Configuration example (%s)"
+msgstr "'Παράδειγμα OpenLDAP configuration (%s)'"
+
+msgid "You have set the proper LDAP ACLs and Policy Module Settings."
+msgstr "Έχετε θέσει τα κατάλληλα LDAP ACLs και settings του Policy Module."
+
+msgid "Proceed"
+msgstr "Συνέχεια"
+
+msgid "Basic Information"
+msgstr "Βασικά στοιχεία"
+
+msgid "Website Home address URL"
+msgstr ""
+"Website Home address URL (να περιλαμβάνει και ολόκληρο το path της εφαρμογής "
+"εάν θα βρίσκεται σε κάποιο directory)"
+
+msgid "Name of Organization"
+msgstr "Όνομα Ιδρύματος"
+
+msgid "Domain Name of Organization"
+msgstr "Domain Name Ιδρύματος"
+
+msgid "Page Title (e.g. Truncated Organization Name)"
+msgstr "Τίτλος Σελίδας (Π.χ. Όνομα Ιδρύματος συμπτυγμένο)"
+
+msgid "Page Subtitle (e.g. Description of Service)"
+msgstr "Υπότίτλος Σελίδας (Π.χ. Περιγραφή Υπηρεσίας)"
+
+msgid ""
+"Page Logo. Either full URL or relative path to image location. <small>"
+"(Optional)</small>"
+msgstr ""
+"Logo Ιδρύματος. Πρέπει να είναι ένα URL ή ένα path προς αρχείο εικόνας. "
+"<small>(Προαιρετικό)</small>"
+
+msgid "Message of the Day"
+msgstr "Ανακοίνωση (Message of the Day)"
+
+msgid ""
+"This text will appear in the login page. It is meant for important "
+"announcements."
+msgstr ""
+"ο κείμενο αυτό θα εμφανίζεται στη σελίδα εισόδου και προορίζεται για "
+"σημαντικές / έκτακτες ανακοινώσεις."
+
+msgid "URL of Terms of Service"
+msgstr "URL για τους Όρους Χρήσης"
+
+msgid "URL of Privacy Policy"
+msgstr "URL για την Πολιτική προστασίας προσωπικών δεδομένων"
+
+msgid "PHP Settings"
+msgstr "Ρυθμίσεις PHP"
+
+msgid ""
+"PHP Session Name (if there are a lot of installations of this application in "
+"the same host)"
+msgstr ""
+"Όνομα PHP Session (αν υπάρχουν πολλές εγκαταστάσεις της εφαρμογής στον ίδιο "
+"host)"
+
+msgid "Note: if you change this attribute, you will have to relogin."
+msgstr ""
+"Σημείωση: εάν αλλάξετε αυτό το attribute, θα πρέπει να ξανακάνετε login."
+
+msgid "LDAP Server Connection"
+msgstr "Σύνδεση με τον LDAP Server"
+
+msgid "LDAP Host or LDAP URI, e.g. ldaps://host:636"
+msgstr "LDAP Host (ή LDAP URI, π.χ. ldaps://host:636)"
+
+msgid "LDAP Base DN"
+msgstr ""
+
+msgid "Bind DN"
+msgstr ""
+
+msgid "Bind Password"
+msgstr ""
+
+msgid "CAS (Login) Server Connection"
+msgstr "Σύνδεση με τον CAS (Login) Server"
+
+msgid "CAS Host"
+msgstr ""
+
+msgid "CAS Port"
+msgstr ""
+
+msgid "CAS URI Path"
+msgstr ""
+
+msgid "LDAP Configuration with regard to Passwords"
+msgstr "Βασικές Επιλογές του LDAP Server σχετικές με Κωδικούς"
+
+msgid "LDAP Password Hash"
+msgstr "Hash για το LDAP Password"
+
+msgid ""
+"Note: affects only newly created passwords; existing passwords will remain "
+"as they are"
+msgstr ""
+"(σημ.: αφορά μόνο τα νέα passwords και δεν επηρεάζει καθόλου τη λειτουργία "
+"και την ισχύ των παλιών passwords, ό,τι hash και αν έχουν)"
+
+msgid "NT Hash attribute (optional)"
+msgstr "Όνομα attribute στο οποίο θα αποθηκεύεται το NT Hash (προαιρετικό)"
+
+msgid "Attribute for symmetrically encrypted cleartext password (optional)"
+msgstr ""
+"Όνομα attribute στο οποίο θα αποθηκεύεται το Cleartext Password (με "
+"<strong>symmetric</strong> encryption) (προαιρετικό)"
+
+msgid "24-byte key for symmetric password encryption"
+msgstr ""
+"24-byte key για την κρυπτογράφηση του Password (αν έχετε συμπληρώσει το "
+"παραπάνω όνομα attribute)"
+
+msgid "Attribute for asymmetrically encrypted cleartext password (optional)"
+msgstr ""
+"Όνομα attribute στο οποίο θα αποθηκεύεται το Cleartext Password (με "
+"<strong>asymmetric</strong> encryption) (προαιρετικό)"
+
+msgid "Feature not implemented yet"
+msgstr "Μελλοντική λειτουργία"
+
+msgid ""
+"Attribute for Time-Based OTP Init Key (format: base-32-encoded) (optional)"
+msgstr ""
+"Όνομα attribute στο οποίο θα αποθηκεύεται το Time-Based OTP Init Key "
+"(format: base-32-encoded) (προαιρετικό)"
+
+msgid "Attribute for storage of One-Time Backup Passwords (optional)"
+msgstr ""
+"Όνομα attribute στο οποίο θα αποθηκεύονται τα One-Time Backup Passwords όταν "
+"είναι ενεργοποιημένο το Time-Based OTP Authentication (προαιρετικό)"
+
+msgid "DigestHA1 Attribute (optional)"
+msgstr "Όνομα attribute στο οποίο θα αποθηκεύεται το Digest HA1 (προαιρετικό)"
+
+msgid "DigestHA1 Realm (optional)"
+msgstr "Το Realm για το Digest HA1 (προαιρετικό)"
+
+msgid ""
+"LDAP Attributes for storing secondary account information, intended for "
+"forgotten password functionality"
+msgstr ""
+"LDAP Attributes που θα διατηρούν δευτερεύοντα accounts, για τη λειτουργία "
+"επανάκτησης κωδικού"
+
+msgid "Attribute for mobile phone number, for recovery via SMS text message"
+msgstr "Όνομα LDAP attribute στο οποίο γράφεται o αριθμός κινητού (για SMS)"
+
+msgid "(Leave blank to disable this password reset method)"
+msgstr ""
+"(Αφήστε κενό, για να μην υποστηρίζεται η επανάκτηση κωδικού μέσω αυτής της "
+"μεθόδου)"
+
+msgid "Attribute for <strong>secondary</strong> e-mail address"
+msgstr ""
+"Όνομα LDAP attribute στο οποίο γράφεται το <strong>δευτερεύον</strong> e-"
+"mail χρήστη"
+
+msgid "Attribute for OpenID account"
+msgstr "Όνομα LDAP attribute στο οποίο γράφεται ο λογαριασμός OpenID χρήστη"
+
+msgid "LDAP Filters and Administrators"
+msgstr "LDAP Φίλτρα και Διαχειριστές"
+
+msgid "Filter for finding out actual users."
+msgstr "Φίλτρο που θα χρησιμοποιείται για την εξακρίβωση των χρηστών."
+
+#, php-format
+msgid "The %s will be substituted by the username."
+msgstr "Το %s θα αντικατασταθεί με το username."
+
+msgid ""
+"Filter to determine which users are allowed to receive SMS text messages."
+msgstr ""
+"Φίλτρο που θα προστίθεται για την εξακρίβωση των χρηστών που θα επιτρέπεται "
+"να λαμβάνουν SMS."
+
+msgid ""
+"Filter to determine the password administrator(s) of this application. A "
+"password administrator can change passwords and lock accounts for everyone "
+"in this directory."
+msgstr ""
+"Φίλτρο που θα χρησιμοποιείται για την εξακρίβωση του ή των διαχειριστών "
+"κωδικών αυτής της εφαρμογής. Οι διαχειριστές κωδικών μπορούν να αλλάζουν "
+"κωδικούς χρηστών και να κλειδώνουν λογαριασμούς."
+
+msgid ""
+"Filter to determine the global policy administrator(s) for this application. "
+"A policy administrator, in addition to changing users' passwords and locking "
+"accounts, can also change the password policy that is in effect (e.g. the "
+"maximum password age)."
+msgstr ""
+"Φίλτρο που θα χρησιμοποιείται για την εξακρίβωση του ή των διαχειριστών "
+"αυτής της εφαρμογής. Οι διαχειριστές αυτοί θα μπορούν να αλλάζουν κωδικούς "
+"χρηστών και να κλειδώνουν λογαριασμούς, κι επιπλέον να επεξεργάζονται την "
+"πολιτική χρήσης κωδικών (π.χ. διάρκεια ισχύος κωδικών)."
+
+msgid "Usage of ReCAPTCHA Service"
+msgstr "Χρήση Υπηρεσίας ReCAPTCHA"
+
+msgid ""
+"This application can use the ReCAPTCHA Service  to protect login forms from "
+"robots and dictionary attacks."
+msgstr ""
+"Η εφαρμογή αυτή χρησιμοποιεί την υπηρεσία ReCAPTCHA για προστασία από robots "
+"και επιθέσεις τύπου dictionary attacks."
+
+#, php-format
+msgid ""
+"To enable, go to the page %s, choose %s and create an API key for this site."
+msgstr ""
+"Μεταβείτε στη σελίδα %s, επιλέξτε %s και δημιουργήστε ένα API key για το "
+"site αυτό."
+
+msgid "Then, enter your Public and Private keys here:"
+msgstr "Ακολούθως εισάγετε τα Public και Private keys που φτιάξατε, εδώ:"
+
+msgid "Public Key"
+msgstr ""
+
+msgid "Private Key"
+msgstr ""
+
+msgid "E-mail Settings"
+msgstr "Ρύθμιση Αποστολής E-mail"
+
+msgid ""
+"Here you can set up the e-mail submission settings. The e-mail messages that "
+"are sent from this application can be instant notifications (&ldquo;Your "
+"password has just changed&rdquo;), password reset requests (&ldquo;Click "
+"here to reset your password&rdquo;) or periodical notifications (&ldquo;"
+"Attention, your password expires in one week&rdquo;)."
+msgstr ""
+"Τα e-mail που αποστέλλονται είναι είτε άμεσες ειδοποιήσεις (&ldquo;Άλλαξε ο "
+"κωδικός σας&rdquo;), είτε ενέργειες ανάκτησης κωδικού μέσω e-mail (&ldquo;"
+"Κάντε κλικ εδώ για να ανακτήσετε τον κωδικό σας&rdquo;) είτε περιοδικές "
+"ειδοποιήσεις (&ldquo;Προσοχή, ο κωδικός σας λήγει σε μία εβδομάδα&rdquo;)."
+
+msgid "Mail Host (SMTP / Submission)"
+msgstr ""
+
+msgid "Mail From: Address"
+msgstr ""
+
+msgid "Mail From: Name"
+msgstr ""
+
+msgid "Mail Reply-To: address (optional)"
+msgstr ""
+
+msgid "SSL"
+msgstr ""
+
+msgid "SMTP Port"
+msgstr ""
+
+msgid "SMTP authentication (optional, enter 'login' to perform authentication)"
+msgstr ""
+"SMTP authentication (προαιρετικό, εισάγετε 'login' για να πραγματοποιείται "
+"authentication)"
+
+msgid "SMTP username (optional)"
+msgstr ""
+
+msgid "SMTP password (optional)"
+msgstr ""
+
+msgid "SMS Gateway Settings"
+msgstr "Ρύθμιση Αποστολής SMS"
+
+msgid "Operator Number"
+msgstr "Αριθμός του Κέντρου που λαμβάνει μηνύματα"
+
+msgid "SMS Gateway Host"
+msgstr ""
+
+msgid "Port"
+msgstr ""
+
+msgid "URI (path)"
+msgstr ""
+
+msgid "SMS Accounting (MySQL Database; optional)"
+msgstr "SMS Accounting (MySQL βάση. Προαιρετικό)"
+
+msgid "Host"
+msgstr ""
+
+msgid "Database name"
+msgstr ""
+
+msgid "Confirm and Save"
+msgstr "Επιβεβαίωση και Αποθήκευση Ρυθμίσεων"
+
+#, php-format
+msgid "Your settings will be saved in file %s."
+msgstr "Οι ρυθμίσεις σας θα αποθηκευθούν στο αρχείο %s."
+
+msgid ""
+"Afterwards, you will be redirected to the login page where you can log in "
+"with an LDAP account."
+msgstr "Στη συνέχεια θα μεταβείτε στη σελίδα εισόδου όπου θα μπορείτε να κάνετε login με έναν λογαριασμό LDAP."
+
+msgid ""
+"We recommend that you log in with a &ldquo;policy administrator&rdquo; "
+"account so that you will continue with the service setup (e.g. setup "
+"password policies, define additional password administrators per department, "
+"setup users' accounts etc.)."
+msgstr "Συνιστούμε να συνδεθείτε με ένα λογαριασμό &ldquo;διαχειριστή πολιτικής&rdquo; (&ldquo;policy administrator&rdquo;) για να συνεχίσετε με τη ρύθμιση της υπηρεσίας σας (π.χ. ορισμός πολιτικών κωδικών, ορισμός επιπρόσθετων διαχειριστών κωδικών ανά τμήμα, ρύθμιση λογαριασμών χρηστών κ.λπ.)."
+
+msgid "Save configuration File"
+msgstr "Αποθήκευση Αρχείου Ρυθμίσεων"
+
+#, php-format
+msgid ""
+"From now on, these settings will be accessible from inside the application. "
+"Just log in as a password policy administrator and go to Setup tab. You can "
+"reenable the installer by removing the file %s."
+msgstr "Από εδώ και στο εξής, αυτές οι επιλογές θα είναι διαθέσιμες μέσω της εφαρμογής. Απλά πραγματοποιήστε είσοδο ως διαχειριστής πολιτικής κωδικών (policy administrator) και μεταβείτε στην καρτέλα Ρυθμίσεις. Μπορείτε να επανενεργοποιήσετε τον web installer διαγράφοντας το αρχείο %s."
+
+msgid ""
+"In this page, you can define administrators who can manage users' passwords, "
+"per organizational unit or user group."
+msgstr ""
+"Σε αυτή τη σελίδα μπορείτε να ορίσετε διαχειριστές κωδικών ανά μονάδα ή "
+"κατηγορία χρηστών."
+
+msgid ""
+"Administrator(s) are defined according to the <em>Administration Filter</em>."
+msgstr "Οι διαχειριστές ορίζονται σύμφωνα με το πεδίο Administration Filter."
+
+msgid ""
+"These administrators can change the password of the users, who are defined "
+"according to the <em>Apply to Users Filter</em>."
+msgstr ""
+"Οι χρήστες, των οποίων τον κωδικό μπορούν να αλλάξουν, ορίζεται σύμφωνα με "
+"το Apply to Users Filter."
+
+msgid "Add new Administrator(s)"
+msgstr "Προσθήκη νέου Διαχειριστή(ών)"
+
+msgid "Identifier"
+msgstr "Κωδική Ονομασία"
+
+msgid "Administrator Filter"
+msgstr "Φίλτρο Διαχειριστή"
+
+msgid "Apply to Users Filter"
+msgstr "Φίλτρο για Αντιστοίχιση σε Χρήστες"
+
+msgid "Delete"
+msgstr "Διαγραφή"
+
+msgid "You have signed out successfully."
+msgstr "Αποσυνδεθήκατε επιτυχώς."
+
+#, php-format
+msgid "The password of the account %s has been successfully changed."
+msgstr ""
+"Η αλλαγή του κωδικού για το λογαριασμό με username %s πραγματοποιήθηκε με "
+"επιτυχία."
+
+#, php-format
+msgid ""
+"<a href=\"%s\">Continue to service %s</a> (you will be asked to reenter your "
+"password)"
+msgstr ""
+"<a href=\"%s\">Συνεχίστε στην Υπηρεσία %s</a> (θα χρειαστεί να ξαναεισάγετε "
+"τον κωδικό σας)"
+
+msgid "Login Page"
+msgstr "Σελίδα Εισόδου"
+
+#, php-format
+msgid ""
+"Note: The server has reported this error message: %s. Please contact your "
+"administrator and mention this message."
+msgstr ""
+"Σημείωση: Το λάθος που αναφέρει το σύστημα είναι: %s. Παρακαλούμε "
+"επικοινωνήστε με τον διαχειριστή του συστήματος αναφέροντας το παραπάνω "
+"μήνυμα λάθους."

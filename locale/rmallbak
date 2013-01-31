@@ -1,0 +1,6 @@
+#!/bin/sh
+for dir in `ls -1d ../locale/??_??`
+do
+	echo "Deleting $dir/LC_MESSAGES/*.po.bak"
+	rm -f $dir/LC_MESSAGES/*.po.bak
+done

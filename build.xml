@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+
+<project name="arcanum" default="dist" basedir=".">
+    <target name="apidocs">
+        <docblox title="API Documentation" destdir="doc/api">
+         <fileset dir="./include">
+            <include name="*.php" />
+         </fileset>
+        </docblox>
+    </target>
+    
+    <target name="clean">
+        <delete dir="./build" includeemptydirs="true" verbose="false" />
+        <delete file="./arcanum.tar.gz" />
+    </target>
+    
+    <target name="compilelocales">
+        <echo msg="Compiling locales" />
+        <exec command="msgfmt -c -v -o locale/el_GR/LC_MESSAGES/arcanum.mo locale/el_GR/LC_MESSAGES/arcanum.po" />
+    </target>
+
+    <target name="test">
+        <exec command="php codecept.phar run" level="debug" checkreturn="true" />
+    </target>
+
+    <target name="prepare" depends="clean,compilelocales">
+        <svnlastrevision svnpath="/usr/bin/svn" workingcopy="./" propertyname="svn.lastrevision" />
+        <property name="destdir" value="./build" />
+        <mkdir dir="${destdir}" />
+        <echo file="${destdir}/revision.txt" append="false">${svn.lastrevision}</echo>
+    </target>
+
+    <target name="build" depends="prepare">
+        <echo msg="Copying files to build directory..." />
+        <copy todir="./build/arcanum" >
+            <fileset dir=".">
+                <include name="**.htaccess" />
+                <include name="*.php" />
+                <include name="include/**" />
+                <include name="cli/*.php" />
+                <include name="images/**" />
+                <include name="doc/**" />
+                <include name="javascripts/*.js" />
+                <include name="lib/**" />
+                <include name="locale/**" />
+                <include name="style/**" />
+                <include name="templates/**" />
+
+                <exclude name="**.po" />
+                <exclude name="style/custom.css" />
+            </fileset>
+        </copy>
+        <mkdir dir="./build/arcanum/config" />
+        <mkdir dir="./build/arcanum/data" />
+    </target>
+
+    <target name="dist" depends="build">
+        <echo msg="Creating archive..." />
+
+        <tar destfile="./arcanum.tar.gz" compression="gzip">
+            <fileset dir="./build">
+                <include name="*" />
+            </fileset>
+        </tar>
+
+        <echo msg="Build complete." />
+    </target>
+
+    <target name="deploy">
+        <exec command="./cli/deploy_test.sh" dir="./" />
+    </target>
+</project>

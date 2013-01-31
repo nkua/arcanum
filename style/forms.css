@@ -1,0 +1,107 @@
+@charset "utf-8";
+
+/* HTML5 tags */
+article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video{ display: block; }
+mark, rp, rt, ruby, summary, time{ display: inline }
+
+
+/* Forms */
+.box-form {
+	border: 1px solid #999;
+	background: #F2F2F2;
+	-moz-box-shadow:    0 0 5px #000;
+    -webkit-box-shadow: 0 0 5px #000;
+    box-shadow:       0 0 5px #666;
+	padding:10px;
+	overflow:auto;
+    margin-right:15px;
+}
+.box-form#account{
+	margin-bottom:15px;
+
+}
+.form-line {
+    width:100%;
+    padding-bottom:15px;
+	padding-top:5px;
+    clear:both;
+	overflow:auto;
+}
+
+.form-text {
+	width:50%;
+	padding-right:5px;
+	float:left;
+}
+.form-input {
+	width:40%;
+	float:left;
+}
+.paddingdiv {
+	width:100%;
+	min-height:30px;
+}
+
+.formleft-part {
+	width:45%;
+	float:left;
+}
+.formright-part {
+	width:30%;
+	float right;
+}
+
+/*Confirmation form*/
+#email.form-sendby {
+	float:left;
+	padding:10px 40px;
+	clear:both;
+}
+#sms.form-sendby {
+	float:left;
+	padding:10px 40px;
+	clear:both;
+}
+.formconf-text {
+	float:left;
+	padding-bottom:10px;
+	clear:both;
+}
+.formconf-input {
+	float:left;
+	padding-bottom:10px;
+	clear:both;
+}
+.formleft-input {
+	float:left;
+	padding:10px 20px;
+	clear:both;
+}
+
+
+/* Form input fields style */
+
+input {
+    outline:none;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border:1px solid rgba(0,0,0, 0.2);
+
+
+}
+
+input[type="text"], input[type="password"] {
+    padding: 1px 0; 
+    line-height: normal;
+    height: 16px;
+}
+
+input:focus {
+    box-shadow: 0 0 5px #09F;
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, 1); 
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 255, 1);
+}
