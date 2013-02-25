@@ -66,7 +66,7 @@
                <div class="form-line">
                    <div class="form-text">&nbsp;</div>
                    <div class="form-input"><div class="button-left">
-                       <input type="submit" class="button blue" value="<?= _("Save") ?>" id="changepass_do" name="changepass_do" />
+                       <input type="submit" class="button blue btn" value="<?= _("Save") ?>" id="changepass_do" name="changepass_do" />
                    </div>
                </div>
            </div>

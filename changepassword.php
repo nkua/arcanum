@@ -229,20 +229,17 @@ $t->display('html_header');
 
 if($isAdmin) {
     $t->display('page_header_admin');
+    $t->display('change_password_admin_layout');
+    $t->display('page_footer_admin');
+
 } else {
     $t->display('page_header');
     if(empty($cleared_for) || sizeof($cleared_for) > 1) {
         $t->display('navigation_user');
     }
-}
-
-
-$t->display('change_password');
-
-if($isAdmin) {
-    $t->display('page_footer_admin');
-} else {
+    $t->display('change_password');
     $t->display('page_footer');
 }
+
 $t->display('html_footer');
 
