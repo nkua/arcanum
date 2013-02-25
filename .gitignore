@@ -1,0 +1,2 @@
+config/config*.php
+locale/*/LC_MESSAGES/arcanum.mo
