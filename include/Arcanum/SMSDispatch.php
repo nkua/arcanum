@@ -17,7 +17,7 @@ class Arcanum_SMSDispatch {
      * According to $status, it logs the transaction using syslog and sends
      * the reply text back to the client. Never returns!
      */
-    public static function send($status,$acct,$smsc="",$phone="",$msg=array(),$uid="",$pw="") {
+    public static function send($status,$smsc="",$phone="",$msg=array(),$uid="",$pw="") {
         global $config;
 
         switch($status) {
@@ -107,25 +107,6 @@ class Arcanum_SMSDispatch {
             $respMsg = str_replace($pw, '********', $replmsg);
         } else {
             $respMsg = $replmsg;
-        }
-
-        if($acct !== false) {
-            $acct->setResponseData(array(
-               'message' =>  $respMsg,
-               'status'  =>  $status
-           ));
-
-            if(($e = $acct->connect()) !== 0) {
-                openlog('arcanum',LOG_ODELAY,LOG_AUTH);
-                syslog(LOG_ALERT, 'Could not connect to accounting db. Server returned '.$e);
-                closelog();
-            }
-
-            if(($e = $acct->write()) !== 0) {
-                openlog('arcanum',LOG_ODELAY,LOG_AUTH);
-                syslog(LOG_ALERT, 'Could not write to accounting db. Server returned '.$e);
-                closelog();
-            }
         }
 
         self::echoResponse($replmsg);

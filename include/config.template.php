@@ -122,15 +122,6 @@ return array(
         'ip_receive' => array(
         ),
     ),
-    'smsacct' => array(
-        'dbsrv' => array(
-            'host' => '',
-            'port' => 3306,
-            'user' => '',
-            'pass' => '',
-            'db' => 'sms_accounting'
-        ),
-    ),
     'login_servers' => array(
     ),
     'timezone' => 'Europe/Athens',

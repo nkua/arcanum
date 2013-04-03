@@ -155,11 +155,6 @@ if(isset($_POST['submitstep']) && in_array($_POST['submitstep'], $ops)) {
         $cfg->saveAttr('smsgw__uri');
         $cfg->saveAttr('smsgw__username');
         $cfg->saveAttr('smsgw__password');
-        $cfg->saveAttr('smsacct__dbsrv__host');
-        $cfg->saveAttr('smsacct__dbsrv__port');
-        $cfg->saveAttr('smsacct__dbsrv__user');
-        $cfg->saveAttr('smsacct__dbsrv__pass');
-        $cfg->saveAttr('smsacct__dbsrv__db');
         break;
     
     case '7_admins':

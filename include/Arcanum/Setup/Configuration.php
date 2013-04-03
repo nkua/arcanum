@@ -32,10 +32,7 @@ class Arcanum_Setup_Configuration {
         // 'login_servers',
         'cas__host', 'cas__port', 'cas__uri',
         'sms_operator_number', 'smsgw__host', 'smsgw__port',
-        'smsgw__uri', 'smsgw__username',
-        'smsgw__password', 'smsacct__dbsrv__host',
-        'smsacct__dbsrv__port', 'smsacct__dbsrv__user',
-        'smsacct__dbsrv__pass', 'smsacct__dbsrv__db',
+        'smsgw__uri', 'smsgw__username', 'smsgw__password'
     );
 
     /**

@@ -18,9 +18,6 @@ ini_set('error_prepend_string', '');
 ini_set('error_append_string', '');
 
 require_once('lib/sms_service_def/sms_service_def.inc.php');
-include_once('lib/smsacct/SMSAcct.class.php');
-require_once('lib/smsacct/SMSAcctRequest.class.php');
-include_once('lib/smsacct/SMSAcctNotification.class.php');
 
 $msgs = array();
 
@@ -28,46 +25,35 @@ $PHONE = !empty($_GET['phone']) ? $_GET['phone'] : NULL;
 $SMSC = !empty($_GET['smsc']) ? $_GET['smsc'] : NULL;
 $TEXT = !empty($_GET['text']) ? $_GET['text'] : NULL;
 
-if(!empty($config->smsacct->dbsrv->host)) {
-    $acct = new SMSAcctRequest($config->smsacct->toArray(), $PHONE, $SMSC, SMSCHP);
-
-    $acct->setRequestData(array(
-        'type' => SMSCHP_CHP,
-        'message' => !empty($TEXT) ? $TEXT : NULL
-    ));
-} else {
-    $acct = false;
-}
-
 if(!isset($SMSC,$PHONE,$TEXT)) {
-	Arcanum_SMSDispatch::send(SMS_INVALID_REQUEST,$acct);
+	Arcanum_SMSDispatch::send(SMS_INVALID_REQUEST);
 }
 
 if(isset($smsc_deny) && !(array_search($SMSC,$smsc_deny)===false)) {
-	Arcanum_SMSDispatch::send(SMS_SMSC_DENIED,$acct,$SMSC,$PHONE);
+	Arcanum_SMSDispatch::send(SMS_SMSC_DENIED,$SMSC,$PHONE);
 }
 
 if(isset($smsc_allow) && (array_search($SMSC,$smsc_allow)===false)) {
-	Arcanum_SMSDispatch::send(SMS_SMSC_NOT_ALLOWED,$acct,$SMSC,$PHONE);
+	Arcanum_SMSDispatch::send(SMS_SMSC_NOT_ALLOWED,$SMSC,$PHONE);
 }
 
 $arcanumLdap = new Arcanum_Ldap();
 $ldap = $arcanumLdap->connect();
 
 if (!$ldap) {
-	Arcanum_SMSDispatch::send(SMS_LDAP_CONNECT,$acct,$SMSC,$PHONE);
+	Arcanum_SMSDispatch::send(SMS_LDAP_CONNECT,$SMSC,$PHONE);
 }
 
 $filter = sprintf($config->ldap->filter->user_receivesms, $PHONE);
 $result = @ldap_search($ldap, $config->ldap->basedn, $filter, array('uid'),0,9);
 
 if ($result === false) {
-	Arcanum_SMSDispatch::send(SMS_LDAP_SEARCH,$acct,$SMSC,$PHONE);
+	Arcanum_SMSDispatch::send(SMS_LDAP_SEARCH,$SMSC,$PHONE);
 }
 
 $entries = ldap_get_entries($ldap, $result);
 if($entries['count']==0) {
-	Arcanum_SMSDispatch::send(SMSCHP_NOT_FOUND,$acct,$SMSC,$PHONE);
+	Arcanum_SMSDispatch::send(SMSCHP_NOT_FOUND,$SMSC,$PHONE);
 } 
 
 $username="";
@@ -86,7 +72,7 @@ if($entries['count']==1) {
 			$username=$uids[$choice-1];
 	}
 	if($username=="") {
-		Arcanum_SMSDispatch::send(SMSCHP_LIST,$acct,$SMSC,$PHONE,$uids);
+		Arcanum_SMSDispatch::send(SMSCHP_LIST,$SMSC,$PHONE,$uids);
 	}
 }
 
@@ -109,10 +95,10 @@ $tok = new Arcanum_Token_Sms;
 $token = $tok->generate_token();
 $tok->set_token($token, $username);
 
-Arcanum_SMSDispatch::send(SMSCHP_OK,$acct,$SMSC,$PHONE,array(),$username,$token);
+Arcanum_SMSDispatch::send(SMSCHP_OK,$SMSC,$PHONE,array(),$username,$token);
 
 // upon error:
 // FIXME
-//Arcanum_SMSDispatch::send(SMSCHP_FAIL,$acct,$SMSC,$PHONE,$msgs,$username,$token);
+//Arcanum_SMSDispatch::send(SMSCHP_FAIL,$SMSC,$PHONE,$msgs,$username,$token);
 
 
