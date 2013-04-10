@@ -215,7 +215,7 @@ class Arcanum_Session {
             unset($initiated_reset_pw[$uid]);
             unset($confirmed_reset_pw[$uid]);
             $envStore->set('initiated_reset_pw', $initiated_reset_pw);
-            $envStore->set('initiated_reset_pw', $confirmed_reset_pw);
+            $envStore->set('confirmed_reset_pw', $confirmed_reset_pw);
         
         }
 
@@ -227,6 +227,7 @@ class Arcanum_Session {
 
         $_SESSION['login_username'] = $uid;
         $_SESSION['reset_forgotten_password_enabled'] = true;
+        $_SESSION['cleared_for'] = array('passwordreset');
         $_SESSION['authenticated'] = true;
 
         $loggedin = true;

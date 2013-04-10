@@ -106,7 +106,6 @@ switch($initLocation) {
 case 'changepassword':
     // In changepassword, we enable: normal session authentication & token authentication
     // TODO - implement login_protector here
-    
     $loggedin = Arcanum_Session::check(false);
     if(!$loggedin) {
         if(isset($_GET['token']) && !empty($_GET['token'])) {
@@ -115,7 +114,6 @@ case 'changepassword':
             $token = $_POST['token'];
             // sms token
         }
-
         if(isset($token)) {
             $token = trim(str_replace('-', '', $token));
             Arcanum_Session::authenticate_token($token);
@@ -136,7 +134,7 @@ case 'changepassword':
         $cleared_for = $_SESSION['cleared_for'];
     }
 
-    if(!in_array('passwordreset', $cleared_for)) {
+    if(!isset($cleared_for) || !in_array('passwordreset', $cleared_for)) {
         Arcanum_Session::logout(Arcanum_Session::LOGOUT_REASON_WRONG_LOGIN);
     }
 
