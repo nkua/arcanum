@@ -7,8 +7,8 @@
      	<div class="box-form" id="sendinstructions">
             <?= _("Please send the following text message via your mobile phone.") ?>
             <br /><br />
-            <strong><?= _("Text message:") <?= $sms_body ?><br />
-              <?= _("Recipient number:") ?><?= $sms_to ?></strong>
+            <strong><?= _("Text message:") ?> <?= $sms_body ?><br />
+              <?= _("Recipient number:") ?> <?= $sms_to ?></strong>
               <br /><br /><br />
 
               <i><?= _("* Standard text message cost") ?></i>

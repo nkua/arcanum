@@ -55,7 +55,7 @@ if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
                         <div class="formconf-input"><input type="text"  name="sms_surname" maxlength="25"/></div>
                         
                         <div class="formconf-text"><?= _("Enter the mobile phone number that you have registered:") ?></div>
-                        <div class="formconf-input"><input type="number" name="sms_sms" maxlength="25" size="25"/></div>
+                        <div class="formconf-input"><input type="text" name="sms_sms" maxlength="25" size="25"/></div>
 
                     </div>
                 </div>
