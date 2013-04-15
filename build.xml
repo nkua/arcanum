@@ -24,10 +24,7 @@
     </target>
 
     <target name="prepare" depends="clean,compilelocales">
-        <svnlastrevision svnpath="/usr/bin/svn" workingcopy="./" propertyname="svn.lastrevision" />
-        <property name="destdir" value="./build" />
-        <mkdir dir="${destdir}" />
-        <echo file="${destdir}/revision.txt" append="false">${svn.lastrevision}</echo>
+        <mkdir dir="build" />
     </target>
 
     <target name="build" depends="prepare">
