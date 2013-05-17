@@ -9,7 +9,7 @@
     <div class="row">
         <div class="span12">
 
-<form name="policy_<?= $index ?>_form" id="policy_<?= $index ?>_form" action="admin_set_policies.php<?= ($showallpolicyattrs ? '?showallpolicyattrs=1' : '' ) ?>" method="POST">
+<form name="policy_form" id="policy_form" action="admin_set_policies.php<?= ($showallpolicyattrs ? '?showallpolicyattrs=1' : '' ) ?>" method="POST">
 <input type="hidden" name="policy_dn" value="<?= htmlspecialchars(urlencode($policy['dn'])) ?>" />
 <input type="hidden" name="subsection" value="<?= $subsection ?>" />
 
