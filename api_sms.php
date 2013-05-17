@@ -2,14 +2,14 @@
 /**
  * API entrypoint.
  *
- * @package arcanum
+ * @package Arcanum
  * @version $Id: api_sms.php 5823 2012-10-02 15:11:31Z avel $
  */
 
 $initLocation = 'api';
-require_once('include/init.php');
+require_once 'include/init.php';
 
-if(!in_array($_SERVER['REMOTE_ADDR'], $config->smsgw->ip_receive->toArray() )) {
+if (!in_array($_SERVER['REMOTE_ADDR'], $config->smsgw->ip_receive->toArray())) {
     die("This was not a request by an sms gateway.\n");
 }
 
@@ -21,13 +21,13 @@ $classname = 'Arcanum_SMS_Receiver_'.ucfirst($config->smsgw->receiver);
 $receiver = new $classname();
 
 try {
-	$receiver->read();
+    $receiver->read();
 } catch(Exception $e) {
-	doReply(
-		"SMS Gateway Error - no phone or smsc found in incoming request",
-		''
-	);
-	exit;
+    doReply(
+        "SMS Gateway Error - no phone or smsc found in incoming request",
+        ''
+    );
+    exit;
 }
 
 $text = $receiver->getText();
@@ -42,111 +42,117 @@ $log_id = $receiver->getLogId();
 //
 // ------------------------------------------------------------------
 
-if(empty($text)) {
+if (empty($text)) {
     doReply(
-    	sprintf("Empty text sent by %s, SMSC %s.",$mobile, $smsc),
-    	''
-	);
+        sprintf("Empty text sent by %s, SMSC %s.", $mobile, $smsc),
+        ''
+    );
 }
 
-if(isset($smsc_deny) && !(array_search($smsc,$smsc_deny)===false)) {
-	doReply(
-		sprintf("Request from %s via SMSC %s ignored. (SMSC blacklisted)",$mobile, $smsc),
-		''
-	);
+if (isset($smsc_deny) && !(array_search($smsc, $smsc_deny)===false)) {
+    doReply(
+        sprintf("Request from %s via SMSC %s ignored. (SMSC blacklisted)", $mobile, $smsc),
+        ''
+    );
 }
 
-if(isset($smsc_allow) && (array_search($smsc,$smsc_allow)===false)) {
-	doReply(
-		sprintf("Request from %s via SMSC %s ignored. (SMSC Not allowed)",$mobile, $smsc),
-		''
-	);
+if (isset($smsc_allow) && (array_search($smsc, $smsc_allow)===false)) {
+    doReply(
+        sprintf("Request from %s via SMSC %s ignored. (SMSC Not allowed)", $mobile, $smsc),
+        ''
+    );
 }
+
+
 
 $arcanumLdap = new Arcanum_Ldap();
 $ldap = $arcanumLdap->connect();
 
 if (!$ldap) {
-	doReply(
-		sprintf("LDAP Connect failed. Request from %s via SMSC %s.",$mobile, $smsc),
-		_("Could not accomodate your request due to a technical issue. Please try again later.")
-	);
+    doReply(
+        sprintf("LDAP Connect failed. Request from %s via SMSC %s.", $mobile, $smsc),
+        _("Could not accomodate your request due to a technical issue. Please try again later.")
+    );
 }
 
 $filter = sprintf($config->ldap->filter->user_receivesms, $mobile);
-$result = @ldap_search($ldap, $config->ldap->basedn, $filter, array('uid'),0,9);
+$result = @ldap_search($ldap, $config->ldap->basedn, $filter, array('uid'), 0, 9);
 
 if ($result === false) {
-	doReply(
-		sprintf("LDAP Search failed. Request for %s via SMSC %s.",$mobile, $smsc),
-		_("Could not accomodate your request due to a technical issue. Please try again later.")
-	);
+    doReply(
+        sprintf("LDAP Search failed. Request for %s via SMSC %s.", $mobile, $smsc),
+        _("Could not accomodate your request due to a technical issue. Please try again later.")
+    );
 }
 
 $entries = ldap_get_entries($ldap, $result);
-if($entries['count']==0) {
-    // don't really reply anything to the user; they shouldn't have sent the sms in the first place
-    // without having started a session first!
-    // Alternatively we _could_ reply:
-    // sprintf( _("No account found for your mobile. Register your mobile at %s"), substr($config->website_home, 7) );
-	// string below is solely for gettext
 
-    $dummy = sprintf( _("No account found for your mobile. Register your mobile at %s"), substr($config->website_home, 7) );
-	
-	doReply(
-        sprintf("No UIDs found for %s. Request via SMSC %s denied.",$mobile, $smsc),
+if ($entries['count'] == 0) {
+    doReply(
+        sprintf("No UIDs found for %s. Request via SMSC %s denied.", $mobile, $smsc),
         ''
-	);
+    );
 } 
 
-$username = '';
+$usernames = array();
 
-if($entries['count']==1) {
-	$username = $entries[0]['uid'][0];
+if ($entries['count'] == 1) {
+    // Just one hit, easy.
+    $usernames[] = $entries[0]['uid'][0];
+
 } else {
-	$uids=array();
-	for ($i=0; $i < $entries["count"]; $i++) {
-		$uids[] = $entries[$i]['uid'][0];
-	}
-	sort($uids);
-	$numuids = count($uids);
-	if(preg_match('/^[^ 0-9]+ *([1-9])$/', $text, $matches)==1) {
-		$choice = intval($matches[1]);
-		if($choice > 0 && $choice <= $numuids) {
-			$username = $uids[$choice-1];
-		}
-	}
+    // This is the case where the same mobile number is in many accounts. We'll simply check to see
+    // which username was declared when the user started the session. (The check will be done in the
+    // next section)
 
-	if($username == "") {
-        $replmsgpart = '';
-        // FIXME XXX
-        foreach($uids as $k => $v) {
-            if($k>0) $replmsgpart .= ",\n";
-            $replmsgpart .= sprintf( _("%s for %s"),  strtoupper($config->smsgw->prefix) . ($k+1),  $v);
-        }
-
-		doReply(
-			sprintf("Multiple UIDs for %s via SMSC %s. List: %s", $mobile,  $smsc, join(",",$uids) ),
-	        sprintf( _("You have %s accounts; send %s"), count($uids), $replmsgpart)
-		);
-	}
+    for ($i=0; $i < $entries["count"]; $i++) {
+        $usernames[] = $entries[$i]['uid'][0];
+    }
 }
+
+
+// ==================================================================
+//
+// Check if the user had started a reset password session from the browser
+//
+// ------------------------------------------------------------------
+
+$confirmed = false;
+$username = '';
 
 $envStore = new Arcanum_EnvironmentStore();
 
 $initiated_reset_pw = $envStore->get('initiated_reset_pw');
-if($initiated_reset_pw  === false || !isset($initiated_reset_pw[$username]) ) {
-    // FAIL! no session. I won't even bother replying to the SMS.
-	/*
-	doReply(
-		sprintf("User %s sent SMS from %s (SMSC: %s) but hadn't started session with the browser", $username, $mobile, $smsc),
-		''
-	);
-	// */
+
+if($initiated_reset_pw !== false) {
+
+    foreach($usernames as $u) {
+        if(isset($initiated_reset_pw[$u])) {
+            $username = $u;
+            $confirmed = true;
+            break;
+        }
+    }
 }
 
+if(!$confirmed) {
+    // This means no browser session had been started. I won't even bother replying to the SMS.
+    doReply(
+        sprintf("User sent SMS from %s (SMSC: %s) but hadn't started session with the browser. (Last username checked: %s)", $mobile, $smsc, $u),
+        ''
+    );
+}
+
+
+// ==================================================================
+//
+// At this point the user is "authenticated". $username, $mobile are trusted.
+// Set tokens accordingly.
+//
+// ------------------------------------------------------------------
+
 $confirmed_reset_pw = $envStore->get('confirmed_reset_pw');
-if($confirmed_reset_pw  === false) {
+if ($confirmed_reset_pw  === false) {
     $confirmed_reset_pw = array();
 }
 $confirmed_reset_pw[$username] = true;
@@ -157,13 +163,13 @@ $token = $tok->generate_token();
 $tok->set_token($token, $username);
 
 doReply(
-	sprintf("Generated password reset token %s for user %s. Request from %s via SMSC %s.", $token, $username, $mobile, $smsc),
-	sprintf( _("Please use the number %s"), $token)
+    sprintf("Generated password reset token %s for user %s. Request from %s via SMSC %s.", $token, $username, $mobile, $smsc),
+    sprintf(_("Please use the number %s"), $token)
 );
 
 // Upon error: Not needed at the moment.
 //doReply(
-//	sprintf("Cannot set token %s for user %s. Request from %s via SMSC %s denied.", $token, $username, $mobile, $smsc)
+//    sprintf("Cannot set token %s for user %s. Request from %s via SMSC %s denied.", $token, $username, $mobile, $smsc)
 //  sprintf( _("Failed to change the password of your account %s. Please try again later."), $username);
 // );
 $dummy = _("Failed to change the password of your account %s. Please try again later.");
@@ -175,22 +181,41 @@ $dummy = _("Failed to change the password of your account %s. Please try again l
 //
 // ------------------------------------------------------------------
 
-function doReply($log_message, $reply_message) {
-	global $config, $mobile, $username, $log_id;
+/**
+ * Reply - actually send SMS.
+ *
+ * @param string $log_message Log message
+ * @param string $reply_message Reply message to be sent
+ * @return void Never returns, exits.
+ */
+function doReply($log_message, $reply_message)
+{
+    global $config, $mobile, $username, $log_id, $receiver;
 
-    // print "SMS from $mobile, resolved to user $username.\nLog message: ".$log_message."\nReply Message: ".$reply_message."\n\n";
-	syslog(LOG_DEBUG, "SMS from $mobile, resolved to user $username. Log message: ".$log_message." Reply Message: ".str_replace('\n', '', $reply_message). " Log ID:".$log_id);
+    syslog(LOG_DEBUG, "arcanum: SMS from $mobile, ". 
+        (!empty($username) ? 'resolved to user ' . $username : 'not resolved to any user') .
+        ". Log message: ".$log_message." ".
+        (!empty($reply_message) ? 'Reply Message: '.str_replace('\n', '', $reply_message) : 'No Reply Message. ') .
+        " Log ID:".$log_id
+    );
 
-    if(isset($username)) {
-    	$recipient = $username;
-    } else {
-    	$recipient = $mobile;
+    if(!empty($reply_message)) {
+        if(isset($config->smsgw->institution) && !empty($config->smsgw->institution)) {
+            $recipient = $username;
+        } else {
+            $recipient = $mobile;
+        }
+
+        $replysms = Arcanum_SMS_Sender::Factory($recipient, $config->smsgw);
+        if ($log_id) $replysms->setLogId($log_id);
+
+        $replystatus = $replysms->send($reply_message);
     }
-	$replysms = Arcanum_SMS_Sender::Factory($username, $config->smsgw);
-    if($log_id) $replysms->setLogId($log_id);
-	$replysms->send($reply_message);
 
-	// Logging
+    // Replying with status
+    if( in_array('Arcanum_SMS_Receiver_with_Status_Reply_Interface', class_implements($receiver))) {
+        $receiver->status(300);
+    }
 
-	
+    exit;
 }

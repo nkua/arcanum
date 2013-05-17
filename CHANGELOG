@@ -1,0 +1,14 @@
+
+Release 1.0a1 - 31-Jan-2013
+    
+    * First public release
+
+Release 1.1a1 - WIP
+
+    * Small improvements in change password page for administrators.
+    * Legacy MySQL-based SMS accounting / logging was removed.
+    * SMS send and recieve overhaul. Allows sending and receiving SMS in a
+      variety of ways: talking directly with a Kannel SMS gateway, or using
+      an intermediary JSON-RPC web service.
+    * Many bugfixes and improvements in reset password ("I have forgotten my
+      password") workflow.

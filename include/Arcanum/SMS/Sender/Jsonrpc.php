@@ -22,8 +22,7 @@ class Arcanum_SMS_Sender_Jsonrpc extends Arcanum_SMS_Sender {
             $request = array(
                 'uid' => $this->recipient,
                 'message' => $message,
-                'institution' => $this->config->institution,
-                // 'simulate' => true
+                'institution' => $this->config->institution
             );
 
         } else {
@@ -31,8 +30,7 @@ class Arcanum_SMS_Sender_Jsonrpc extends Arcanum_SMS_Sender {
             $method = 'send';
             $request = array(
                 'number' => $this->recipient,
-                'message' => $message,
-                // 'simulate' => true
+                'message' => $message
             );
         }
 

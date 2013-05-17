@@ -61,5 +61,14 @@ interface Arcanum_SMS_Receiver_Interface {
 
 }
 
+
+interface Arcanum_SMS_Receiver_with_Status_Reply_Interface extends Arcanum_SMS_Receiver_Interface {
+    /**
+     * Return status to be logged by gateway.
+     */
+    public function status($code, $message = '');
+
+}
+
 class Arcanum_SMS_Receiver_InvalidRequestException extends Exception {}
 
