@@ -12,15 +12,19 @@
  *   ),
  *  - otp options
  *
- * @package arcanum
+ * @package Arcanum
  * @version $Id: setup.php 6045 2013-01-31 10:17:41Z avel $
  */
 
 $initLocation = 'setup';
-require_once('include/init.php');
 
-include_once('include/Template.class.php');
-include_once('include/misc.php');
+if(isset($_GET['setlanguage'])) {
+    $language = $_GET['setlanguage'];
+}
+
+require_once 'include/init.php';
+require_once 'include/Template.class.php';
+require_once 'include/misc.php';
 
 if(isset($_GET['destroy_session'])) {
     session_destroy();
@@ -38,9 +42,19 @@ $t->assign('defaultStyles', $defaultAdminStyles);
 $t->assign('javascripts', $defaultJavascripts);
 $t->assign('styles', array());
 
+if(isset($_GET['setlanguage'])) {
+    $_SESSION['language'] = $language;
+} elseif(isset($_SESSION['language'])) {
+    $language = $_SESSION['language'];
+    setup_locale();
+}
 
 
-// ===========================================================
+// ==================================================================
+//
+// Main Routine
+//
+// ------------------------------------------------------------------
 
 $cfg = new Arcanum_Setup_Configuration();
 
@@ -150,6 +164,9 @@ if(isset($_POST['submitstep']) && in_array($_POST['submitstep'], $ops)) {
 
     case '5_smsgw':
         $cfg->saveAttr('sms_operator_number');
+        $cfg->saveAttr('smsgw__sender');
+        $cfg->saveAttr('smsgw__receiver');
+        $cfg->saveAttr('smsgw__institution');
         $cfg->saveAttr('smsgw__host');
         $cfg->saveAttr('smsgw__port');
         $cfg->saveAttr('smsgw__uri');

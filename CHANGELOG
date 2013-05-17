@@ -10,5 +10,8 @@ Release 1.1a1 - WIP
     * SMS send and recieve overhaul. Allows sending and receiving SMS in a
       variety of ways: talking directly with a Kannel SMS gateway, or using
       an intermediary JSON-RPC web service.
-    * Many bugfixes and improvements in reset password ("I have forgotten my
+    * Many bugfixes and improvements in reset password ("I have forgotten my 
       password") workflow.
+    * Improvements and bugfixes in initial setup script (setup.php); administrator
+      can choose setup language and the new SMS arguments are there.
+    * The key for symmetric encryption of password must now be base64 encoded.

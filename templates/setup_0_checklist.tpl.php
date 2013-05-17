@@ -1,3 +1,20 @@
+
+<?php
+if(!$editing_existing) {
+?>
+
+<h3><?= _("Choose Setup Language") ?></h3>
+
+<select name="setup_lang" class="input" id="setupLang">
+    <option value="en_US" <?= ($language == 'en_US' ? 'selected=""' : '') ?>>English</option>
+    <option value="el_GR" <?= ($language == 'el_GR' ? 'selected=""' : '') ?>>Ελληνικά</option>
+</select>
+
+<?php
+}
+?>
+
+
 <h3><?= _("Checklist") ?></h3>
 
 <ul>
@@ -63,6 +80,15 @@ if(!$editing_existing) {
     <input type="hidden" name="submitstep" value="0_checklist" />
     <input type="submit" class="btn btn-primary span4"  name="save" value="<?= _("Proceed") ?>" />
 </form>
+
+
+<script language="javascript">
+    $(function () {
+        $('#setupLang').on('change', function (e) {
+            window.location = 'setup.php?setlanguage='+this.value;
+        });
+    });
+</script>
 
 <?php
 }

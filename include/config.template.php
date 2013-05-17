@@ -77,7 +77,7 @@ return array(
     ),
     'session_name' => 'change_password',
     'locale' => array(
-        'default_language' => 'el_GR',
+        'default_language' => 'en_US',
     ),
     'title' => 'Password Management Service',
     'subtitle' => 'Organization Name',
@@ -113,12 +113,16 @@ return array(
     ),
     'sms_operator_number' => '',
     'smsgw' => array(
+        'sender' => '',
+        'receiver' => '',
+        'institution' => '',
         'host' => '',
         'port' => 4432,
         'uri' => '/sms',
         'username' => '',
         'password' => '',
         'tout_con' => 10,
+        'prefix' => 'MyText',
         'ip_receive' => array(
         ),
     ),

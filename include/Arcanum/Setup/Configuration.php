@@ -14,6 +14,7 @@ class Arcanum_Setup_Configuration {
     public $editingExisting = false;
 
     public $all_config_vars_flat = array(
+        'locale__defaultlanguage',
         'institution_name', 'institution_domain', 'title', 'subtitle', 'motd', 'session_name',
         'website_home', 'ldap__host', 'ldap__basedn',
         'ldap__bind', 'ldap__password',
@@ -31,7 +32,7 @@ class Arcanum_Setup_Configuration {
         // TODO - GUI and method saveArray() for login_servers option
         // 'login_servers',
         'cas__host', 'cas__port', 'cas__uri',
-        'sms_operator_number', 'smsgw__host', 'smsgw__port',
+        'sms_operator_number', 'smsgw__sender', 'smsgw__receiver', 'smsgw__institution', 'smsgw__host', 'smsgw__port',
         'smsgw__uri', 'smsgw__username', 'smsgw__password'
     );
 

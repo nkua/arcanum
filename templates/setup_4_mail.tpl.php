@@ -46,12 +46,12 @@
 
 <div class="form-field" id="mail__smtp__username">
 <label><?= _("SMTP username (optional)") ?></label>
-<input type="text" class="input-xlarge" name="mail__smtp__username" value="<?= f_val($config->mail->smtp->username); ?>" />
+<input type="text" class="input-xlarge" name="mail__smtp__username" autocomplete="off" value="<?= f_val($config->mail->smtp->username); ?>" />
 </div>
 
 <div class="form-field" id="mail__smtp__password">
 <label><?= _("SMTP password (optional)") ?></label>
-<input type="password" class="input-xlarge" name="mail__smtp__password" value="<?= f_val($config->mail->smtp->password); ?>" />
+<input type="password" class="input-xlarge" name="mail__smtp__password" autocomplete="off" value="<?= f_val($config->mail->smtp->password); ?>" />
 </div>
 
 

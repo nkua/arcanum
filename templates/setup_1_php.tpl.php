@@ -59,7 +59,7 @@
 
 <div class="form-field" id="session_name">
 <label><?= _("PHP Session Name (if there are a lot of installations of this application in the same host)") ?>
-<br/><small><?= _("Note: if you change this attribute, you will have to relogin.") ?></small>
+<br/><small><?php echo ($editing_existing ? _("Note: if you change this attribute, you will have to relogin.") : '') ?></small>
 </label>
 <input type="text" class="input-xlarge" name="session_name" placeholder="" value="<?= f_val($config->session_name); ?>" />
 </div>

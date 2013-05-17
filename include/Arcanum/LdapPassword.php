@@ -397,7 +397,7 @@ class Arcanum_LdapPassword extends Arcanum_Ldap {
     private function _init_3des() {
         global $config;
         $des = new Crypt_TripleDES(CRYPT_DES_MODE_CBC);
-        $des->setKey($config->ldap->ctpKey);
+        $des->setKey(base64_decode($config->ldap->ctpKey));
         return $des;
     }
 

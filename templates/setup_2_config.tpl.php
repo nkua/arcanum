@@ -24,7 +24,7 @@
 <div class="form-field" id="ldap__password">
 <label><?= _("Bind Password") ?></label>
 <input type="password"  <?= ($editing_existing ? 'disabled="DISABLED"' : '') ?> class="input" name="ldap__password"
-  value=<?= ($editing_existing ? '**********' : f_val($config->ldap->password) ) ?> />
+  value="<?= ($editing_existing ? '**********' : f_val($config->ldap->password) ) ?>" />
 </div>
 
 </fieldset>
@@ -35,7 +35,7 @@
 
 <div class="form-field" id="cas__host">
 <label><?= _("CAS Host") ?></label>
-<input type="text" class="input input-xxlarge" name="cas__host" value="<?= f_val($config->cas->host); ?>" />
+<input type="text" class="input input-xxlarge" placeholder="login.example.org" name="cas__host" value="<?= f_val($config->cas->host); ?>" />
 </div>
 
 <div class="form-field" id="cas__port">
@@ -45,7 +45,7 @@
 
 <div class="form-field" id="cas__uri">
 <label><?= _("CAS URI Path") ?></label>
-<input type="text" class="input input-xxlarge" name="cas__uri" value="<?= f_val($config->cas->uri); ?>" />
+<input type="text" class="input input-xxlarge" placeholder="/path" name="cas__uri" value="<?= f_val($config->cas->uri); ?>" />
 </div>
 
 </fieldset>
@@ -85,8 +85,8 @@
 </div>
 
 <div class="form-field" id="ldap__ctpKey">
-<label><?= _("24-byte key for symmetric password encryption") ?></label>
-<input type="text" class="input-large" name="ldap__ctpKey" value="<?= f_val($config->ldap->ctpKey); ?>" />
+<label><?= _("24-byte key for symmetric password encryption (base64-encoded)") ?></label>
+<input type="text" class="input-xxlarge" name="ldap__ctpKey" value="<?= f_val($config->ldap->ctpKey); ?>" />
 </div>
 
 <div class="form-field muted" id="ldap__actpAttribute">
@@ -141,6 +141,7 @@
 <label><?= _("Attribute for OpenID account") ?><br/>
 <?= _("(Leave blank to disable this password reset method)") ?></label>
 <input type="text" class="medium input-text" name="ldap__secondary_accounts__openid" value="<?= f_val($config->ldap->secondary_accounts->openid); ?>" />
+<span class="label"><?= _("Feature not implemented yet") ?></span>
 </div>
 
 </fieldset>

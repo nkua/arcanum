@@ -2,7 +2,7 @@
 /**
  * Initialization Routine
  *
- * @package arcanum
+ * @package Arcanum
  * @version $Id: init.php 5954 2012-12-28 10:39:09Z avel $
  */
 
@@ -244,35 +244,14 @@ if(!$acl->isAllowed($role, $initLocation)) {
     Arcanum_Session::logout(Arcanum_Session::LOGOUT_REASON_ACCESS_DENIED);
 }
 
-// Locale Setup
-global $language, $lang;
-$supported_languages = array(
-    'el' => 'el_GR',
-    'en' => 'en_US',
-);
-
-$language = $config->locale->default_language;
-$lang = substr($language, 0, 2);
-
-$locale = setlocale(LC_ALL, "$language.UTF-8", $language, $lang);
-if($locale !== false) {
-    if ( !ini_get('safe_mode') && getenv( 'LC_ALL' ) != $locale ) {
-        putenv( "LC_ALL=$locale" );
-        putenv( "LANG=$locale" );
-        putenv( "LANGUAGE=$locale" );
-    }
-}
-bindtextdomain('arcanum', 'locale');
-bindtextdomain('password_strength_check', 'locale');
-textdomain('arcanum');
-
+setup_locale();
 
 // Important HTTP Headers
 header('Pragma: no-cache'); // http 1.0 (rfc1945)
 header('Cache-Control: private, no-cache, no-store'); // http 1.1 (rfc2616)
 
-
 // Set up template instance & basic variables
+// TODO - move this to a function / refactor
 $t = new Template;
 $t->assign('loggedin', $loggedin);
 $t->assign('baseuri', $baseuri);
@@ -287,7 +266,7 @@ $t->assign('isAdmin', $isAdmin);
 $t->assign('terms_link', (!empty($config->terms_link) ? $config->terms_link : false) );
 $t->assign('privacy_policy_link', (!empty($config->privacy_policy_link) ? $config->privacy_policy_link : false) );
 
-
+// TODO - move this in redirect.php?
 if(isset($_SESSION['possibly_expired_password'])) {
     $t->assign('urgentmsg', 
         _("Your password has expired!") . ' <a href="changepassword.php">'. _("Change Password") . '</a>'
@@ -302,3 +281,38 @@ if(isset($login_username)) {
     $t->assign('login_username', $login_username);
 }
 
+// ==================================================================
+//
+// Function Definitions
+//
+// ------------------------------------------------------------------
+
+
+/**
+ * Setup Locale
+ */
+function setup_locale() {
+    global $language, $lang, $config;
+
+    $supported_languages = array(
+        'el' => 'el_GR',
+        'en' => 'en_US',
+    );
+
+    if(!isset($language)) {
+        $language = $config->locale->default_language;
+    }
+    $lang = substr($language, 0, 2);
+
+    $locale = setlocale(LC_ALL, "$language.UTF-8", $language, $lang);
+    if($locale !== false) {
+        if ( !ini_get('safe_mode') && getenv( 'LC_ALL' ) != $locale ) {
+            putenv( "LC_ALL=$locale" );
+            putenv( "LANG=$locale" );
+            putenv( "LANGUAGE=$locale" );
+        }
+    }
+    bindtextdomain('arcanum', 'locale');
+    bindtextdomain('password_strength_check', 'locale');
+    textdomain('arcanum');
+}
