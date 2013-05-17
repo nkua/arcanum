@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-03 15:21+0300\n"
+"POT-Creation-Date: 2013-05-17 12:44+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -130,6 +130,20 @@ msgid "Users with username starting with a"
 msgstr ""
 
 msgid "Users that are allowed to receive SMS"
+msgstr ""
+
+msgid ""
+"Could not accomodate your request due to a technical issue. Please try again "
+"later."
+msgstr ""
+
+#, php-format
+msgid "Please use the number %s"
+msgstr ""
+
+#, php-format
+msgid ""
+"Failed to change the password of your account %s. Please try again later."
 msgstr ""
 
 msgid "Your old password is not correct."
@@ -827,32 +841,6 @@ msgid ""
 "This attribute specifies the number of seconds an account may remain unused "
 "before it becomes locked.  If this attribute is not set or is 0, no check is "
 "performed."
-msgstr ""
-
-msgid ""
-"Could not accomodate your request due to a technical issue. Please try again "
-"later."
-msgstr ""
-
-#, php-format
-msgid "No account found for your mobile. Register your mobile at %s"
-msgstr ""
-
-#, php-format
-msgid ""
-"Failed to change the password of your account %s. Please try again later."
-msgstr ""
-
-#, php-format
-msgid "Please use the number %s"
-msgstr ""
-
-#, php-format
-msgid "%s for %s"
-msgstr ""
-
-#, php-format
-msgid "You have %s accounts; send %s"
 msgstr ""
 
 msgid "Session has timed out."
@@ -1602,6 +1590,9 @@ msgstr ""
 msgid "Cancel Changes and Restart Setup"
 msgstr ""
 
+msgid "Choose Setup Language"
+msgstr ""
+
 msgid "LDAP server is installed and operational."
 msgstr ""
 
@@ -1711,7 +1702,7 @@ msgstr ""
 msgid "Attribute for symmetrically encrypted cleartext password (optional)"
 msgstr ""
 
-msgid "24-byte key for symmetric password encryption"
+msgid "24-byte key for symmetric password encryption (base64-encoded)"
 msgstr ""
 
 msgid "Attribute for asymmetrically encrypted cleartext password (optional)"
@@ -1843,6 +1834,21 @@ msgstr ""
 msgid "Operator Number"
 msgstr ""
 
+msgid "Method to use for receiving Text Messages"
+msgstr ""
+
+msgid "None"
+msgstr ""
+
+msgid "HTTP(S) connection to Kannel Gateway"
+msgstr ""
+
+msgid "JSON-RPC over HTTP(S) to GunetSMS (or compatible) Gateway"
+msgstr ""
+
+msgid "Method to use for sending Text Messages"
+msgstr ""
+
 msgid "SMS Gateway Host"
 msgstr ""
 
@@ -1850,6 +1856,12 @@ msgid "Port"
 msgstr ""
 
 msgid "URI (path)"
+msgstr ""
+
+msgid "Timeout when connecting to SMS Gateway, in seconds"
+msgstr ""
+
+msgid "SMS Prefix / Text to be sent by the user"
 msgstr ""
 
 msgid "Confirm and Save"

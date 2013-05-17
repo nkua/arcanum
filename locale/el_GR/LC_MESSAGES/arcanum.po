@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arcanum 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-04-03 15:21+0300\n"
+"POT-Creation-Date: 2013-05-17 12:44+0300\n"
 "PO-Revision-Date: 2012-02-21 16:30+0200\n"
 "Last-Translator: Alexandros Vellis <avel@noc.uoa.gr>\n"
 "Language-Team: greek <el@li.org>\n"
@@ -135,6 +135,24 @@ msgstr "Χρήστες όπου το username ξεκινάει με a"
 
 msgid "Users that are allowed to receive SMS"
 msgstr "Χρήστες που επιτρέπεται να δέχονται SMS"
+
+msgid ""
+"Could not accomodate your request due to a technical issue. Please try again "
+"later."
+msgstr ""
+"Δε μπορέσαμε να εξυπηρετήσουμε το αίτημά σας λόγω τεχνικού προβλήματος. "
+"Παρακαλώ ξαναπροσπαθήστε αργότερα."
+
+#, php-format
+msgid "Please use the number %s"
+msgstr "Παρακαλώ χρησιμοποιήστε τον αριθμό %s"
+
+#, php-format
+msgid ""
+"Failed to change the password of your account %s. Please try again later."
+msgstr ""
+"Δεν μπορέσαμε να αλλάξουμε τον κωδικό του λογαριασμού %s. Παρακαλώ "
+"ξαναπροσπαθήστε αργότερα."
 
 msgid "Your old password is not correct."
 msgstr "Ο παλιός σας κωδικός δεν είναι σωστός."
@@ -886,37 +904,6 @@ msgid ""
 "before it becomes locked.  If this attribute is not set or is 0, no check is "
 "performed."
 msgstr ""
-
-msgid ""
-"Could not accomodate your request due to a technical issue. Please try again "
-"later."
-msgstr ""
-"Δε μπορέσαμε να εξυπηρετήσουμε το αίτημά σας λόγω τεχνικού προβλήματος. "
-"Παρακαλώ ξαναπροσπαθήστε αργότερα."
-
-#, php-format
-msgid "No account found for your mobile. Register your mobile at %s"
-msgstr ""
-"Δε βρέθηκε λογαριασμός για το κινητό σας. Καταχωρήστε το κινητό σας στο %s"
-
-#, php-format
-msgid ""
-"Failed to change the password of your account %s. Please try again later."
-msgstr ""
-"Δεν μπορέσαμε να αλλάξουμε τον κωδικό του λογαριασμού %s. Παρακαλώ "
-"ξαναπροσπαθήστε αργότερα."
-
-#, php-format
-msgid "Please use the number %s"
-msgstr "Παρακαλώ χρησιμοποιήστε τον αριθμό %s"
-
-#, php-format
-msgid "%s for %s"
-msgstr ""
-
-#, php-format
-msgid "You have %s accounts; send %s"
-msgstr "Έχετε %s λογαριασμούς. Στείλτε %s"
 
 msgid "Session has timed out."
 msgstr "Η συνεδρία έχει λήξει."
@@ -1753,6 +1740,9 @@ msgstr "Απενεργοποίηση Εγκατάστασης μέσω Web"
 msgid "Cancel Changes and Restart Setup"
 msgstr "Ακύρωση Αλλαγών και Επανέναρξη Installer"
 
+msgid "Choose Setup Language"
+msgstr "Επιλέξτε Γλώσσα Εγκατάστασης"
+
 msgid "LDAP server is installed and operational."
 msgstr "Ο LDAP server είναι εγκατεστημένος και λειτουργεί."
 
@@ -1804,7 +1794,7 @@ msgid ""
 "This text will appear in the login page. It is meant for important "
 "announcements."
 msgstr ""
-"ο κείμενο αυτό θα εμφανίζεται στη σελίδα εισόδου και προορίζεται για "
+"Το κείμενο αυτό θα εμφανίζεται στη σελίδα εισόδου και προορίζεται για "
 "σημαντικές / έκτακτες ανακοινώσεις."
 
 msgid "URL of Terms of Service"
@@ -1875,10 +1865,8 @@ msgstr ""
 "Όνομα attribute στο οποίο θα αποθηκεύεται το Cleartext Password (με "
 "<strong>symmetric</strong> encryption) (προαιρετικό)"
 
-msgid "24-byte key for symmetric password encryption"
+msgid "24-byte key for symmetric password encryption (base64-encoded)"
 msgstr ""
-"24-byte key για την κρυπτογράφηση του Password (αν έχετε συμπληρώσει το "
-"παραπάνω όνομα attribute)"
 
 msgid "Attribute for asymmetrically encrypted cleartext password (optional)"
 msgstr ""
@@ -2035,10 +2023,25 @@ msgid "SMTP password (optional)"
 msgstr ""
 
 msgid "SMS Gateway Settings"
-msgstr "Ρύθμιση Αποστολής SMS"
+msgstr "Ρύθμιση Πύλης SMS"
 
 msgid "Operator Number"
 msgstr "Αριθμός του Κέντρου που λαμβάνει μηνύματα"
+
+msgid "Method to use for receiving Text Messages"
+msgstr "Μέθοδος λήψης γραπτών μηνυμάτων"
+
+msgid "None"
+msgstr "Καμμία"
+
+msgid "HTTP(S) connection to Kannel Gateway"
+msgstr "HTTP(S) σύνδεση με Kannel Gateway"
+
+msgid "JSON-RPC over HTTP(S) to GunetSMS (or compatible) Gateway"
+msgstr "JSON-RPC πάνω από HTTP(S) σύνδεση με GunetSMS (ή συμβατό) Gateway"
+
+msgid "Method to use for sending Text Messages"
+msgstr "Μέθοδος αποστολής γραπτών μηνυμάτων"
 
 msgid "SMS Gateway Host"
 msgstr ""
@@ -2048,6 +2051,12 @@ msgstr ""
 
 msgid "URI (path)"
 msgstr ""
+
+msgid "Timeout when connecting to SMS Gateway, in seconds"
+msgstr ""
+
+msgid "SMS Prefix / Text to be sent by the user"
+msgstr "Κείμενο / πρόθεμα SMS που θα γράφεται από τον χρήστη"
 
 msgid "Confirm and Save"
 msgstr "Επιβεβαίωση και Αποθήκευση Ρυθμίσεων"
@@ -2151,3 +2160,14 @@ msgstr ""
 "επικοινωνήστε με τον διαχειριστή του συστήματος αναφέροντας το παραπάνω "
 "μήνυμα λάθους."
 
+#~ msgid "No account found for your mobile. Register your mobile at %s"
+#~ msgstr ""
+#~ "Δε βρέθηκε λογαριασμός για το κινητό σας. Καταχωρήστε το κινητό σας στο %s"
+
+#~ msgid "You have %s accounts; send %s"
+#~ msgstr "Έχετε %s λογαριασμούς. Στείλτε %s"
+
+#~ msgid "24-byte key for symmetric password encryption"
+#~ msgstr ""
+#~ "24-byte key για την κρυπτογράφηση του Password (αν έχετε συμπληρώσει το "
+#~ "παραπάνω όνομα attribute)"
