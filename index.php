@@ -17,15 +17,17 @@ include_once('include/misc.php');
 require_once('include/init.php');
 require_once('include/LoginProtector.php');
 
-$loginProtector = new LoginProtector();
-// check our xcache stats to see if we need to require captcha
-if($loginProtector->get_tries() >= 5) {
-    include_once('Zend/Captcha/ReCaptcha.php');
-    $recaptcha = new Zend_Service_ReCaptcha($config->recaptcha->pubkey, $config->recaptcha->privkey);
-    $recaptcha->setParams(array('ssl' => true, 'theme' => 'clean'));
-    $t->assign('captcha_html', $recaptcha->getHTML());
-}
+if(!empty($config->recaptcha->pubkey)) {
+    $loginProtector = new LoginProtector();
 
+    // check our xcache stats to see if we need to require captcha
+    if($loginProtector->get_tries() >= 5) {
+        include_once('Zend/Captcha/ReCaptcha.php');
+        $recaptcha = new Zend_Service_ReCaptcha($config->recaptcha->pubkey, $config->recaptcha->privkey);
+        $recaptcha->setParams(array('ssl' => true, 'theme' => 'clean'));
+        $t->assign('captcha_html', $recaptcha->getHTML());
+    }
+}
 
 // Check if we were redirected from CAS because of an expired password
 

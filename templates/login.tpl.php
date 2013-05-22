@@ -83,8 +83,7 @@ if(isset($message_above_login_box)) {
 
 if(isset($captcha_html)) {
     echo '
-        <p>'.$captcha_html.'
-        </p>
+        <p>'.$captcha_html.'</p>
     ';
 }
 

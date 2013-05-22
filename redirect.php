@@ -25,22 +25,24 @@ if(empty($password)) {
 require_once('include/LoginProtector.php');
 
 // 0) check captcha, if it is required
-$loginProtector = new LoginProtector();
-$loginProtector->increment_tries();
-if($loginProtector->get_tries() > 5) {
-    // captcha required here.
-    if(empty($_POST['recaptcha_challenge_field']) || empty($_POST['recaptcha_response_field'])) {
-        Arcanum_Session::logoutToLogin(Arcanum_Session::LOGOUT_REASON_WRONG_LOGIN, _("Please type in the two scrambled words in order to login."));
-    }
+if(!empty($config->recaptcha->pubkey)) {
+    $loginProtector = new LoginProtector();
+    $loginProtector->increment_tries();
+    if($loginProtector->get_tries() > 5) {
+        // captcha required here.
+        if(empty($_POST['recaptcha_challenge_field']) || empty($_POST['recaptcha_response_field'])) {
+            Arcanum_Session::logoutToLogin(Arcanum_Session::LOGOUT_REASON_WRONG_LOGIN, _("Please type in the two scrambled words in order to login."));
+        }
 
-    include_once('Zend/Captcha/ReCaptcha.php');
-    $recaptcha = new Zend_Service_ReCaptcha($config->recaptcha->pubkey, $config->recaptcha->privkey);
-    $captcha_result = $recaptcha->verify(
-        $_POST['recaptcha_challenge_field'],
-        $_POST['recaptcha_response_field']
-    );
-    if (!$captcha_result->isValid() && !$config->devel->allow_all_captcha) {
-        Arcanum_Session::logoutToLogin(Arcanum_Session::LOGOUT_REASON_WRONG_LOGIN, _("You did not enter the two scrambled words correctly."));
+        include_once('Zend/Captcha/ReCaptcha.php');
+        $recaptcha = new Zend_Service_ReCaptcha($config->recaptcha->pubkey, $config->recaptcha->privkey);
+        $captcha_result = $recaptcha->verify(
+            $_POST['recaptcha_challenge_field'],
+            $_POST['recaptcha_response_field']
+        );
+        if (!$captcha_result->isValid() && !$config->devel->allow_all_captcha) {
+            Arcanum_Session::logoutToLogin(Arcanum_Session::LOGOUT_REASON_WRONG_LOGIN, _("You did not enter the two scrambled words correctly."));
+        }
     }
 }
 

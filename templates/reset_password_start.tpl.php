@@ -79,12 +79,13 @@ if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
 }
 ?>
 
+            <?php if(isset($captcha_html)) { ?>
                 <div class="form-line" id="inputcaptcha">
                     <br/>
                     <div class="formleft-text"><?= _("Finally, please enter these two words:" ) ?></div>
                     <?= $captcha_html ?>
                 </div>
-
+            <?php } ?>
                 
                <div class="button-right">
                   <input type="submit" name="reset_password_do" class="button blue" value="<?= _("Continue &rarr;") ?>" />

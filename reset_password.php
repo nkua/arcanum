@@ -64,8 +64,6 @@ if(isset($_POST['reset_password_do'])) {
     $t->assign('required_info', $required_info);
         
     // a long and tedious verification process
-    $recaptcha = new Zend_Service_ReCaptcha($config->recaptcha->pubkey, $config->recaptcha->privkey);
-    $recaptcha->setParams(array('ssl' => true, 'theme' => 'clean'));
 
     $msgs = array();
     $encounterederror = false;
@@ -79,18 +77,23 @@ if(isset($_POST['reset_password_do'])) {
         $msgs[] = array('class' => 'error', 'msg' => _("Required information was not filled in"));
     }
 
-    if(empty($_POST['recaptcha_challenge_field']) || empty($_POST['recaptcha_response_field'])) {
-        $msgs[] = array('class' => 'warning', 'msg' => _("Please type the two words in the box."));
-        $encounterederror = true;
-
-    } else {
-        $captcha_result = $recaptcha->verify(
-            $_POST['recaptcha_challenge_field'],
-            $_POST['recaptcha_response_field']
-        );
-        if (!$captcha_result->isValid() && !$config->devel->allow_all_captcha) {
-            $msgs[] = array('class' => 'warning', 'msg' => _("Captcha verification failed; please retry typing the two words in the box."));
+    if(!empty($config->recaptcha->pubkey)) {
+        $recaptcha = new Zend_Service_ReCaptcha($config->recaptcha->pubkey, $config->recaptcha->privkey);
+        $recaptcha->setParams(array('ssl' => true, 'theme' => 'clean'));
+      
+        if(empty($_POST['recaptcha_challenge_field']) || empty($_POST['recaptcha_response_field'])) {
+            $msgs[] = array('class' => 'warning', 'msg' => _("Please type the two words in the box."));
             $encounterederror = true;
+
+        } else {
+            $captcha_result = $recaptcha->verify(
+                $_POST['recaptcha_challenge_field'],
+                $_POST['recaptcha_response_field']
+            );
+            if (!$captcha_result->isValid() && !$config->devel->allow_all_captcha) {
+                $msgs[] = array('class' => 'warning', 'msg' => _("Captcha verification failed; please retry typing the two words in the box."));
+                $encounterederror = true;
+            }
         }
     }
 
@@ -272,9 +275,12 @@ if(isset($_POST['reset_password_do'])) {
         $t->assign('javascripts', array_merge($defaultJavascripts, array('javascripts/reset_password_start.js')));
     }
 
-    $recaptcha = new Zend_Service_ReCaptcha($config->recaptcha->pubkey, $config->recaptcha->privkey);
-    $recaptcha->setParams(array('ssl' => true, 'theme' => 'clean'));
-    $t->assign('captcha_html', $recaptcha->getHTML());
+    if(!empty($config->recaptcha->pubkey)) {
+        $recaptcha = new Zend_Service_ReCaptcha($config->recaptcha->pubkey, $config->recaptcha->privkey);
+        $recaptcha->setParams(array('ssl' => true, 'theme' => 'clean'));
+        $t->assign('captcha_html', $recaptcha->getHTML());
+    }
+    
 }
 
 
