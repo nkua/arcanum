@@ -12,7 +12,7 @@
 </div>
 
 <div class="form-field" id="ldap__basedn">
-<label><? _("LDAP Base DN") ?></label>
+<label><?= _("LDAP Base DN") ?></label>
 <input type="text"  <?= ($editing_existing ? 'disabled="DISABLED"' : '') ?> class="input input-xxlarge" name="ldap__basedn" value="<?= f_val($config->ldap->basedn); ?>" />
 </div>
 
@@ -28,6 +28,16 @@
 </div>
 
 </fieldset>
+
+
+<div>
+    <button class="btn btn-primary" id="ldap_test_connection"><?= _("Test Connection") ?></button>
+</div>
+<br/>
+<div id="ldap_test_result">
+    <div class="alert alert-info"><?= _("Click button to test connection parameters.")?></div>
+</div>
+
 
 <h3><?= _("CAS (Login) Server Connection") ?></h3>
 
@@ -223,4 +233,30 @@ $this->display('setup_save_button');
 ?>
 
 </form>
+
+
+
+<script language="javascript">
+    $(function () {
+        $('#ldap_test_connection').on('click', function (e) {
+            $.post("setup_rpc.php?method=ldap_test_connection", {
+                host: $('[name=ldap__host]').val(),
+                basedn: $('[name=ldap__basedn]').val(),
+                bind: $('[name=ldap__bind]').val(),
+                password: $('[name=ldap__password]').val()
+            }, function(response) {
+                if(response.result == 0) {
+                    $('#ldap_test_result').html('<div class="alert alert-error">'+response.error+'</div>');
+
+                } else if(response.result == 1) {
+                    $('#ldap_test_result').html('<div class="alert alert-success">Success.</div>');
+
+                } else {
+                    $('#ldap_test_result').html('<div class="alert alert-warning">Incorrect response received</div>');
+                }
+            }, 'json');
+            e.preventDefault();
+        });
+    });
+</script>
 

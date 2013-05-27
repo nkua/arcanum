@@ -13,7 +13,8 @@ Release 1.1a1 - WIP
     * Many bugfixes and improvements in reset password ("I have forgotten my 
       password") workflow.
     * Improvements and bugfixes in initial setup script (setup.php); administrator
-      can choose setup language and the new SMS arguments are there.
+      can choose setup language and the new SMS arguments are there. A quick test
+      to see if the connection and credentials to LDAP is valid can be performed.
     * The key for symmetric encryption of password must now be base64 encoded.
     * ReCAPTCHA settings can now be empty and no CAPTCHA will be requested in
       login / reset password forms.

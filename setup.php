@@ -264,8 +264,11 @@ if(isset($_POST['finish']) && $_POST['finish'] == 'true') {
 
 if(isset($_POST['disable_installer'])) {
     file_put_contents('config/web_installer_disabled.php', 'Delete this file to reenable the web installer (setup.php)');
-    $msgs['warning'][] = sprintf( _("Web Installer has been deactivated. %sContinue by logging in to the application.</a>"), '<a href="index.php">') .
-        '<br/>' . _("(To reactivate the web installer, delete the file config/web_installer_disabled.php)");
+    $msgs['warning'] = array('msg' =>
+            sprintf( _("Web Installer has been deactivated. %sContinue by logging in to the application.</a>"), '<a href="index.php">') .
+            '<br/>' . _("(To reactivate the web installer, delete the file config/web_installer_disabled.php)"),
+            'class' => 'info'
+        );
 
     $t->assign('msgs', $msgs);
 
