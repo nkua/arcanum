@@ -221,6 +221,7 @@ $t->assign('javascripts', array_merge(
     $defaultJavascripts,
     array(
         'lib/jquery.delayedObserver.js',
+        'lib/underscore-min.js',
         'javascripts/change_password.js',
     )
 ));

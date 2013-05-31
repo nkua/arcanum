@@ -556,3 +556,16 @@ h4 {
 #push {
 	height:53px;
 }
+
+#password_suggestions {
+	font-family: Ubuntu Mono, Andale Mono, Consolas, Courier, monospace;
+	padding-right: 4px;
+	cursor: pointer;
+}
+#password_suggestions tr td {
+	padding: 4px;
+	border: 1px solid #cccccc;
+}
+.highlighted_password {
+	background: yellow;
+}

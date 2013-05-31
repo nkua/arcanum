@@ -33,9 +33,17 @@
         <i><?= _("Password must consist of at least 6 characters; ") ?><br />
             <?= _("Must contain at least one number or symbol") ?><br /></i>
 
-            <div class="more-link"><a href="safety.php"><?= _("More information about password safety &gt;") ?></a></div></div>
+            <div class="more-link"><a href="safety.php"><?= _("More information about password safety") ?></a></div></div>
 
-        </div>
+       
+       <strong>Password Suggestions</strong>
+
+       <p>Pick one of these easy to pronounce passwords:</p>
+      <div id="password_suggestions">
+      </div>
+      <a href="#" id="get_other_suggestions">Get other suggestions</a>
+
+    </div>
 
         <!--Right part of home page-->
         <div id="right-home">

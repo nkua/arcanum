@@ -9,10 +9,13 @@ $(document).ready(function() {
             pass = $('#cp_newpass').attr('value');
             pass2 = $('#cp_verify').attr('value');
 
+            // remove any highlighted password
+            $('.highlighted_password').removeClass('highlighted_password');
+
             if(pass.length > 3) {
                 $.post('ajax_handler.php?operation=strength_check&password='+encodeURIComponent(pass),
                     {},
-                    function(response, testStatus) {
+                    function(response) {
                         var responseType, succeeded, total, failedTestsMsgs, allTests, failedTests;
                         responseType = response[0];
                         
@@ -79,6 +82,48 @@ $(document).ready(function() {
             Arcanum.hidePopoverVerify();
         }
     }, 0.5);
+
+
+    // Fill in password suggestions
+    var fillInPasswordSuggestions = function() {
+
+        $.post('ajax_handler.php?operation=password_suggestions', function(response) {
+            $('#password_suggestions').append('<table>');
+        
+            for(var i = 0; i<4; i++) {
+
+                $('#password_suggestions').append(
+                    _.template(
+                        "<tr><% _.each(passwords, function(p) { %> <td class='suggested_password'><%= p %></td> <% }); %></tr>",
+                        {passwords : response.slice(i, i+6) }
+                    )
+
+                );
+            }
+            $('#password_suggestions').append('</table>');
+        });
+
+    };
+
+    fillInPasswordSuggestions();
+
+    $('#password_suggestions').click( function(e) {
+        var newpass = e.target.innerHTML;
+        
+        $('.highlighted_password').removeClass('highlighted_password');
+        $(e.target).addClass('highlighted_password');
+        $('#cp_newpass').val(newpass);
+        $('#cp_verify').val(newpass);
+        Arcanum.hidePopover();
+    });
+
+
+
+    $('#get_other_suggestions').click( function() {
+        $('#password_suggestions').html('');
+        fillInPasswordSuggestions();
+    });
+
 
 });
 

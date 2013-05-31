@@ -18,3 +18,4 @@ Release 1.1a1 - WIP
     * The key for symmetric encryption of password must now be base64 encoded.
     * ReCAPTCHA settings can now be empty and no CAPTCHA will be requested in
       login / reset password forms.
+    * New functionality: "Password Suggestions" in user change password page.
