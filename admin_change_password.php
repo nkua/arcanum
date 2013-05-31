@@ -154,7 +154,8 @@ $t->display('page_header_admin');
 
 if(isset($_POST['changepass'])) {
 	// Change password and success (or, error) message
-    $t->assign('error_encountered',   $error_encountered);
+    $t->assign('error_encountered', $error_encountered);
+    $t->assign('uid', $uid);
     
     $t->display('admin_change_password_result');
 

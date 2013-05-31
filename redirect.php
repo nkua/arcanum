@@ -217,7 +217,9 @@ if($arcanumLdap->connectAsUser($userdn, $password) === false) {
 }
 
 // write session data & redirect to main page.
-$loginProtector->reset_tries();
+if(!empty($config->recaptcha->pubkey)) {
+    $loginProtector->reset_tries();
+}
     
 Arcanum_Session::init();
 

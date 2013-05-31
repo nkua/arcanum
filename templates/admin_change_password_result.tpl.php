@@ -9,10 +9,13 @@
 
 ?>
 
+<div style="margin: auto; text-align:center;">
+
 <?php
 $this->display('messages');
 ?>
+<br/>
 
-    <div style="text-align:center"><a href="admin_change_password.php"><?= _("Return to Change Password Page") ?></a>
+    <a href="admin_show_user.php?uid=<?= htmlspecialchars($uid) ?>"><?= sprintf( _("Return to Account Information for user %s"), htmlspecialchars($uid) ) ?></a>
 
-
+</div>
