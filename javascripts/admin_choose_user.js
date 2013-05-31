@@ -41,8 +41,8 @@ ARCANUM.searchFor = function(q) {
             $('#bodysearchresults').html('<img src="images/loading_searching_people.gif" alt="" style="margin: auto;" />');
         }
 
-    }).done(function ( ret ) {
-        var r = jQuery.parseJSON(ret);
+    }).done(function ( r ) {
+                
         if(r.result == -2) return;
         $('#bodysearchresults').show();
         if(r.result == -1) {

@@ -9,7 +9,6 @@
 /**
  * The simplest template class in the world.
  *
- * @todo A fetch() method might be needed in the future.
  * @todo Build a Cache Layer modeled after
  *       http://massassi.com/php/articles/template_engines/
  */
@@ -48,6 +47,21 @@ class Template {
         } else {
             require('templates/'.$template.'.tpl.php');
         }
+    }
+
+    /**
+     * Fetch template int o a variable.
+     * 
+     * @see display()
+     * @param string $template
+     * @return string
+     */
+    public function fetch($template) {
+        ob_start();
+        $this->display($template);
+        $out = ob_get_contents();
+        ob_end_clean();
+        return $out;
     }
 
 }

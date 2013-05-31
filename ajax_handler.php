@@ -153,6 +153,8 @@ class RpcMethods {
 
     public static function ldap_search()
     {
+        global $config, $isAdmin, $role;
+
         Arcanum_Session::check();
         if(!$isAdmin) {
             echo json_encode(array('result' => -2));
@@ -229,22 +231,28 @@ class RpcMethods {
 
     public static function setup_admins_show_current_rows()
     {
+        global $t, $config;
+        $out = '';
         foreach($config->ldap->restrictfilters as $no => $arr) {
             $t->assign('restrictfilteritem', $arr->toArray() );
             $t->assign('restrictfilterindex', $no);
 
-            $t->display('setup_7_admins_row');
+            $out .= $t->fetch('setup_7_admins_row');
+
         }
+        return json_encode(array('html' => $out));
+
     }
 
     public static function setup_admins_create_form_row()
     {
+        global $t, $config;
 
         $t->assign('restrictfilterindex', ( (isset($_POST['newindex']) && is_numeric($_POST['newindex']) ) ? $_POST['newindex'] : 0) );
         $t->assign('restrictfilteritem', array('id'=>'', 'description'=>'', 'adminfilter'=>'', 'apply'=>''));
         $t->assign('new_row', true);
 
-        $t->display('setup_7_admins_row');
+        return json_encode(array('html' => $t->fetch('setup_7_admins_row')));
     }
 
 }

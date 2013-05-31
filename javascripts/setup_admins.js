@@ -7,7 +7,7 @@ ARCANUM.showCurrentRows = function() {
         data: {},
 
     }).done(function ( ret ) {
-        $('#current_rows').html(ret);
+        $('#current_rows').html(ret.html);
     });
 }
 
@@ -18,7 +18,7 @@ ARCANUM.createFormRow = function(newindex) {
         data: {newindex: newindex},
 
     }).done(function ( ret ) {
-        $('#new_row').html(ret);
+        $('#new_row').html(ret.html);
     });
 }
 
