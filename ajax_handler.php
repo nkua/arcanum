@@ -114,7 +114,7 @@ class RpcMethods {
             }
         }
 
-        return $pw;
+        return json_encode($pw);
     }
 
     public static function password_suggestions()

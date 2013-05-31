@@ -8,12 +8,18 @@ if($editing_existing) {
 ?>
 
 <div class="container">
+
 <div class="row">
     <div class="span10">
             <h3><?= _("Setup Password Management Application") ?></h3>
     </div>
 </div>
 
+<?php
+if($msgs) {
+    $this->display('messages');
+}
+?>
 
 <div class="row">
     <div class="span4">
@@ -47,12 +53,11 @@ if($editing_existing) {
 ?>
         </div>
     </div>
-
+    
     <div class="span8">
+
+
 <?php
-if($msgs) {
-    $this->display('messages');
-}
 
 if($operation) {
     $this->display('setup_'.$operation);

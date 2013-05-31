@@ -47,3 +47,10 @@ ul.nav-stacked li.active {
 
     font-weight: bold;
 }
+
+
+.spancenter {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}

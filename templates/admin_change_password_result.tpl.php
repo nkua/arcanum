@@ -16,6 +16,12 @@ $this->display('messages');
 ?>
 <br/>
 
+
+    <a href="admin_change_password.php?uid=<?= htmlspecialchars($uid) ?>"><?= _("Try Again") ?></a>
+
+    <br/>
+    <br/>
+
     <a href="admin_show_user.php?uid=<?= htmlspecialchars($uid) ?>"><?= sprintf( _("Return to Account Information for user %s"), htmlspecialchars($uid) ) ?></a>
 
 </div>
