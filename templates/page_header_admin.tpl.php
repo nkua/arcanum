@@ -42,7 +42,7 @@ if($role == 'admin_policy') {
     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> <?= $login_username ?> <b class="caret"></b></a>
     <ul class="dropdown-menu">
       <li><a tabindex="-1" href="myaccount.php"><?= _("About my Administrative Account") ?></a></li>
-      <li><a tabindex="-1" href="changepassword.php"><?= _("Change my Password") ?></a></li>
+      <li><a tabindex="-1" href="admin_change_password.php?uid=<?= htmlspecialchars($login_username) ?>"><?= _("Change my Password") ?></a></li>
     </ul>
   </li>
   

@@ -213,7 +213,6 @@ $allStrengthMessages = $check->allTestMessages(true);
 
 $t->assign('workflow', $workflow);
 $t->assign('ask_old_password', $ask_old_password);
-$t->assign('isAdmin', $isAdmin);
 $t->assign('msgs', $msgs);
 $t->assign('allStrengthMessages', $allStrengthMessages);
 
@@ -228,19 +227,12 @@ $t->assign('javascripts', array_merge(
 
 $t->display('html_header');
 
-if($isAdmin) {
-    $t->display('page_header_admin');
-    $t->display('change_password_admin_layout');
-    $t->display('page_footer_admin');
-
-} else {
-    $t->display('page_header');
-    if(empty($cleared_for) || sizeof($cleared_for) > 1) {
-        $t->display('navigation_user');
-    }
-    $t->display('change_password');
-    $t->display('page_footer');
+$t->display('page_header');
+if(empty($cleared_for) || sizeof($cleared_for) > 1) {
+    $t->display('navigation_user');
 }
+$t->display('change_password');
+$t->display('page_footer');
 
 $t->display('html_footer');
 
