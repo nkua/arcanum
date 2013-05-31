@@ -56,7 +56,7 @@ class Arcanum_Ldap {
         global $config;
         $this->ldap = $this->_ldap_connect();
 
-        $bind = ldap_bind($this->ldap, $config->ldap->bind, $config->ldap->password);
+        $bind = @ldap_bind($this->ldap, $config->ldap->bind, $config->ldap->password);
         if($bind === false) {
             $error_message = ldap_error($this->ldap);
             @header("Location: signout.php?forced=3&error_message=".urlencode($error_message));

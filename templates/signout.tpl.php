@@ -35,7 +35,30 @@ if($forced) {
 }
 
 
-echo '<br/><div style="text-align: center;">';
+// ==================================================================
+//
+// Additional error message explanation
+//
+// ------------------------------------------------------------------
+
+if(!empty($error_message)) {
+?>
+<br/>
+    <div class="span6 spancenter alert alert-error">
+    <p><?= sprintf( _("Note: The server has reported this error message: %s. Please contact your administrator and mention this message."),
+     ' &ldquo;<tt>'.htmlspecialchars($error_message).'</tt>&rdquo;') ?></p>
+    </div>
+<?php
+}
+
+
+// ==================================================================
+//
+// Link to service or back to login page
+//
+// ------------------------------------------------------------------
+
+echo '<br/><div class="span6 spancenter center">';
 
 if(isset($service)) {
     echo '<p>' . sprintf( _("<a href=\"%s\">Continue to service %s</a> (you will be asked to reenter your password)"),
@@ -45,15 +68,6 @@ if(isset($service)) {
 }
 echo '</div>';
 
-
-if(!empty($error_message)) {
-?>
-
-    <br/>
-    <p><?= sprintf( _("Note: The server has reported this error message: %s. Please contact your administrator and mention this message."),
-     '<br/><tt>'.htmlspecialchars($error_message).'</tt><br/><br/>') ?></p>';
-<?php
-}
     
 $this->display('page_footer');
 $this->display('html_footer');
