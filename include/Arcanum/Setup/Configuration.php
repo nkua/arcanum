@@ -14,7 +14,7 @@ class Arcanum_Setup_Configuration {
     public $editingExisting = false;
 
     public $all_config_vars_flat = array(
-        'locale__defaultlanguage',
+        'locale__default_language',
         'institution_name', 'institution_domain', 'title', 'subtitle', 'motd', 'session_name',
         'website_home', 'ldap__host', 'ldap__basedn',
         'ldap__bind', 'ldap__password',
@@ -24,7 +24,9 @@ class Arcanum_Setup_Configuration {
         'ldap__secondary_accounts__openid', 'ldap__filter__user', 'ldap__filter__user_receivesms',
         'ldap__filter__admin_password', 'ldap__filter__admin_policy', 'recaptcha__pubkey',
         'ldap__restrictfilters',
-        'recaptcha__privkey', 'mail__host',
+        'password_strength_policy__PW_CHECK_LEVENSHTEIN', 'password_strength_policy__PW_CHECK_MIN_LEN',
+        'password_strength_policy__PW_CHECK_MIN_UNIQ', 'password_strength_policy__PW_CHECK_MIN_LCS',
+        'password_strength_policy__PW_CHECK_MIN_NON_ALPHA', 'password_strength_policy__PW_MIN_CONSECUTIVE_NUMBERS',         'recaptcha__privkey', 'mail__host',
         'mail__from', 'mail__fromComment',
         'mail__replyto', 'mail__smtp__ssl',
         'mail__smtp__port', 'mail__smtp__auth',

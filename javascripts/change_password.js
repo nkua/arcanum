@@ -89,15 +89,13 @@ $(document).ready(function() {
 
         $.post('ajax_handler.php?operation=password_suggestions', function(response) {
             $('#password_suggestions').append('<table>');
-        
-            for(var i = 0; i<4; i++) {
-
+            for(var i = 0; i<3; i++) {
+                
                 $('#password_suggestions').append(
                     _.template(
                         "<tr><% _.each(passwords, function(p) { %> <td class='suggested_password'><%= p %></td> <% }); %></tr>",
-                        {passwords : response.slice(i, i+6) }
+                        {passwords : response.slice(i*6, i*6+6) }
                     )
-
                 );
             }
             $('#password_suggestions').append('</table>');

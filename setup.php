@@ -62,6 +62,7 @@ $operations = array(
     '0_checklist' => _("Checklist"),
     '1_php' => _("Basic Setup"),
     '2_config' => _("LDAP Connection"),
+    '2_password_strength' => _("Password Strength Policy"),
     '3_recaptcha' => _("CAPTCHA Setup"),
     '4_mail' => _("E-mail Dispatch"),
     '5_smsgw' => _("SMS Gateway"),
@@ -107,7 +108,7 @@ if(isset($_POST['submitstep']) && in_array($_POST['submitstep'], $ops)) {
         $cfg->saveAttr('website_home');
         
         // auto-generate suggested basedn, bind and website_home from 'domain', if they are not set:
-        if(empty($cfg->config->ldap->basedn)) {
+        if(!$cfg->editingExisting && empty($cfg->config->ldap->basedn)) {
             $basedn = Arcanum_Setup_Configuration::calculate_basedn_from_domain($cfg->config->institution_domain);
             $bind = "cn=Manager,$basedn";
 
@@ -120,10 +121,12 @@ if(isset($_POST['submitstep']) && in_array($_POST['submitstep'], $ops)) {
         break;
 
     case '2_config':
-        $cfg->saveAttr('ldap__host');
-        $cfg->saveAttr('ldap__basedn');
-        $cfg->saveAttr('ldap__bind');
-        $cfg->saveAttr('ldap__password');
+        if(!$cfg->editingExisting) {
+            $cfg->saveAttr('ldap__host');
+            $cfg->saveAttr('ldap__basedn');
+            $cfg->saveAttr('ldap__bind');
+            $cfg->saveAttr('ldap__password');
+        }
         $cfg->saveAttr('ldap__passwordHash');
         $cfg->saveAttr('ldap__sambaNtAttribute');
         $cfg->saveAttr('ldap__ctpAttribute');
@@ -145,6 +148,16 @@ if(isset($_POST['submitstep']) && in_array($_POST['submitstep'], $ops)) {
         //$msgs[] = array(class=>'warning', 'msg' => 'Δοκιμή', 'attribute' => 'ldap__host');
         //print_r($config->ldap->host);
         break;
+    
+    case '2_password_strength':
+        $cfg->saveAttr('password_strength_policy__PW_CHECK_LEVENSHTEIN');
+        $cfg->saveAttr('password_strength_policy__PW_CHECK_MIN_LEN');
+        $cfg->saveAttr('password_strength_policy__PW_CHECK_MIN_UNIQ');
+        $cfg->saveAttr('password_strength_policy__PW_CHECK_MIN_LCS');
+        $cfg->saveAttr('password_strength_policy__PW_CHECK_MIN_NON_ALPHA');
+        $cfg->saveAttr('password_strength_policy__PW_MIN_CONSECUTIVE_NUMBERS');
+        break;
+
     case '3_recaptcha':
         $cfg->saveAttr('recaptcha__pubkey');
         $cfg->saveAttr('recaptcha__privkey');

@@ -87,12 +87,13 @@ return array(
         'summary_attrs' => array('cn','uid','mail'),
         'show_attrs' => array('cn','uid','title','mail')
     ),
-    // 'password_strength_checks' => 'regexpTest,lengthTest,uniqueTest,similarityTest,consecutivenumbersTest',
     'password_strength_policy' => array(
         'PW_CHECK_LEVENSHTEIN' => 2, 
         'PW_CHECK_MIN_LEN' => 6,
         'PW_CHECK_MIN_UNIQ' => 5,
-        'PW_CHECK_MIN_LCS' => 40
+        'PW_CHECK_MIN_LCS' => 40,
+        'PW_CHECK_MIN_NON_ALPHA' => 2,
+        'PW_MIN_CONSECUTIVE_NUMBERS' => 3,
     ),
 	'recaptcha' => array(
 		'pubkey' => '',

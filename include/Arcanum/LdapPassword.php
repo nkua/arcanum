@@ -119,12 +119,7 @@ class Arcanum_LdapPassword extends Arcanum_Ldap {
         }
 
         if($check_strength && $this->enable_strength_check === true) {
-            $check = new passwordStrengthCheck(array(
-                'PW_CHECK_LEVENSHTEIN' => $config->password_strength_policy->PW_CHECK_LEVENSHTEIN,
-                'PW_CHECK_MIN_LEN' => $config->password_strength_policy->PW_CHECK_MIN_LEN,
-                'PW_CHECK_MIN_UNIQ' => $config->password_strength_policy->PW_CHECK_MIN_UNIQ,
-                'PW_CHECK_MIN_LCS' => $config->password_strength_policy->PW_CHECK_MIN_LCS
-            ));
+            $check = new passwordStrengthCheck($config->password_strength_policy->toArray());
             $ret = $check->runTests(array($this->username, $this->newpass), true);
 
             if(sizeof($ret) > 0) {
