@@ -29,6 +29,9 @@
 
 </fieldset>
 
+<?php
+if(!$editing_existing) {
+?>
 
 <div>
     <button class="btn btn-primary" id="ldap_test_connection"><?= _("Test Connection") ?></button>
@@ -37,6 +40,9 @@
 <div id="ldap_test_result">
     <div class="alert alert-info"><?= _("Click button to test connection parameters.")?></div>
 </div>
+<?php
+}
+?>
 
 
 <h3><?= _("CAS (Login) Server Connection") ?></h3>
@@ -166,7 +172,7 @@
     <?php
 
     Arcanum_ViewHelper_Setup::example_accordion('(uid=%s)
-(&amp;(uid=%s)(objectclass=GUPerson))'
+(&(uid=%s)(objectclass=GUPerson))'
 );
 ?>
 </label>
@@ -194,10 +200,10 @@ Arcanum_ViewHelper_Setup::example_accordion('(objectclass=GUPerson)
 <?php
 
 Arcanum_ViewHelper_Setup::example_accordion(
-    '(&amp;(uid=%s)(edupersonentitlement=dbadmin))
-(&amp;(uid=%s)(objectclass=uoaadmin))
-(&amp;(uid=%s)(uid=username))
-(&amp;(uid=%s)(|(uid=username1)(uid=username2)))'
+    '(&(uid=%s)(edupersonentitlement=dbadmin))
+(&(uid=%s)(objectclass=uoaadmin))
+(&(uid=%s)(uid=username))
+(&(uid=%s)(|(uid=username1)(uid=username2)))'
     );
     
     ?>
@@ -214,10 +220,10 @@ Arcanum_ViewHelper_Setup::example_accordion(
 
 <?php
 
-Arcanum_ViewHelper_Setup::example_accordion('(&amp;(uid=%s)(edupersonentitlement=dbadmin))
-(&amp;(uid=%s)(objectclass=uoaadmin))
-(&amp;(uid=%s)(uid=username))
-(&amp;(uid=%s)(|(uid=username1)(uid=username2)))');
+Arcanum_ViewHelper_Setup::example_accordion('(&(uid=%s)(edupersonentitlement=dbadmin))
+(&(uid=%s)(objectclass=uoaadmin))
+(&(uid=%s)(uid=username))
+(&(uid=%s)(|(uid=username1)(uid=username2)))');
 ?>
 </label>
 
@@ -234,6 +240,10 @@ $this->display('setup_save_button');
 
 </form>
 
+
+<?php
+if(!$editing_existing) {
+?>
 
 
 <script language="javascript">
@@ -260,3 +270,6 @@ $this->display('setup_save_button');
     });
 </script>
 
+<?php
+}
+?>

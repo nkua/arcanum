@@ -19,3 +19,6 @@ Release 1.1a1 - WIP
     * ReCAPTCHA settings can now be empty and no CAPTCHA will be requested in
       login / reset password forms.
     * New functionality: "Password Suggestions" in user change password page.
+    * New password strength check: customize minimum non-alpha characters in
+      password.
+    * Administrator settings for password strength.

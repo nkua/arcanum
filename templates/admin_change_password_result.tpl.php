@@ -17,7 +17,7 @@ $this->display('messages');
 <br/>
 
 
-    <a href="admin_change_password.php?uid=<?= htmlspecialchars($uid) ?>"><?= _("Try Again") ?></a>
+    <a href="admin_change_password.php?uid=<?= htmlspecialchars($uid) ?>"><?= _("Return to Change Password Page") ?></a>
 
     <br/>
     <br/>
