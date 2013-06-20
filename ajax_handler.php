@@ -5,7 +5,7 @@
  * @package arcanum
  * @version $Id: ajax_handler.php 5892 2012-10-31 11:05:29Z avel $
  */
-   
+
 $initLocation = 'ajax_handler';
 require_once('include/init.php');
 
@@ -18,7 +18,7 @@ class RpcMethods {
      */
     public static function strength_check()
     {
-        global $pw_check_params;
+        global $config;
 
         Arcanum_Session::check();
         $username = $_SESSION['login_username'];
@@ -64,7 +64,7 @@ class RpcMethods {
             include_once('password_strength_check/password_strength_check_collection.class.php');
             include_once('password_strength_check/password_strength_check.class.php');
 
-            $check = new passwordStrengthCheck($pw_check_params);
+            $check = new passwordStrengthCheck($config->password_strength_policy->toArray());
 
             //$check->runTests(array($username, $password), explode(',', $config->password_strength_checks));
             $check->runTests(array($username, $password), true);
@@ -91,7 +91,9 @@ class RpcMethods {
 
     public static function password_generator()
     {
-        global $pw_check_params;
+        global $config;
+
+
         Arcanum_Session::check();
 
         include_once('lib/password_generator/password_generator.inc.php');
@@ -108,7 +110,7 @@ class RpcMethods {
         $check_result = false;
         while($check_result === false) {
             $pw = uoa_generate_password();
-            $check = new passwordStrengthCheck($pw_check_params);
+            $check = new passwordStrengthCheck($config->password_strength_policy->toArray());
             if(!$check->runTests(array($uid, $pw))) {
                 $check_result = true;
             }
@@ -119,7 +121,7 @@ class RpcMethods {
 
     public static function password_suggestions()
     {
-        global $pw_check_params;
+        global $config;
 
         Arcanum_Session::check();
 
@@ -140,7 +142,7 @@ class RpcMethods {
 
         while(sizeof($passwords) < 24) {
             $pw = uoa_generate_password();
-            $check = new passwordStrengthCheck($pw_check_params);
+            $check = new passwordStrengthCheck($config->password_strength_policy->toArray());
             if(!$check->runTests(array($uid, $pw))) {
                 $passwords[] = $pw;
             }

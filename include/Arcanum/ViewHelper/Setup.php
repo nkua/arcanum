@@ -18,7 +18,7 @@ class Arcanum_ViewHelper_Setup {
         </div>
         <div id="accordion_'.$example_accordion_autoincrement.'collapse_'.$example_accordion_autoincrement2.'" class="accordion-body collapse">
           <div class="accordion-inner">
-    <pre style="margin-left: 1em;">'.$pretext .'</pre>
+    <pre style="margin-left: 1em;">'.htmlspecialchars($pretext) .'</pre>
           </div>
         </div>
     </div>';

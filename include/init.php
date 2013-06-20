@@ -44,14 +44,6 @@ include_once('include/misc.php');
 
 date_default_timezone_set($config->timezone);
 
-// Export some stuff from config object to global variables (for "legacy" code)
-$pw_check_params = array(
-    'PW_CHECK_LEVENSHTEIN' => $config->password_strength_policy->PW_CHECK_LEVENSHTEIN,
-    'PW_CHECK_MIN_LEN' => $config->password_strength_policy->PW_CHECK_MIN_LEN,
-    'PW_CHECK_MIN_UNIQ' => $config->password_strength_policy->PW_CHECK_MIN_UNIQ,
-    'PW_CHECK_MIN_LCS' => $config->password_strength_policy->PW_CHECK_MIN_LCS
-);
-
 
 // ACL definitions
 $acl = new Zend_Acl();

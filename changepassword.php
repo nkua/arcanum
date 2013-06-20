@@ -205,7 +205,7 @@ if (isset($_POST['changepass_do'])) {
 }
 
 // Displaying form; grab policy for strength check to show.
-$check = new passwordStrengthCheck($pw_check_params);
+$check = new passwordStrengthCheck($config->password_strength_policy->toArray());
 $allStrengthMessages = $check->allTestMessages(true);
 
 
