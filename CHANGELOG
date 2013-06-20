@@ -3,7 +3,7 @@ Release 1.0a1 - 31-Jan-2013
     
     * First public release
 
-Release 1.1a1 - WIP
+Release 1.1a1 - 20-Jun-2013
 
     * Small improvements in change password page for administrators.
     * Legacy MySQL-based SMS accounting / logging was removed.
