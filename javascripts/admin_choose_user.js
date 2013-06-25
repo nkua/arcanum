@@ -42,14 +42,14 @@ ARCANUM.searchFor = function(q) {
         }
 
     }).done(function ( r ) {
-                
+
         if(r.result == -2) return;
         $('#bodysearchresults').show();
         if(r.result == -1) {
             $('#bodysearchresults').html('<div class="alert alert-error">Σφάλμα LDAP Server ή λανθασμένο φίλτρο. Παρακαλούμε ξαναπροσπαθήστε.</div>');
             return;
         }
-        
+
         if(r.result == 0) {
             $('#bodysearchresults').html('Δε βρέθηκαν χρήστες.');
             return;
@@ -104,7 +104,7 @@ $(document).ready(function(){
     var nq = ARCANUM.getURLParameter('navquery');
     if(nq != null) {
         $('#bodysearchquery').val(nq);
-        ARCANUM.searchFor(nq);
+        ARCANUM.searchFor({query: nq});
     }
 
 

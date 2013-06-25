@@ -22,3 +22,8 @@ Release 1.1a1 - 20-Jun-2013
     * New password strength check: customize minimum non-alpha characters in
       password.
     * Administrator settings for password strength.
+
+Release 1.1a2 (WIP)
+
+    * Bugfix while searching from the nav bar
+    
