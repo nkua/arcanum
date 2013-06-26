@@ -155,12 +155,15 @@ class Arcanum_Ldap {
         global $config;
 
         $snippet = self::specialchars($query);
+        $attrs = array_unique( array_merge( array('cn', 'uid', 'mail'), $config->admin->summary_attrs->toArray()) );
 
-        return'(&'.sprintf($config->ldap->filter->user, '*') . '(|' . 
-            '(cn=*'.$snippet.'*)'.
-            '(uid=*'.$snippet.'*)'.
-            '(mail=*'.$snippet.'*)'.
-            '))';
+        $filter = '(&'.sprintf($config->ldap->filter->user, '*') . '(|';
+        foreach($attrs as $attr) {
+            $filter .= '('.$attr.'=*'.$snippet.'*)';
+
+        }
+        $filter .= '))';
+        return $filter;
     }
 
     /**

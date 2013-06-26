@@ -27,3 +27,5 @@ Release 1.1a2 (WIP)
 
     * Bugfix while searching from the nav bar
     * Small beautification fix for the "No policies defined" screen
+    * When searching for users in admin interface, the attributes in which search
+      is performed are no longer hardcoded; the summary attributes are used.
