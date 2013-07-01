@@ -17,4 +17,4 @@ templates/emails/notification_email_<?= $show_template ?>.local.tpl.php
 <?= htmlspecialchars(file_get_contents('templates/emails/notification_email_'.$show_template.'.tpl.php')) ?>
 </pre>
 
-<p><a href="admin_notifications.php"><i class="icon-arrow-left"></i> <?= _("Back to Notifications"?></a></p>
+<p><a href="admin_notifications.php"><i class="icon-arrow-left"></i> <?= _("Back to Notifications") ?></a></p>
