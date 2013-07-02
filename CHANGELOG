@@ -30,3 +30,4 @@ Release 1.1a2 (WIP)
     * When searching for users in admin interface, the attributes in which search
       is performed are no longer hardcoded; the summary attributes are used.
     * Fix syntax error in "Show E-mail Notification Template" admin page.
+    * Locale updates

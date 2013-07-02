@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-17 12:44+0300\n"
+"POT-Creation-Date: 2013-07-02 10:53+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -217,6 +217,9 @@ msgid "Basic Setup"
 msgstr ""
 
 msgid "LDAP Connection"
+msgstr ""
+
+msgid "Password Strength Policy"
 msgstr ""
 
 msgid "CAPTCHA Setup"
@@ -925,6 +928,10 @@ msgstr ""
 msgid "Return to Change Password Page"
 msgstr ""
 
+#, php-format
+msgid "Return to Account Information for user %s"
+msgstr ""
+
 msgid "Simple Search"
 msgstr ""
 
@@ -1238,7 +1245,16 @@ msgstr ""
 msgid "Must contain at least one number or symbol"
 msgstr ""
 
-msgid "More information about password safety &gt;"
+msgid "More information about password safety"
+msgstr ""
+
+msgid "Password Suggestions"
+msgstr ""
+
+msgid "Pick one of these easy to pronounce passwords:"
+msgstr ""
+
+msgid "Get other suggestions"
 msgstr ""
 
 msgid "Password:"
@@ -1673,6 +1689,12 @@ msgstr ""
 msgid "Bind Password"
 msgstr ""
 
+msgid "Test Connection"
+msgstr ""
+
+msgid "Click button to test connection parameters."
+msgstr ""
+
 msgid "CAS (Login) Server Connection"
 msgstr ""
 
@@ -1766,6 +1788,29 @@ msgid ""
 "A policy administrator, in addition to changing users' passwords and locking "
 "accounts, can also change the password policy that is in effect (e.g. the "
 "maximum password age)."
+msgstr ""
+
+msgid ""
+"The following settings affect the intensity of the password strength checks. "
+"For each setting, set a value of 0 to disable that check entirely."
+msgstr ""
+
+msgid "Minimum length in characters"
+msgstr ""
+
+msgid "Minimum unique characters"
+msgstr ""
+
+msgid "Minimum non-alpha characters (symbols or numbers)"
+msgstr ""
+
+msgid "Avoid more than this count of consecutive numbers"
+msgstr ""
+
+msgid "Similarity with username (Levenenshtein Distance)"
+msgstr ""
+
+msgid "Similarity with username (LCS test)"
 msgstr ""
 
 msgid "Usage of ReCAPTCHA Service"
@@ -1931,15 +1976,15 @@ msgstr ""
 
 #, php-format
 msgid ""
+"Note: The server has reported this error message: %s. Please contact your "
+"administrator and mention this message."
+msgstr ""
+
+#, php-format
+msgid ""
 "<a href=\"%s\">Continue to service %s</a> (you will be asked to reenter your "
 "password)"
 msgstr ""
 
 msgid "Login Page"
-msgstr ""
-
-#, php-format
-msgid ""
-"Note: The server has reported this error message: %s. Please contact your "
-"administrator and mention this message."
 msgstr ""

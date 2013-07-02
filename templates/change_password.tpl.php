@@ -36,12 +36,12 @@
             <div class="more-link"><a href="safety.php"><?= _("More information about password safety") ?></a></div></div>
 
        
-       <strong>Password Suggestions</strong>
+       <strong><?= _("Password Suggestions") ?></strong>
 
-       <p>Pick one of these easy to pronounce passwords:</p>
+       <p><?= _("Pick one of these easy to pronounce passwords:") ?></p>
       <div id="password_suggestions">
       </div>
-      <a href="#" id="get_other_suggestions">Get other suggestions</a>
+      <a href="#" id="get_other_suggestions"><?= _("Get other suggestions") ?></a>
 
     </div>
 

@@ -1,16 +1,19 @@
 # arcanum greek locale
+# Alexandros Vellis <avel@noc.uoa.gr>, 2013.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: arcanum 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-17 12:44+0300\n"
-"PO-Revision-Date: 2012-02-21 16:30+0200\n"
+"POT-Creation-Date: 2013-07-02 10:53+0300\n"
+"PO-Revision-Date: 2013-07-02 11:13+0300\n"
 "Last-Translator: Alexandros Vellis <avel@noc.uoa.gr>\n"
-"Language-Team: greek <el@li.org>\n"
+"Language-Team: el <greek-locale@email.uoa.gr>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: -\n"
+"Plural-Forms: -\n"
 
 msgid "Users"
 msgstr "Χρήστες"
@@ -247,6 +250,9 @@ msgstr "Βασικές Ρυθμίσεις"
 msgid "LDAP Connection"
 msgstr "Ρύθμιση LDAP"
 
+msgid "Password Strength Policy"
+msgstr "Πολιτική Βαθμού Ασφαλείας Κωδικών"
+
 msgid "CAPTCHA Setup"
 msgstr "Ρύθμιση CAPTCHA"
 
@@ -399,25 +405,29 @@ msgstr ""
 "6931234567 (%s ψηφία)."
 
 msgid "Duplicate (or no) login entries detected, cannot change password."
-msgstr ""
+msgstr "Βρέθηκαν διπλές (ή καθόλου) εγγραφές, δεν μπορεί να αλλάξει ο κωδικός."
 
 #, php-format
 msgid "Could not bind to LDAP server as %s; LDAP error: %s"
 msgstr ""
+"Δε μπορούσε να πραγματοποιηθεί η σύνδεση στον εξυπηρετητή LDAP ως %s. Σφάλμα "
+"LDAP: %s"
 
 msgid ""
 "Account has been temporarily locked manually by an administrator, to force "
 "change of password."
 msgstr ""
+"Ο λογαριασμός έχει κλειδωθεί προσωρινά από έναν διαχειριστή, για να γίνει "
+"αναγκαστική αλλαγή κωδικού."
 
 msgid "Account is active."
-msgstr ""
+msgstr "Ο λογαριασμός είναι ενεργός."
 
 msgid "No dates registered."
-msgstr ""
+msgstr "Δεν έχουν καταγραφεί ημερομηνίες."
 
 msgid "Password history is empty."
-msgstr ""
+msgstr "Το ιστορικό παλαιών κωδικών είναι κενό."
 
 #, php-format
 msgid "%s-encoded password, set on %s"
@@ -428,40 +438,40 @@ msgid "Cleartext password, set on %s"
 msgstr "Cleartext κωδικός, τέθηκε στις %s"
 
 msgid "Unreadable or not set."
-msgstr ""
+msgstr "Αδύνατο να αναγνωστεί ή μη ορισμένο."
 
 #, php-format
 msgid "%s-encoded password"
-msgstr ""
+msgstr "Κωδικός κωδικοποιημένος κατά %s"
 
 #, php-format
 msgid "Cleartext password; hover to reveal"
 msgstr ""
 
 msgid "Default or unspecified policy."
-msgstr ""
+msgstr "Προκαθορισμένη ή μη ορισμένη πολιτική"
 
 #, php-format
 msgid "Specific Policy: %s"
-msgstr ""
+msgstr "Συγκεκριμένη Πολιτική: %s"
 
 msgid "No"
-msgstr ""
+msgstr "Όχι"
 
 msgid "Yes; user will be prompted to change it immediately."
-msgstr ""
+msgstr "Ναι. Ο χρήστης θα λάβει μήνυμα να τον αλλάξει άμεσα."
 
 msgid "Empty username."
-msgstr ""
+msgstr "Κενό όνομα χρήστη."
 
 msgid "Could not resolve username to an entry in LDAP directory."
 msgstr ""
 
 msgid "You must type in your old password."
-msgstr ""
+msgstr "Πρέπει να εισάγετε τον παλιό σας κωδικό."
 
 msgid "You must type in your new password."
-msgstr ""
+msgstr "Πρέπει να εισάγετε τον νέο σας κωδικό."
 
 msgid "The password contains invalid characters."
 msgstr "Ο κωδικός περιέχει άκυρους χαρακτήρες."
@@ -491,13 +501,16 @@ msgid ""
 "recently, or it is still too early to change the password again. Try "
 "entering a different password."
 msgstr ""
+"Η αλλαγή του κωδικού απέτυχε. Πιθανόν έχετε χρησιμοποιήσει ήδη τον ίδιο "
+"κωδικό πρόσφατα, ή είναι πολύ νωρίς για να αλλάξετε ξανά τον κωδικό. "
+"Προσπαθήστε να εισάγετε έναν διαφορετικό κωδικό."
 
 #, php-format
 msgid "Password change failed: %s"
 msgstr "Αλλαγή κωδικού απέτυχε: %s"
 
 msgid "GUnet Unique ID"
-msgstr ""
+msgstr "GUnet Μοναδικό ID"
 
 msgid ""
 "A unique identifier for a user of the entire organization. It is usually the "
@@ -706,7 +719,7 @@ msgid ""
 msgstr ""
 
 msgid "Minimum Age"
-msgstr ""
+msgstr "Ελάχιστη Ηλικία"
 
 msgid ""
 "This attribute holds the number of seconds that must elapse between "
@@ -715,7 +728,7 @@ msgid ""
 msgstr ""
 
 msgid "Maximum Age"
-msgstr ""
+msgstr "Μέγιστη Ηλικία"
 
 msgid ""
 "This attribute holds the number of seconds after which a modified password "
@@ -725,7 +738,7 @@ msgid ""
 msgstr ""
 
 msgid "Passwords to keep in History"
-msgstr ""
+msgstr "Αριθμός κωδικών που να διατηρούνται στο Ιστορικό"
 
 msgid ""
 "This attribute specifies the maximum number of used passwords stored in the "
@@ -748,7 +761,7 @@ msgid ""
 msgstr ""
 
 msgid "Minimum Length"
-msgstr ""
+msgstr "Ελάχιστο Μέγεθος"
 
 msgid ""
 "When quality checking is enabled, this attribute holds the minimum number of "
@@ -760,7 +773,7 @@ msgid ""
 msgstr ""
 
 msgid "Maximum Length"
-msgstr ""
+msgstr "Μέγιστο Μέγεθος"
 
 msgid ""
 "When quality checking is enabled, this attribute holds the maximum number of "
@@ -996,6 +1009,10 @@ msgstr ""
 
 msgid "Return to Change Password Page"
 msgstr "Επιστροφή στη σελίδα Αλλαγής Κωδικού"
+
+#, php-format
+msgid "Return to Account Information for user %s"
+msgstr ""
 
 msgid "Simple Search"
 msgstr "Απλή Αναζήτηση"
@@ -1334,8 +1351,17 @@ msgstr "Ο κωδικός σας πρέπει να αποτελείται του
 msgid "Must contain at least one number or symbol"
 msgstr "Να περιέχει τουλάχιστον 1 αριθμό ή σύμβολο"
 
-msgid "More information about password safety &gt;"
-msgstr "Περισσότερα για την ασφάλεια κωδικού &gt;"
+msgid "More information about password safety"
+msgstr "Περισσότερες πληροφορίες για την ασφάλεια του κωδικού"
+
+msgid "Password Suggestions"
+msgstr "Προτάσεις για έτοιμους κωδικούς"
+
+msgid "Pick one of these easy to pronounce passwords:"
+msgstr "Επιλέξτε έναν από αυτούς τους κωδικούς:"
+
+msgid "Get other suggestions"
+msgstr "Λήψη άλλων προτάσεων"
 
 msgid "Password:"
 msgstr "Κωδικός:"
@@ -1392,8 +1418,8 @@ msgid ""
 "You will be redirected to the login page in %s seconds. If you need to make "
 "further changes, please login again."
 msgstr ""
-"Θα μεταφερθείτε αυτόματα πίσω στη σε %s δευτερόλεπτα. Εάν επιθυμείτε να "
-"κάνετε περαιτέρω αλλαγές, πρέπει να κάνετε είσοδο εκ νέου."
+"Θα μεταφερθείτε αυτόματα πίσω στη σελίδα εισόδου σε %s δευτερόλεπτα. Εάν "
+"επιθυμείτε να κάνετε περαιτέρω αλλαγές, πρέπει να κάνετε είσοδο εκ νέου."
 
 msgid "Back to Change Password Home"
 msgstr "Επιστροφή στη σελίδα Αλλαγής Κωδικού"
@@ -1449,7 +1475,7 @@ msgstr ""
 "Παρακαλούμε πατήστε &quot;Πίσω&quot; στον Browser σας και ξαναπροσπαθήστε."
 
 msgid "If the problem persists, contact your local administrator."
-msgstr ""
+msgstr "Εάν το πρόβλημα επιμείνει, επικοινωνήστε με τον διαχειριστή."
 
 msgid "Available Functions"
 msgstr "Διαθέσιμες Λειτουργίες"
@@ -1752,7 +1778,7 @@ msgstr "Έχετε εγκαταστήσει το %s καθώς και τα %s σ
 
 #, php-format
 msgid "OpenLDAP Configuration example (%s)"
-msgstr "'Παράδειγμα OpenLDAP configuration (%s)'"
+msgstr "Παράδειγμα OpenLDAP configuration (%s)"
 
 msgid "You have set the proper LDAP ACLs and Policy Module Settings."
 msgstr "Έχετε θέσει τα κατάλληλα LDAP ACLs και settings του Policy Module."
@@ -1831,6 +1857,12 @@ msgstr ""
 
 msgid "Bind Password"
 msgstr ""
+
+msgid "Test Connection"
+msgstr "Δοκιμή Σύνδεσης"
+
+msgid "Click button to test connection parameters."
+msgstr "Κάντε κλικ για να δοκιμάσετε τις παραμέτρους σύνδεσης."
 
 msgid "CAS (Login) Server Connection"
 msgstr "Σύνδεση με τον CAS (Login) Server"
@@ -1952,6 +1984,29 @@ msgstr ""
 "χρηστών και να κλειδώνουν λογαριασμούς, κι επιπλέον να επεξεργάζονται την "
 "πολιτική χρήσης κωδικών (π.χ. διάρκεια ισχύος κωδικών)."
 
+msgid ""
+"The following settings affect the intensity of the password strength checks. "
+"For each setting, set a value of 0 to disable that check entirely."
+msgstr ""
+
+msgid "Minimum length in characters"
+msgstr ""
+
+msgid "Minimum unique characters"
+msgstr ""
+
+msgid "Minimum non-alpha characters (symbols or numbers)"
+msgstr ""
+
+msgid "Avoid more than this count of consecutive numbers"
+msgstr ""
+
+msgid "Similarity with username (Levenenshtein Distance)"
+msgstr ""
+
+msgid "Similarity with username (LCS test)"
+msgstr ""
+
 msgid "Usage of ReCAPTCHA Service"
 msgstr "Χρήση Υπηρεσίας ReCAPTCHA"
 
@@ -1973,10 +2028,10 @@ msgid "Then, enter your Public and Private keys here:"
 msgstr "Ακολούθως εισάγετε τα Public και Private keys που φτιάξατε, εδώ:"
 
 msgid "Public Key"
-msgstr ""
+msgstr "Δημόσιο Κλειδί"
 
 msgid "Private Key"
-msgstr ""
+msgstr "Ιδιωτικό Κλειδί"
 
 msgid "E-mail Settings"
 msgstr "Ρύθμιση Αποστολής E-mail"
@@ -2142,6 +2197,15 @@ msgstr ""
 
 #, php-format
 msgid ""
+"Note: The server has reported this error message: %s. Please contact your "
+"administrator and mention this message."
+msgstr ""
+"Σημείωση: Το λάθος που αναφέρει το σύστημα είναι: %s. Παρακαλούμε "
+"επικοινωνήστε με τον διαχειριστή του συστήματος αναφέροντας το παραπάνω "
+"μήνυμα λάθους."
+
+#, php-format
+msgid ""
 "<a href=\"%s\">Continue to service %s</a> (you will be asked to reenter your "
 "password)"
 msgstr ""
@@ -2151,14 +2215,8 @@ msgstr ""
 msgid "Login Page"
 msgstr "Σελίδα Εισόδου"
 
-#, php-format
-msgid ""
-"Note: The server has reported this error message: %s. Please contact your "
-"administrator and mention this message."
-msgstr ""
-"Σημείωση: Το λάθος που αναφέρει το σύστημα είναι: %s. Παρακαλούμε "
-"επικοινωνήστε με τον διαχειριστή του συστήματος αναφέροντας το παραπάνω "
-"μήνυμα λάθους."
+#~ msgid "More information about password safety &gt;"
+#~ msgstr "Περισσότερα για την ασφάλεια κωδικού &gt;"
 
 #~ msgid "No account found for your mobile. Register your mobile at %s"
 #~ msgstr ""
