@@ -11,7 +11,7 @@ UOA.arcanum = {
                 $('#newpassnotice').show();
             }
         );
-    },
+    }
 
 };
 
