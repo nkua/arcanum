@@ -31,7 +31,7 @@
 
 <div class="form-field" id="smsgw__sender">
 <label><?= _("Method to use for sending Text Messages") ?></label>
-<select class="input-xxlarge" name="smsgw__receiver">
+<select class="input-xxlarge" name="smsgw__sender">
     <option value="" <?= ($config->smsgw->sender == '' ? 'selected=""' : '' ) ?>>
         <?= _("None") ?>
     </option>

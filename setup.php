@@ -185,6 +185,7 @@ if(isset($_POST['submitstep']) && in_array($_POST['submitstep'], $ops)) {
         $cfg->saveAttr('smsgw__uri');
         $cfg->saveAttr('smsgw__username');
         $cfg->saveAttr('smsgw__password');
+        $cfg->saveAttr('smsgw__prefix');
         break;
     
     case '7_admins':
