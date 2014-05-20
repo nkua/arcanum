@@ -182,8 +182,8 @@ class Arcanum_Session {
     public static function authenticate_token($token) {
         global $config, $initLocation, $loggedin, $login_username, $cpAuthKey;
 
-        if(strlen($token) == 12) {
-            // numeric 12-digit token
+        if(strlen($token) == 6) {
+            // numeric 6-digit token
             $tok = new Arcanum_Token_Sms();
             $envstorecheck = true;
 

@@ -23,8 +23,8 @@ class Arcanum_Token_Sms extends Arcanum_Token {
      */
     public function generate_token() {
         $parts = array(
-            str_pad(mt_rand(0,999999), 6, "0", STR_PAD_LEFT),
-            str_pad(mt_rand(0,999999), 6, "0", STR_PAD_LEFT),
+            str_pad(mt_rand(0,999), 3, "0", STR_PAD_LEFT),
+            str_pad(mt_rand(0,999), 3, "0", STR_PAD_LEFT),
         );
         return $parts[0].$parts[1];
     }
