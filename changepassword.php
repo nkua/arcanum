@@ -144,7 +144,7 @@ if (isset($_POST['changepass_do'])) {
         $mobile_number = false;
         if(!empty($config->ldap->filter->user_receivesms)) {
             $sr = ldap_search($ldap, $config->ldap->basedn,
-                '(&'.sprintf($config->ldap->filter->user, Arcanum_Ldap::specialchars($username)).$config->ldap->filter->user_receivesms.')',
+                sprintf($config->ldap->filter->user, Arcanum_Ldap::specialchars($username)),
                 array('mobile'));
             $info = ldap_get_entries($ldap, $sr);
             if($info['count'] == 1 && isset($info[0]['mobile']) && isset($info[0]['mobile'][0])) {
@@ -163,7 +163,7 @@ if (isset($_POST['changepass_do'])) {
 
                 if($arcanumLdap->changeUserAdditionalPasswordAttributes() === true) {
                     if($mobile_number) {
-                        $sms = new Arcanum_SMS($mobile_number);
+                        $sms = Arcanum_SMS_Sender::Factory($mobile_number,$config->smsgw);
                         $sms->send(_("This is an automated notification to inform you that your password was just changed. - ".$config->institution_name));
                     }
 

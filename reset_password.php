@@ -54,10 +54,10 @@ if(isset($_POST['reset_password_do'])) {
     }
     switch($method) {
     case 'sms':
-        $required_info = array('surname', 'sms');
+        $required_info = array('sms');
         break;
     case 'email':
-        $required_info = array('surname', 'email');
+        $required_info = array('email');
         break;
     }
     $_SESSION['required_info'] = $required_info;
@@ -324,8 +324,8 @@ function canonicalize_greek_text($str) {
 
 function format_number_token($token) {
     return substr($token, 0, 3) . ' ' .
-        substr($token, 3, 3) . ' ' .
-        substr($token, 6, 3) . ' ' .
-        substr($token, 9, 3);
+        substr($token, 3, 3); // . ' ' .
+        //substr($token, 6, 3) . ' ' .
+        //substr($token, 9, 3);
 }
 
