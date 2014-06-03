@@ -19,13 +19,13 @@ return array(
         'password' => '',
         'secondary_accounts' => array(
             'sms' => 'mobile',
-            'email' => 'GUAccountSecondaryMail',
-            'openid' => 'GUAccountSecondaryOpenID'
+            'email' => 'SecondaryEmail',
+            //'openid' => 'AccountSecondaryOpenID'
         ),
         'filter' => array(
             //'user' => 'uid=%s',
-            'user' => '(&(uid=%s)(objectclass=guperson))',
-            'user_receivesms' => '(objectclass=guperson)',
+            'user' => '(&(uid=%s)(objectclass=*))',
+            'user_receivesms' => '(objectclass=*)',
             //
             // Sample LDAP filter for setting specific users as administrators:
             // 'admin' => '(&(uid=%s)(uid=adminuid))',
@@ -67,7 +67,7 @@ return array(
         'otpInitKeyAttribute' => '',
         'otpBackupPasswordsAttribute' => '',
         
-        'digestha1Attribute' => 'gudigestha1',
+        'digestha1Attribute' => 'digestha1',
         'digestRealm' => '',
     ),
     'cas'  => array(

@@ -71,7 +71,7 @@ $summariesDef = array(
         'group' => 'info',
     ),
     'noguobjectclass' => array(
-        'filter' => '(&'.$f.'(!(objectclass=GUExtendedAuthentication)))',
+        'filter' => '(&'.$f.'(!(objectclass=ExtendedAuthentication)))',
         'desc' => _("Users without the required ObjectClass"),
         'bad' => true,
         'fix' => true,
@@ -292,11 +292,11 @@ if($flow == 'summary') {
             for($j=0; $j< $entries[$i]['objectclass']['count']; $j++) {
                 $newobjectclass[] = $entries[$i]['objectclass'][$j];
             }
-            $newobjectclass[] = 'GUExtendedAuthentication';
+            $newobjectclass[] = 'ExtendedAuthentication';
             ldap_modify($ldap, $entries[$i]['dn'], array('objectclass' => $newobjectclass));
             $count_fixed++;
         }
-        $msgs[] = array('class' => 'success', 'msg' => sprintf( _("The required objectclass (GUExtendedAuthentication) was added to %s entries"), $count_fixed));
+        $msgs[] = array('class' => 'success', 'msg' => sprintf( _("The required objectclass (ExtendedAuthentication) was added to %s entries"), $count_fixed));
         break;
 
     case  'nonthash':

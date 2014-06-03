@@ -20,7 +20,7 @@ if(!$editing_existing) {
 <ul>
 <li><?= _("LDAP server is installed and operational.") ?></li>
 <li><?= sprintf( _("You have installed %s and %s in LDAP server"),
-    '<a href="doc/GUExtendedAuthentication.schema" target="_blank">GUExtendedAuthentication.schema</a>',
+    '<a href="doc/ExtendedAuthConfig.ldif" target="_blank">ExtendedAuthConfig.ldif</a>',
     '<a href="https://spaces.internet2.edu/display/macedir/LDIFs" target="_blank">eduOrg, eduPerson schemas</a>') ?>
 
 

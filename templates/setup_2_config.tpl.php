@@ -172,7 +172,7 @@ if(!$editing_existing) {
     <?php
 
     Arcanum_ViewHelper_Setup::example_accordion('(uid=%s)
-(&(uid=%s)(objectclass=GUPerson))'
+(&(uid=%s)(objectclass=Person))'
 );
 ?>
 </label>
@@ -184,8 +184,8 @@ if(!$editing_existing) {
 <label><?= _("Filter to determine which users are allowed to receive SMS text messages.") ?> <?= _("The %s will be substituted by the username.") ?>
     <?php
 
-Arcanum_ViewHelper_Setup::example_accordion('(objectclass=GUPerson)
-(&(objectclass=GUPerson)(eduPersonAffiliation=faculty))');
+Arcanum_ViewHelper_Setup::example_accordion('(objectclass=Person)
+(&(objectclass=Person)(eduPersonAffiliation=faculty))');
 ?>
 </label>
 

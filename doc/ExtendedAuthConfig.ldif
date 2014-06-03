@@ -1,0 +1,68 @@
+#
+# GUnet assinged OID: 1.3.6.1.4.1.36215
+#
+# http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+# http://oid-info.com/get/1.3.6.1.4.1.36215
+#
+#
+# extendedAuth and related objectclasses (20140501)
+#
+# See http://www.gunet.gr/.../guperson for background and usage
+#
+# extendedAuth et. al are an effort of GUNet
+#
+# 1.3.6.1.4.1.36215 is the toplevel OID for this work
+#           .2 = GUnet Password Management related work
+#
+# CHANGELOG
+#	May, 2014  (pdrados@noc.uoa.gr) First major update
+#
+# $Id$
+
+# ======================= Attributes ======================= 
+dn: cn=extendedAuth,cn=schema,cn=config
+changetype: add
+objectClass: olcSchemaConfig
+cn: extendedAuth
+olcObjectIdentifier: GUnet 1.3.6.1.4.1.36215
+olcObjectIdentifier: extendedAuth GUnet:2
+olcObjectIdentifier: extendedAuthAttribute extendedAuth:1
+olcObjectIdentifier: extendedAuthObjectClass extendedAuth:2
+# Blatantly copied over from samba schema 3.0
+olcAttributeTypes: {0}( 1.3.6.1.4.1.7165.2.1.25 
+ NAME 'sambaNTPassword' 
+ DESC 'MD4 hash of the unicode password' 
+ EQUALITY caseIgnoreIA5Match 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{32} SINGLE-VALUE )
+olcAttributeTypes: {1}( extendedAuthAttribute:1 
+ NAME 'ctp' 
+ DESC 'CTP' 
+ EQUALITY caseIgnoreIA5Match 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+olcAttributeTypes: {2}( extendedAuthAttribute:2 
+ NAME 'digestHA1' 
+ DESC 'MD5 hash of the uid:realm:password string' 
+ EQUALITY caseIgnoreIA5Match 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{32} SINGLE-VALUE )
+olcAttributeTypes: {3}( extendedAuthAttribute:3 
+ NAME 'secondaryEmail' 
+ DESC 'Secondary E-mail Addresses used for password reset or other purposes' 
+ EQUALITY caseIgnoreIA5Match 
+ SUBSTR caseIgnoreIA5SubstringsMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+olcAttributeTypes: {4}( extendedAuthAttribute:4 
+ NAME 'secondaryOptOut' 
+ DESC 'If exists and is TRUE, user has elected not to be bothered again about entering secondary account information used for password reset or other purposes' 
+ EQUALITY booleanMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.7 SINGLE-VALUE )
+olcAttributeTypes: {5}( extendedAuthAttribute:5 
+ NAME 'secondaryOpenID' 
+ DESC 'Secondary Accounts used for password reset or other purposes' 
+ EQUALITY caseIgnoreIA5Match 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.26{256} )
+olcObjectClasses: {0}( extendedAuthObjectClass:1 
+ NAME 'extendedAuthentication' 
+ DESC 'Enables extended authentication attributes such as smb password on any objects' 
+ SUP top 
+ AUXILIARY 
+ MAY( sambaNTPassword $ ctp $ digestHA1 $ secondaryEmail $ secondaryOptOut $ secondaryOpenID ))

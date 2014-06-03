@@ -1,0 +1,69 @@
+#
+# GUnet assinged OID: 1.3.6.1.4.1.36215
+#
+# http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+# http://oid-info.com/get/1.3.6.1.4.1.36215
+#
+#
+# vocabulary and related objectclasses (20140501)
+#
+# See http://www.gunet.gr/.../guperson for background and usage
+#
+# schGRacVocabulary et. al are an effort of GUNet
+#
+# 1.3.6.1.4.1.36215 is the toplevel OID for this work
+#           .3 = GUNet authorised terms and vocabulary of ldap attributes related work
+#
+# CHANGELOG
+#	May, 2014  (pdrados@noc.uoa.gr) First major update
+#
+# $Id$
+
+# ======================= Attributes ======================= 
+dn: cn=vocabulary,cn=schema,cn=config
+changetype: add
+objectClass: olcSchemaConfig
+cn: vocabulary
+olcObjectIdentifier: GUnet 1.3.6.1.4.1.36215
+olcObjectIdentifier: vocabulary GUnet:3
+olcObjectIdentifier: vocabularyAttribute vocabulary:1
+olcObjectIdentifier: vocabularyObjectClass vocabulary:2
+olcAttributeTypes: {0}( vocabularyAttribute:1 
+ NAME 'eduPersonAffiliationCV' 
+ DESC 'Controlled Vocabulary of eduPersonAffiliation' 
+ EQUALITY caseIgnoreMatch 
+ SUBSTR caseIgnoreSubstringsMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+olcAttributeTypes: {1}( vocabularyAttribute:2 
+ NAME 'schacGenderCV' 
+ DESC 'Controlled Vocabulary of schacGender' 
+ EQUALITY integerMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.27 )
+olcAttributeTypes: {2}( vocabularyAttribute:3 
+ NAME 'schacCountryOfCitizenshipCV' 
+ DESC 'Controlled Vocabulary of schacCountryOfCitizenship' 
+ EQUALITY caseIgnoreMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+olcAttributeTypes: {3}( vocabularyAttribute:4 
+ NAME 'schacHomeOrganizationTypeCV' 
+ DESC 'Controlled Vocabulary of schacHomeOrganizationType' 
+ EQUALITY caseIgnoreMatch 
+ SUBSTR caseIgnoreSubstringsMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+olcAttributeTypes: {4}( vocabularyAttribute:5 
+ NAME 'schacCountryOfResidenceCV' 
+ DESC 'Controlled Vocabulary of schacCountryOfResidence' 
+ EQUALITY caseIgnoreMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+olcObjectClasses: {0}( vocabularyObjectClass:1 
+ NAME 'eduPersonVocabulary' 
+ DESC 'Used to store the controlled vocabularies of eduPerson schema attributes' 
+ SUP top 
+ AUXILIARY 
+ MAY( eduPersonAffiliationCV ))
+olcObjectClasses: {1}( vocabularyObjectClass:2 
+ NAME 'schacVocabulary' 
+ DESC 'Used to store the controlled vocabularies of schema for academia (schac) attributes' 
+ SUP top 
+ AUXILIARY 
+ MAY( schacGenderCV $ schacCountryOfCitizenshipCV $ schacHomeOrganizationTypeCV $ schacCountryOfResidenceCV ))

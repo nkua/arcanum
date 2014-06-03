@@ -34,12 +34,12 @@ $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($config->ldap->filter->u
 $entries = ldap_get_entries($ldap, $sr);
 $userdn = $entries[0]['dn'];
 
-if(!in_array('GUExtendedAuthentication', $entries[0]['objectclass'])) {
+if(!in_array('ExtendedAuthentication', $entries[0]['objectclass'])) {
     $new_objectclass = array();
     for($i=0; $i<$entries[0]['objectclass']['count']; $i++) {
         $new_objectclass[] = $entries[0]['objectclass'][$i];
     }
-    $new_objectclass[] = 'GUExtendedAuthentication';
+    $new_objectclass[] = 'ExtendedAuthentication';
     if(@ldap_modify($ldap, $userdn, array( 'objectclass' => $new_objectclass)) === false) {
         $msgs[] = array('class' => 'error', 'msg' => sprintf( _("Attention: your record in the directory server cannot be modified. Please contact your administrator. (LDAP Error: %s)"),
             ldap_error($ldap)) );

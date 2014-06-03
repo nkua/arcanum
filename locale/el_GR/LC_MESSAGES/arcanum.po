@@ -66,9 +66,9 @@ msgstr ""
 
 #, php-format
 msgid ""
-"The required objectclass (GUExtendedAuthentication) was added to %s entries"
+"The required objectclass (ExtendedAuthentication) was added to %s entries"
 msgstr ""
-"Σε %s εγγραφές προστέθηκε επιτυχώς το GUExtendedAuthentication Object Class."
+"Σε %s εγγραφές προστέθηκε επιτυχώς το ExtendedAuthentication Object Class."
 
 msgid "No entries in which to add Samba NT Hash"
 msgstr "Δεν υπάρχουν εγγραφές στις οποίες να προστεθεί το Samba NT Hash."
@@ -509,8 +509,8 @@ msgstr ""
 msgid "Password change failed: %s"
 msgstr "Αλλαγή κωδικού απέτυχε: %s"
 
-msgid "GUnet Unique ID"
-msgstr "GUnet Μοναδικό ID"
+msgid "Unique ID"
+msgstr "Μοναδικό ID"
 
 msgid ""
 "A unique identifier for a user of the entire organization. It is usually the "

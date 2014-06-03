@@ -1,0 +1,79 @@
+#
+# GUnet assinged OID: 1.3.6.1.4.1.36215
+#
+# http://www.iana.org/assignments/enterprise-numbers/enterprise-numbers
+# http://oid-info.com/get/1.3.6.1.4.1.36215
+#
+#
+# schGrAc and related objectclasses (20140501)
+#
+# See http://www.gunet.gr/.../guperson for background and usage
+#
+# schGrAc et. al are an effort of GUNet
+#
+#   1.3.6.1.4.1.36215 is the toplevel OID for this work
+#            .1 = Schema for Greek Academia related work
+#
+# CHANGELOG
+#	May, 2014  (pdrados@noc.uoa.gr) First major update
+#
+# $Id$
+
+
+dn: cn=schGrAc,cn=schema,cn=config
+changetype: add
+objectClass: olcSchemaConfig
+cn: schGrAc
+olcObjectIdentifier: GUnet 1.3.6.1.4.1.36215
+olcObjectIdentifier: schGrAc GUnet:1
+olcObjectIdentifier: schGrAcExperimental schGrAc:0
+olcObjectIdentifier: schGrAcObjectClass schGrAc:1
+olcObjectIdentifier: schGrAcAttributeType schGrAc:2
+olcObjectIdentifier: schGrAcExpObjectClass schGrAcExperimental:1
+olcObjectIdentifier: schGrAcExpAttributeType schGrAcExperimental:2
+olcAttributeTypes: {0}( schGrAcAttributeType:1.1 
+ NAME 'schGrAcPersonSSN' 
+ DESC 'Social Security Number' 
+ EQUALITY caseIgnoreMatch 
+ SUBSTR caseIgnoreSubstringsMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+olcAttributeTypes: {1}( schGrAcAttributeType:1.2 
+ NAME 'schGrAcPersonTIN' 
+ DESC 'Tax Identification Number' 
+ EQUALITY caseIgnoreMatch 
+ SUBSTR caseIgnoreSubstringsMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+olcAttributeTypes: {2}( schGrAcAttributeType:2.1 
+ NAME 'schGrAcPersonID' 
+ DESC 'The unique identifier of a person across institution' 
+ EQUALITY caseIgnoreMatch 
+ SUBSTR caseIgnoreSubstringsMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+olcAttributeTypes: {3}( schGrAcAttributeType:2.2 
+ NAME 'schGrAcPersonIDKey' 
+ DESC 'The unique identifier of a person per authoritative system' 
+ EQUALITY caseIgnoreMatch 
+ SUBSTR caseIgnoreSubstringsMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 )
+olcAttributeTypes: {4}( schGrAcAttributeType:2.3 
+ NAME 'schGrAcDepartmentID' 
+ DESC 'The unique identifier of a department in the organization chart of the institution' 
+ EQUALITY caseIgnoreMatch 
+ SUBSTR caseIgnoreSubstringsMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+olcAttributeTypes: {5}( schGrAcAttributeType:2.4 
+ NAME 'schGrAcProgramID' 
+ DESC 'The unique identifier of a students program' 
+ EQUALITY caseIgnoreMatch 
+ SUBSTR caseIgnoreSubstringsMatch 
+ SYNTAX 1.3.6.1.4.1.1466.115.121.1.15 SINGLE-VALUE )
+olcObjectClasses: {0}( schGrAcObjectClass:1 
+ NAME 'schGrAcExtIdentifiers' 
+ AUXILIARY 
+ MAY ( schGrAcPersonSSN $ schGrAcPersonTIN ) 
+ )
+olcObjectClasses: {1}( schGrAcObjectClass:2 
+ NAME 'schGrAcIdentifiers' 
+ AUXILIARY 
+ MAY ( schGrAcPersonID $ schGrAcPersonIDKey $ schGrAcDepartmentID $ schGrAcProgramID ) 
+ )

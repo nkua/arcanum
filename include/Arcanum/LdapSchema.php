@@ -20,26 +20,26 @@ class Arcanum_LdapSchema {
         global $config;
 
         $this->attributes = array(
-            'gupersonid' => array(
-                'desc' => _('GUnet Unique ID'),
+            'schGrAcPersonID' => array(
+                'desc' => _('Academic Unique ID'),
                 'title' => _('A unique identifier for a user of the entire organization. It is usually the department code concatenated with the registration number.'),
                 'noneditable' => true,
             ),
-            'gustudentid' => array(
+          /*  'gustudentid' => array(
                 'desc' => _('Student Registration #'),
                 'title' => _('The student registration number.'),
                 'important' => true,
                 'editable' => true,
-            ),
-            'gustudentdepartmentid' => array(
+            ),*/
+            'schGrAcDepartmentID' => array(
                 'desc' => _('Department ID'),
                 'title' => _('Numerical code that identifies the department.'),
                 'important' => true,
                 'editable' => true,
             ),
-            'GUStudentDepartment' => array(
+           /* 'GUStudentDepartment' => array(
                 'desc' => _('Department Name'),
-            ),
+            ),*/
             'givenname' => array(
                 'desc' => _('First Name'),
                 'title' => _('First / given name; can contain second (middle) name'),
@@ -56,24 +56,24 @@ class Arcanum_LdapSchema {
                 'desc' => _('Full Name'),
                 'editable' => true,
             ),
-            'account_status' => array(
+           /* 'account_status' => array(
                 'desc' => _("Account Status"), 
                 'ldapattrs' => array('GUPersonAccountStatus'),
                 'editable' => true,
                 'title' => _("Whether your account is active or locked for some administrative reason"), 
                 'defaultvalue' => 'enabled',
                 'vocabulary' => array('', 'enabled', 'locked'),
-            ),
-            'student_status' => array(
+            ),*/
+            /*'student_status' => array(
                 'desc' => _("Student Status"),
                 'ldapattrs' => array('GUStudentStatus'),
                 'title' => '',
-            ),
-            'gustudentsemester' => array(
+            ),*/
+            /*'gustudentsemester' => array(
                 'desc' => _('Semester'),
                 'title' => _('Semester number'),
                 'editable' => true,
-            ),
+            ),*/
             'uid' => array(
                 'desc' => _('Username'),
                 'title' => _('Username or userid'),
@@ -95,14 +95,14 @@ class Arcanum_LdapSchema {
             'title' => array(
                 'desc' => _('Personal Title'),
             ),
-            'gustudenttype' => array(
+            /*'gustudenttype' => array(
                 'desc' => _('Student Type'),
                 'title' => _('Whether the student is undergraduate, postgraduate, doctoral'),
                 'vocabulary' => array('undergraduate', 'postgraduate', 'doctoral'),
                 'defaultvalue' => 'undergraduate',
                 'compulsory' => true,
                 'editable' => true,
-            ),
+            ),*/
             'o' => array(
                 'desc' => _('Organization'),
                 'title' => _("Name of organization"),
