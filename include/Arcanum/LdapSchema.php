@@ -113,7 +113,7 @@ class Arcanum_LdapSchema {
                 'desc' => _('E-Mail'),
                 'editable' => true,
             ),
-            'mailalternateaddress' => array(
+            'mailforwardingaddress' => array(
                 'desc' => _('Alternative E-mails'),
                 'title' => _("Alternative e-mail addresses where the user can receive e-mail messages."),
             ),

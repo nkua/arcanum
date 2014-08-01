@@ -21,17 +21,17 @@ foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
     }
 }
 $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($config->ldap->filter->user, ldapspecialchars($login_username)),
-        array_merge($secondary_accounts_ldapattrs, array('objectclass', 'GUAccountSecondaryOptOut', '+')));
+        array_merge($secondary_accounts_ldapattrs, array('objectclass', 'secondaryOptOut', '+')));
 
 $entries = ldap_get_entries($ldap, $sr);
 $userdn = $entries[0]['dn'];
 
-if(!in_array('ExtendedAuthentication', $entries[0]['objectclass'])) {
+if(!in_array('extendedAuthentication', $entries[0]['objectclass'])) {
     $new_objectclass = array();
     for($i=0; $i<$entries[0]['objectclass']['count']; $i++) {
         $new_objectclass[] = $entries[0]['objectclass'][$i];
     }
-    $new_objectclass[] = 'ExtendedAuthentication';
+    $new_objectclass[] = 'extendedAuthentication';
     if(@ldap_modify($ldap, $userdn, array( 'objectclass' => $new_objectclass)) === false) {
         $msgs[] = array('class' => 'error', 'msg' => sprintf( _("Attention: your record in the directory server cannot be modified. Please contact your administrator. (LDAP Error: %s)"),
             ldap_error($ldap)) );
@@ -41,7 +41,7 @@ if(!in_array('ExtendedAuthentication', $entries[0]['objectclass'])) {
 $t->assign('secondary_accounts', $config->ldap->secondary_accounts->toArray());
 
 $opted_out = false;
-if(isset($entries[0]['guaccountsecondaryoptout']) && $entries[0]['guaccountsecondaryoptout'][0] == TRUE) {
+if(isset($entries[0]['secondaryoptout']) && $entries[0]['secondaryoptout'][0] == TRUE) {
     $opted_out = true;
 }
 
@@ -91,7 +91,7 @@ foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
     }
 }
 $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($config->ldap->filter->user, ldapspecialchars($login_username)),
-        array_merge($secondary_accounts_ldapattrs, array('objectclass', 'GUAccountSecondaryOptOut', '+')));
+        array_merge($secondary_accounts_ldapattrs, array('objectclass', 'secondaryOptOut', '+')));
 
 
 $t->assign('secondary_accounts_values', $secondary_accounts_values);

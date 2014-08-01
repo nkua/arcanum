@@ -71,7 +71,7 @@ $summariesDef = array(
         'group' => 'info',
     ),
     'noguobjectclass' => array(
-        'filter' => '(&'.$f.'(!(objectclass=ExtendedAuthentication)))',
+        'filter' => '(&'.$f.'(!(objectclass=extendedAuthentication)))',
         'desc' => _("Users without the required ObjectClass"),
         'bad' => true,
         'fix' => true,
