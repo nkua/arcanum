@@ -98,7 +98,7 @@ if(isset($_POST['policy_apply'])) {
             'top',
         ),
         'cn' => 'default',
-        'pwdAttribute' => 'userPassword',
+        'pwdAttribute' => '2.5.4.35', /*userPassword*/
         'sn' => 'default',
         'pwdAllowUserChange' => 'TRUE',
         'pwdCheckQuality' => 0,
