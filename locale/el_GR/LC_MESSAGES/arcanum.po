@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arcanum 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-07-02 10:53+0300\n"
+"POT-Creation-Date: 2014-09-30 15:18+0300\n"
 "PO-Revision-Date: 2013-07-02 11:13+0300\n"
 "Last-Translator: Alexandros Vellis <avel@noc.uoa.gr>\n"
 "Language-Team: el <greek-locale@email.uoa.gr>\n"
@@ -509,8 +509,8 @@ msgstr ""
 msgid "Password change failed: %s"
 msgstr "Αλλαγή κωδικού απέτυχε: %s"
 
-msgid "Unique ID"
-msgstr "Μοναδικό ID"
+msgid "Academic Unique ID"
+msgstr ""
 
 msgid ""
 "A unique identifier for a user of the entire organization. It is usually the "
@@ -520,20 +520,11 @@ msgstr ""
 "Περιλαμβάνει συνήθως τον αριθμό μητρώου μαζί με έναν κωδικό τμήματος, ή έναν "
 "αριθμό μητρώου μοναδικό για ολόκληρο το ίδρυμα."
 
-msgid "Student Registration #"
-msgstr "Α.Μ. Φοιτητή"
-
-msgid "The student registration number."
-msgstr "Ο αριθμός μητρώου του φοιτητή."
-
 msgid "Department ID"
 msgstr "Κωδικός Τμήματος"
 
 msgid "Numerical code that identifies the department."
 msgstr "Ο αριθμητικός κωδικός που χαρακτηρίζει το τμήμα."
-
-msgid "Department Name"
-msgstr "Όνομα Τμήματος"
 
 msgid "First Name"
 msgstr "Μικρό Όνομα"
@@ -546,26 +537,6 @@ msgstr "Επώνυμο"
 
 msgid "Full Name"
 msgstr "Oνοματεπώνυμο"
-
-msgid "Account Status"
-msgstr "Κατάσταση Λογαριασμού"
-
-msgid "Whether your account is active or locked for some administrative reason"
-msgstr ""
-"Εάν ο λογαριασμός είναι ενεργός ή κλειδωμένος για κάποιον λόγο (π.χ. "
-"διαχειριστικός λόγος, έχει διαρρεύσει ο μυστικός κωδικός, ο χρήστης έχει "
-"κάνει κάποια κατάχρηση πόρων κ.λπ.)"
-
-msgid "Student Status"
-msgstr "Κατάσταση Φοιτητή"
-
-msgid "Semester"
-msgstr "Εξάμηνο"
-
-msgid "Semester number"
-msgstr ""
-"Αριθμός Εξαμήνου Σπουδών. Για Επί Πτυχίω φοιτητές, ο αριθμός αυτός θα πρέπει "
-"να συνεχίζεται μετά το τελευταίο εξάμηνο σπουδών. Π.χ. 9, 10, 11, 12, ...."
 
 msgid "Username"
 msgstr "Όνομα Χρήστη"
@@ -590,14 +561,6 @@ msgstr ""
 
 msgid "Personal Title"
 msgstr "Τίτλος / Ιδιότητα"
-
-msgid "Student Type"
-msgstr "Ιδιότητα Φοιτητή"
-
-msgid "Whether the student is undergraduate, postgraduate, doctoral"
-msgstr ""
-"Τύπος, όσον αφορά τη φοιτητική ιδιότητα. Π.χ. προπτυχιακός / μεταπτυχιακός / "
-"διδακτορικός"
 
 msgid "Organization"
 msgstr "Οργανισμός / Ίδρυμα"
@@ -1425,7 +1388,7 @@ msgid "Back to Change Password Home"
 msgstr "Επιστροφή στη σελίδα Αλλαγής Κωδικού"
 
 msgid "Password Recovery Information"
-msgstr "Καταχώρηση στοιχείων"
+msgstr "Καταχώριση στοιχείων"
 
 msgid "Your information has been updated."
 msgstr "Τα στοιχεία σας ενημερώθηκαν επιτυχώς."
@@ -1435,10 +1398,11 @@ msgid ""
 "secondary e-mail address or a mobile phone number with us; this way, you can "
 "reset your password easily."
 msgstr ""
-"Σε περίπτωση που ξεχάσετε τον κωδικό σας, θα πρέπει να έχετε καταχωρημένο "
-"ένα δευτερεύον email ή τον αριθμό του κινητού σας τηλεφώνου για να γίνει η "
-"επιβεβαίωση στοιχείων χρήστη και να μπορέσετε να προχωρήσετε στην εισαγωγή "
-"νέου κωδικού."
+"Ορίζοντας τα στοιχεία επικοινωνίας (κινητό η/και email) σας παρέχεται η "
+"δυνατότητα ανάκτησης πρόσβασης με ασφαλή τρόπο στην περίπτωση που έχετε "
+"ξεχάσει τον κωδικό σας. Εφόσον το επιθυμείτε, έχετε την δυνατότητα "
+"οποιαδήποτε στιγμή να εξαιρεθείτε από την εφαρμογή ανάκτησης πρόσβασης, "
+"αφαιρώντας τα στοιχεία επικοινωνίας"
 
 msgid "Secondary e-mail address:"
 msgstr "Δευτερεύον email:"
@@ -1490,7 +1454,7 @@ msgstr ""
 
 msgid "The following functionality is available:"
 msgstr ""
-"Συγκεκριμένα μέσω της Υπηρεσίας Διαχείρισης κωδικού χρήστης είναι διαθέσιμες "
+"Συγκεκριμένα μέσω της Υπηρεσίας Διαχείρισης κωδικού χρήστη είναι διαθέσιμες "
 "οι ακόλουθες λειτουργίες:"
 
 msgid "Reset password in case you have forgotten your original password"
@@ -1647,8 +1611,8 @@ msgid ""
 "contact the helpdesk to acquire a new password."
 msgstr ""
 "Σε περίπτωση που δε θυμάστε τα στοιχεία που έχετε καταχωρήσει θα πρέπει να "
-"απευθυνθείτε στη Γραμματεία του Τμήματός σας για να προμηθευτείτε νέο κωδικό "
-"πρόσβασης."
+"απευθυνθείτε στη Διεύθυνση Διοικητικού του Τμήματός σας για να προμηθευτείτε "
+"νέο κωδικό πρόσβασης."
 
 msgid ""
 "If you have forgotten your password, you'll need to confirm your password "
@@ -1807,8 +1771,8 @@ msgid "Page Subtitle (e.g. Description of Service)"
 msgstr "Υπότίτλος Σελίδας (Π.χ. Περιγραφή Υπηρεσίας)"
 
 msgid ""
-"Page Logo. Either full URL or relative path to image location. <small>"
-"(Optional)</small>"
+"Page Logo. Either full URL or relative path to image location. "
+"<small>(Optional)</small>"
 msgstr ""
 "Logo Ιδρύματος. Πρέπει να είναι ένα URL ή ένα path προς αρχείο εικόνας. "
 "<small>(Προαιρετικό)</small>"
@@ -2214,6 +2178,48 @@ msgstr ""
 
 msgid "Login Page"
 msgstr "Σελίδα Εισόδου"
+
+#~ msgid "Student Registration #"
+#~ msgstr "Α.Μ. Φοιτητή"
+
+#~ msgid "The student registration number."
+#~ msgstr "Ο αριθμός μητρώου του φοιτητή."
+
+#~ msgid "Department Name"
+#~ msgstr "Όνομα Τμήματος"
+
+#~ msgid "Account Status"
+#~ msgstr "Κατάσταση Λογαριασμού"
+
+#~ msgid ""
+#~ "Whether your account is active or locked for some administrative reason"
+#~ msgstr ""
+#~ "Εάν ο λογαριασμός είναι ενεργός ή κλειδωμένος για κάποιον λόγο (π.χ. "
+#~ "διαχειριστικός λόγος, έχει διαρρεύσει ο μυστικός κωδικός, ο χρήστης έχει "
+#~ "κάνει κάποια κατάχρηση πόρων κ.λπ.)"
+
+#~ msgid "Student Status"
+#~ msgstr "Κατάσταση Φοιτητή"
+
+#~ msgid "Semester"
+#~ msgstr "Εξάμηνο"
+
+#~ msgid "Semester number"
+#~ msgstr ""
+#~ "Αριθμός Εξαμήνου Σπουδών. Για Επί Πτυχίω φοιτητές, ο αριθμός αυτός θα "
+#~ "πρέπει να συνεχίζεται μετά το τελευταίο εξάμηνο σπουδών. Π.χ. 9, 10, 11, "
+#~ "12, ...."
+
+#~ msgid "Student Type"
+#~ msgstr "Ιδιότητα Φοιτητή"
+
+#~ msgid "Whether the student is undergraduate, postgraduate, doctoral"
+#~ msgstr ""
+#~ "Τύπος, όσον αφορά τη φοιτητική ιδιότητα. Π.χ. προπτυχιακός / "
+#~ "μεταπτυχιακός / διδακτορικός"
+
+#~ msgid "Unique ID"
+#~ msgstr "Μοναδικό ID"
 
 #~ msgid "More information about password safety &gt;"
 #~ msgstr "Περισσότερα για την ασφάλεια κωδικού &gt;"

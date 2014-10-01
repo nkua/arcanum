@@ -8,5 +8,14 @@ $(document).ready(function() {
             $('#'+method).fadeIn(140);
         }
     });
+ 
+
+    $( "#reset_password_do" ).click(function( event ) {
+        if( $("#login_username").val().length == 0 )
+            event.preventDefault();
+    });
+
+
+
 
 });
