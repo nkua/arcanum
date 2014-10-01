@@ -29,7 +29,7 @@
             <br /><br />
             
             <form action="changepassword.php" method="POST">
-                <input type="text" name="token" value="" placeholder="123456789012" size="25" /><br /><br />
+                <input type="text" name="token" value="" placeholder="π.χ. 123456" size="25" /><br /><br />
                 <div class="button-right">
                     <input type="submit" name="sms_token" value="<?= _("Continue &rarr;") ?>" class="button blue" />
                 </div>

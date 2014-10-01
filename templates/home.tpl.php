@@ -13,17 +13,17 @@
    <div class="services">
 
     <div class="home-service">
-    	<div class="home-icon"><img src="images/changepassword_icon.png" /></div>
-        <div class="home-text"><div class="paddingtop"><?= _("Change Password") ?></div></div>
+    	<div class="home-icon"><a href="changepassword.php"><img src="images/changepassword_icon.png" /></div>
+        <div class="home-text"><div class="paddingtop"><?= _("Change Password") ?></div></div></a>
     </div>
     <div class="home-service">
-    	<div class="home-icon"><img src="images/forgotpassword_icon.png"/></div>
+    	<div class="home-icon"><a href="reset_password.php"><img src="images/forgotpassword_icon.png"/></div>
         <div class="home-text"><?= _("Reset password in case you have forgotten your original password") ?></div>
-    </div>
+    </div></a>
     <div class="home-service">
-    	<div class="home-icon"><img src="images/dataentry_icon.png" /></div>
+    	<div class="home-icon"><a href="dataentry.php"><img src="images/dataentry_icon.png" /></div>
         <div class="home-text"><?= _("Register a mobile phone number or a secondary e-mail address, for password recovery") ?></div>
-    </div>
+    </div></a>
     
 </div>
 </div>

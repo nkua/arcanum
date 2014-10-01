@@ -42,18 +42,18 @@ if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
                      <input type="radio" name="method" class="method_radio" id="email_radio" value="email" style="margin: 2px;" /> <label for="email_radio"><?= _("Send via e-mail") ?></label>
                      </div>
                      <div class="form-sendby" id="email">
-                        <div class="formconf-text"><?= _("Enter your surname:") ?></div>
+                    <!--    <div class="formconf-text"><?= _("Enter your surname:") ?></div>
                         <div class="formconf-input"><input type="text"  name="email_surname" maxlength="25"/></div>
-                        
+                     -->   
                         <div class="formconf-text"><?= _("Enter the secondary e-mail that you have registered:") ?></div>
                         <div class="formconf-input"><input type="text" name="email_email"  maxlength="25"/></div>
                     </div>
                     <div class="formleft-input">
                      <input type="radio" name="method" class="method_radio" id="sms_radio" value="sms" style="margin: 2px;" /> <label for="sms_radio"><?= _("Send via SMS") ?></label>
                      <div class="form-sendby" id="sms">
-                        <div class="formconf-text"><?= _("Enter your surname:") ?></div>
+                    <!--    <div class="formconf-text"><?= _("Enter your surname:") ?></div>
                         <div class="formconf-input"><input type="text"  name="sms_surname" maxlength="25"/></div>
-                        
+                    -->    
                         <div class="formconf-text"><?= _("Enter the mobile phone number that you have registered:") ?></div>
                         <div class="formconf-input"><input type="text" name="sms_sms" maxlength="25" size="25"/></div>
 
@@ -68,9 +68,9 @@ if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
                      
                      <input type="hidden" name="method" value="email" />
                      <div class="form-sendby">
-                        <div class="formconf-text"><?= _("Enter your surname:") ?></div>
+                      <!--  <div class="formconf-text"><?= _("Enter your surname:") ?></div>
                         <div class="formconf-input"><input type="text"  name="email_surname" maxlength="25"/></div>
-                        
+                       --> 
                         <div class="formconf-text"><?= _("Enter the secondary e-mail that you have registered:") ?></div>
                         <div class="formconf-input"><input type="text" name="email_email"  maxlength="25"/></div>
                     </div>
@@ -88,7 +88,7 @@ if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
             <?php } ?>
                 
                <div class="button-right">
-                  <input type="submit" name="reset_password_do" class="button blue" value="<?= _("Continue &rarr;") ?>" />
+                  <input type="submit" name="reset_password_do" id="reset_password_do" class="button blue" value="<?= _("Continue &rarr;") ?>" />
                </div>
                
             
