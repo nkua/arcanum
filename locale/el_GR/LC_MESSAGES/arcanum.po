@@ -5,9 +5,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arcanum 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-30 15:18+0300\n"
-"PO-Revision-Date: 2013-07-02 11:13+0300\n"
-"Last-Translator: Alexandros Vellis <avel@noc.uoa.gr>\n"
+"POT-Creation-Date: 2014-10-05 15:18+0300\n"
+"PO-Revision-Date: 2014-10-05 11:13+0300\n"
+"Last-Translator: Trougakos Spiros <trougakoss@noc.uoa.gr>\n"
 "Language-Team: el <greek-locale@email.uoa.gr>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -520,11 +520,20 @@ msgstr ""
 "Περιλαμβάνει συνήθως τον αριθμό μητρώου μαζί με έναν κωδικό τμήματος, ή έναν "
 "αριθμό μητρώου μοναδικό για ολόκληρο το ίδρυμα."
 
+msgid "Student Registration #"
+msgstr "Α.Μ. Φοιτητή"
+
+msgid "The student registration number."
+msgstr "Ο αριθμός μητρώου του φοιτητή."
+
 msgid "Department ID"
 msgstr "Κωδικός Τμήματος"
 
 msgid "Numerical code that identifies the department."
 msgstr "Ο αριθμητικός κωδικός που χαρακτηρίζει το τμήμα."
+
+msgid "Department Name"
+msgstr "Όνομα Τμήματος"
 
 msgid "First Name"
 msgstr "Μικρό Όνομα"
@@ -537,6 +546,26 @@ msgstr "Επώνυμο"
 
 msgid "Full Name"
 msgstr "Oνοματεπώνυμο"
+
+msgid "Account Status"
+msgstr "Κατάσταση Λογαριασμού"
+
+msgid "Whether your account is active or locked for some administrative reason"
+msgstr ""
+"Εάν ο λογαριασμός είναι ενεργός ή κλειδωμένος για κάποιον λόγο (π.χ. "
+"διαχειριστικός λόγος, έχει διαρρεύσει ο μυστικός κωδικός, ο χρήστης έχει "
+"κάνει κάποια κατάχρηση πόρων κ.λπ.)"
+
+msgid "Student Status"
+msgstr "Κατάσταση Φοιτητή"
+
+msgid "Semester"
+msgstr "Εξάμηνο"
+
+msgid "Semester number"
+msgstr ""
+"Αριθμός Εξαμήνου Σπουδών. Για Επί Πτυχίω φοιτητές, ο αριθμός αυτός θα πρέπει "
+"να συνεχίζεται μετά το τελευταίο εξάμηνο σπουδών. Π.χ. 9, 10, 11, 12, ...."
 
 msgid "Username"
 msgstr "Όνομα Χρήστη"
@@ -561,6 +590,14 @@ msgstr ""
 
 msgid "Personal Title"
 msgstr "Τίτλος / Ιδιότητα"
+
+msgid "Student Type"
+msgstr "Ιδιότητα Φοιτητή"
+
+msgid "Whether the student is undergraduate, postgraduate, doctoral"
+msgstr ""
+"Τύπος, όσον αφορά τη φοιτητική ιδιότητα. Π.χ. προπτυχιακός / μεταπτυχιακός / "
+"διδακτορικός"
 
 msgid "Organization"
 msgstr "Οργανισμός / Ίδρυμα"
@@ -1611,8 +1648,8 @@ msgid ""
 "contact the helpdesk to acquire a new password."
 msgstr ""
 "Σε περίπτωση που δε θυμάστε τα στοιχεία που έχετε καταχωρήσει θα πρέπει να "
-"απευθυνθείτε στη Διεύθυνση Διοικητικού του Τμήματός σας για να προμηθευτείτε "
-"νέο κωδικό πρόσβασης."
+"απευθυνθείτε στη Διεύθυνση Διοικητικού του Ιδρύματος σας για να "
+"προμηθευτείτε νέο κωδικό πρόσβασης."
 
 msgid ""
 "If you have forgotten your password, you'll need to confirm your password "
@@ -1651,13 +1688,14 @@ msgstr "Συνέχεια &rarr;"
 
 msgid "Please send the following text message via your mobile phone."
 msgstr ""
-"Παρακαλούμε στείλτε το παρακάτω μήνυμα SMS στον αριθμό που αναγράφεται."
+"Παρακαλούμε να αποστείλετε το παρακάτω μήνυμα SMS από τον αριθμό κινητού που "
+"έχετε δηλώσει στα στοιχεία επικοινωνίας του λογαριασμού σας:"
 
 msgid "Text message:"
-msgstr "Περιεχόμενο sms:"
+msgstr "Περιεχόμενο sms (κείμενο):"
 
 msgid "Recipient number:"
-msgstr "Στον αριθμό: "
+msgstr "Προς τον αριθμό: "
 
 msgid "* Standard text message cost"
 msgstr "* Χρέωση απλού μηνύματος SMS"

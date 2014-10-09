@@ -231,6 +231,11 @@ $t->display('page_header');
 if(empty($cleared_for) || sizeof($cleared_for) > 1) {
     $t->display('navigation_user');
 }
+
+if(isset($_GET['token']))
+    $t->display('logged_in_as');
+
+
 $t->display('change_password');
 $t->display('page_footer');
 
