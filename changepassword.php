@@ -215,7 +215,7 @@ $t->assign('workflow', $workflow);
 $t->assign('ask_old_password', $ask_old_password);
 $t->assign('msgs', $msgs);
 $t->assign('allStrengthMessages', $allStrengthMessages);
-
+$t->assign('login_username', $_SESSION['login_username']);
 $t->assign('javascripts', array_merge(
     $defaultJavascripts,
     array(

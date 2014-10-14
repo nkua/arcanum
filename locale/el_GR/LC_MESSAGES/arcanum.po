@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arcanum 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-10-05 15:18+0300\n"
+"POT-Creation-Date: 2014-09-30 15:18+0300\n"
 "PO-Revision-Date: 2014-10-05 11:13+0300\n"
 "Last-Translator: Trougakos Spiros <trougakoss@noc.uoa.gr>\n"
 "Language-Team: el <greek-locale@email.uoa.gr>\n"
@@ -148,7 +148,7 @@ msgstr ""
 
 #, php-format
 msgid "Please use the number %s"
-msgstr "Παρακαλώ χρησιμοποιήστε τον αριθμό %s"
+msgstr "Υπηρεσία Διαχείρισης κωδικών: Ο κωδικός επιβεβαίωσης είναι %s"
 
 #, php-format
 msgid ""
@@ -2216,45 +2216,6 @@ msgstr ""
 
 msgid "Login Page"
 msgstr "Σελίδα Εισόδου"
-
-#~ msgid "Student Registration #"
-#~ msgstr "Α.Μ. Φοιτητή"
-
-#~ msgid "The student registration number."
-#~ msgstr "Ο αριθμός μητρώου του φοιτητή."
-
-#~ msgid "Department Name"
-#~ msgstr "Όνομα Τμήματος"
-
-#~ msgid "Account Status"
-#~ msgstr "Κατάσταση Λογαριασμού"
-
-#~ msgid ""
-#~ "Whether your account is active or locked for some administrative reason"
-#~ msgstr ""
-#~ "Εάν ο λογαριασμός είναι ενεργός ή κλειδωμένος για κάποιον λόγο (π.χ. "
-#~ "διαχειριστικός λόγος, έχει διαρρεύσει ο μυστικός κωδικός, ο χρήστης έχει "
-#~ "κάνει κάποια κατάχρηση πόρων κ.λπ.)"
-
-#~ msgid "Student Status"
-#~ msgstr "Κατάσταση Φοιτητή"
-
-#~ msgid "Semester"
-#~ msgstr "Εξάμηνο"
-
-#~ msgid "Semester number"
-#~ msgstr ""
-#~ "Αριθμός Εξαμήνου Σπουδών. Για Επί Πτυχίω φοιτητές, ο αριθμός αυτός θα "
-#~ "πρέπει να συνεχίζεται μετά το τελευταίο εξάμηνο σπουδών. Π.χ. 9, 10, 11, "
-#~ "12, ...."
-
-#~ msgid "Student Type"
-#~ msgstr "Ιδιότητα Φοιτητή"
-
-#~ msgid "Whether the student is undergraduate, postgraduate, doctoral"
-#~ msgstr ""
-#~ "Τύπος, όσον αφορά τη φοιτητική ιδιότητα. Π.χ. προπτυχιακός / "
-#~ "μεταπτυχιακός / διδακτορικός"
 
 #~ msgid "Unique ID"
 #~ msgstr "Μοναδικό ID"
