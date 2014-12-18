@@ -14,6 +14,7 @@ $msgs = array();
 $sessions = array();
 
 $sessiondir = ini_get('session.save_path');
+
 if(strstr($sessiondir, ';')) {
     $msgs[] = array('class' => 'error', 'msg' => 'The application does not support hashed session directories yet.');
 } else {
@@ -40,6 +41,7 @@ $t->assign('sessions', $sessions);
 
 
 // get xcache active tokens
+
 $vcnt = xcache_count(XC_TYPE_VAR);
 
 //print "count = $vcnt";

@@ -88,7 +88,7 @@ if(isset($_POST['policy_apply'])) {
 
     $containerobject = array(
         'objectclass' => 'organizationalUnit',
-        'ou' => 'policies'
+        'ou' => 'PPolicies'
     );
 
     $policyobject = array(
@@ -115,13 +115,21 @@ if(isset($_POST['policy_apply'])) {
         'pwdMustChange' => 'TRUE',
         'pwdSafeModify' => 'FALSE',
     );
-    if( ldap_add($ldap, 'ou=policies,'.$config->ldap->basedn, $containerobject) === false) {
+
+
+if(ldap_search($ldap, 'ou=PPolicies,'.$config->ldap->basedn,'(objectclass=*)') === false) {
+    if( ldap_add($ldap, 'ou=PPolicies,'.$config->ldap->basedn, $containerobject) === false) {
         $msgs[] = array('class' => 'error', 'msg' => 'Could not create container object &mdash; ' . ldap_error($ldap));
-    } else {
-        if(ldap_add($ldap, 'cn=default,ou=policies,'.$config->ldap->basedn, $policyobject) === false) {
+    }
+
+}
+
+        if(ldap_add($ldap, 'cn=default,ou=PPolicies,'.$config->ldap->basedn, $policyobject) === false) {
             $msgs[] = array('class' => 'error', 'msg' => 'Could not create policy object &mdash; ' . ldap_error($ldap));
         }
-    }
+
+
+
 
 
 }

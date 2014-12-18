@@ -1,8 +1,7 @@
 <?php
 /**
  * Change Password Main form
- *
- * @package arcanum
+ * * @package arcanum
  * @version $Id: changepassword.php 5892 2012-10-31 11:05:29Z avel $
  */
    
@@ -20,6 +19,7 @@ $msgs = array();
 if(isset($_SESSION['service'])) {
     $service = $_SESSION['service'];
 }
+
 
 $reset_forgotten_password_enabled = (isset($_SESSION['reset_forgotten_password_enabled']) ? true : false);
 
