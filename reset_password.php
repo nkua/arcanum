@@ -96,11 +96,22 @@ if(isset($_POST['reset_password_do'])) {
             }
         }
     }
-
+    
+//here add the prefix
     $supplied_info = array();
     foreach($required_info as $required) {
+
         if(isset($_POST[$method.'_'.$required]) && !empty($_POST[$method.'_'.$required])) {
-            $supplied_info[$required] = $_POST[$method.'_'.$required];
+            
+            //here do a quick and dirty check for mobile number format 
+            if(strcmp($method,"sms")==0){
+                $supplied_info[$required] =  normalise_mobile($_POST[$method.'_'.$required]);
+            }else{
+                $supplied_info[$required] = $_POST[$method.'_'.$required];
+            
+            }
+            $supplied_info['prefix']= $config->ldap->secondary_accounts->$method->prefix;
+            
         } else {
             $msgs[] = array('class' => 'error', 'msg' => _("You did not fill in a required field. Please try again."));
             abort($msgs);
@@ -123,7 +134,7 @@ if(isset($_POST['reset_password_do'])) {
     $ldapattrs = array();
     foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
         if(!empty($ldapattr)) {
-            $ldapattrs[] = strtolower($ldapattr);
+            $ldapattrs[] = strtolower($ldapattr['attribute']);
         }
     }
 
@@ -132,7 +143,7 @@ if(isset($_POST['reset_password_do'])) {
         if($required == 'surname') {
             $ldapattrs[] = 'sn';
         } else {
-            $ldapattrs[] = strtolower($config->ldap->secondary_accounts->$required);
+            $ldapattrs[] = strtolower($config->ldap->secondary_accounts->$required->attribute);
         }
     }
     $ldapattrs = array_values($ldapattrs);
@@ -153,7 +164,7 @@ if(isset($_POST['reset_password_do'])) {
         if($required == 'surname') {
             $attr = 'sn';
         } else {
-            $attr = strtolower($config->ldap->secondary_accounts->$required);
+            $attr = strtolower($config->ldap->secondary_accounts->$required->attribute);
         }
         //print "<br> verification - ". $supplied_info[$required] . " vs " . $entries[0][$attr][0];
 
@@ -175,7 +186,14 @@ if(isset($_POST['reset_password_do'])) {
             $res = ($mobile_form_object->getNormalizedValue()  == $entries[0][$attr][0]);
 
         } else {
-            $res = (mb_strtolower($supplied_info[$required], 'UTF-8') == mb_strtolower($entries[0][$attr][0], 'UTF-8'));
+            $tempresult = array();
+            foreach( $entries[0][$attr] as $att_value ) {
+                $tempresult[] = (mb_strtolower($supplied_info['prefix'].$supplied_info[$required], 'UTF-8') == mb_strtolower($att_value, 'UTF-8'));
+            }
+
+            $res = in_array(true,$tempresult);
+           // $res = (mb_strtolower($supplied_info[$required], 'UTF-8') == mb_strtolower($entries[0][$attr][0], 'UTF-8'));
+       
         }
         if($res) {
             // all ok
@@ -329,3 +347,24 @@ function format_number_token($token) {
         //substr($token, 9, 3);
 }
 
+function normalise_mobile($phone){
+
+        if($phone == null)
+                return null;
+
+        $length = strlen($phone);
+        $firstDigits = substr($phone, 0, 2);
+        $res = null;
+
+        if($length == 10 && $firstDigits == 69)
+        $res = '+30'.$phone;
+
+        if($length == 14 && $firstDigits == 00)
+        $res = '+'.substr($phone,2,$length);
+
+        if($length == 13 && $firstDigits == '+3')
+        $res = $phone;
+
+        return $res;
+
+}

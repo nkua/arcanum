@@ -23,28 +23,38 @@ $arcanumLdap = new Arcanum_Ldap();
 $ldap = $arcanumLdap->connect();
 
 $secondary_accounts_ldapattrs = array();
+$opt_attribute = $config->ldap->optinattibute;
+
 foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
     if(!empty($ldapattr)) {
         $secondary_accounts_ldapattrs[] = $ldapattr;
     }
 }
+
 $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($config->ldap->filter->user, ldapspecialchars($login_username)),
-        array_merge($secondary_accounts_ldapattrs, array('objectclass', 'secondaryOptOut', '+')));
+        array_merge($secondary_accounts_ldapattrs, array('objectclass', $opt_attribute, '+')));
 
 $entries = ldap_get_entries($ldap, $sr);
 $userdn = $entries[0]['dn'];
 
+$entry = array();
+
 if(!in_array('extendedAuthentication', $entries[0]['objectclass'])) {
-    $new_objectclass = array();
-    for($i=0; $i<$entries[0]['objectclass']['count']; $i++) {
-        $new_objectclass[] = $entries[0]['objectclass'][$i];
-    }
-    $new_objectclass[] = 'extendedAuthentication';
-    if(@ldap_modify($ldap, $userdn, array( 'objectclass' => $new_objectclass)) === false) {
+    $entry['objectclass'][] = 'extendedAuthentication';
+    if(ldap_mod_add($ldap, $userdn, $entry) === false) {
         $msgs[] = array('class' => 'error', 'msg' => sprintf( _("Attention: your record in the directory server cannot be modified. Please contact your administrator. (LDAP Error: %s)"),
             ldap_error($ldap)) );
     }
 }
+
+if(!in_array('pwdManagement', $entries[0]['objectclass'])) {
+    $entry['objectclass'][] = 'pwdManagement';
+    if(ldap_mod_add($ldap, $userdn, $entry) === false) {
+        $msgs[] = array('class' => 'error', 'msg' => sprintf( _("Attention: your record in the directory server cannot be modified. Please contact your administrator. (LDAP Error: %s)"),
+            ldap_error($ldap)) );
+    }
+}
+
 
 $t->assign('secondary_accounts', $config->ldap->secondary_accounts->toArray());
 
@@ -82,6 +92,9 @@ if($ask_old_password === true) {
 }
 
 if($modallowed === true) {
+
+$newvalues = array();
+//TODO fix ldapattr
     foreach($config->ldap->secondary_accounts->toArray() as $method => $ldapattr) {
         if(empty($ldapattr)) continue;
 
@@ -94,25 +107,49 @@ if($modallowed === true) {
                 // add / modify
                 if(($res = $formobject->validate()) === true) {
                     // input value validated
+
                     $ldapvalue = $formobject->getNormalizedValue();
-                    ldap_modify($ldap, $userdn, array( $ldapattr => $ldapvalue) );
-                    $modified = true;
+
+                    //Quick and dirty changes not working properly TODO
+                    $ldapvalue = $ldapattr['prefix'].$ldapvalue;
+                    $newvalues[$ldapattr['attribute']][] =  $ldapvalue;
+                    
+                    //Do not modify here but wait to gather all values
+                    //ldap_modify($ldap, $userdn, array( $ldapattr['attribute'] => $ldapvalue) );
+                    //$modified = true;
                 } else {
                     $msgs[] = array('class' => 'error', 'msg' => $res);
                 }
             } else {
+             
+                //No do not run here
+                //
                 // delete
-                ldap_modify($ldap, $userdn, array( $ldapattr => array() ));
-                $modified = true;
+               // ldap_modify($ldap, $userdn, array( $ldapattr['attribute'] => array() ));
+               // $modified = true;
             }
             unset($val);
         }
     }
+             
+    if(isset($_POST['submit_values']) && isset($_POST[$method])) {
+        if( empty($newvalues) ){
+           foreach($config->ldap->secondary_accounts->toArray() as $method => $ldapattr) {
+                ldap_modify($ldap, $userdn, array_merge(array($opt_attribute => 'FALSE') ,array( $ldapattr['attribute'] => array() )));  
+                $modified = true;
+            }
+        }else {
+            ldap_modify($ldap, $userdn, array_merge( array($opt_attribute => 'TRUE'),$newvalues));
+            $modified = true;
+        }
 
+    }
 }
 
+
+
 if($submit_optout) {
-    ldap_modify($ldap, $userdn, array( 'secondaryOptOut' => 'TRUE'));
+    ldap_modify($ldap, $userdn, array( $opt_attribute => 'TRUE'));
     $modified = true;
 
     // if we have a service, redirect straight to there
@@ -125,12 +162,12 @@ if($submit_optout) {
 if($modified === true) {
     // re-get entry
     $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($config->ldap->filter->user, ldapspecialchars($login_username)),
-            array_merge($secondary_accounts_ldapattrs, array('secondaryOptOut', '+')));
+            array_merge($secondary_accounts_ldapattrs, array($opt_attribute, '+')));
     $entries = ldap_get_entries($ldap, $sr);
 }
 
 $opted_out = false;
-if(isset($entries[0]['secondaryoptout']) && $entries[0]['secondaryoptout'][0] == TRUE) {
+if(isset($entries[0][$opt_attribute]) && $entries[0][$opt_attribute][0] == TRUE) {
     $opted_out = true;
 }
 
@@ -167,8 +204,14 @@ if(isset($_SESSION['possibly_expired_password'])) {
     $t->assign('possibly_expired_password', true);
 }
 
-// gather all secondary accounts values
+
 $secondary_accounts_values = array();
+// gather all secondary accounts values
+if (!empty($config->ldap->secondary_accounts )) {
+    $secondary_accounts_values = $arcanumLdap->getSecondaryAccounts($login_username);
+}
+//$secondary_accounts_values = array();
+/*
 foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
     $secondary_accounts_values[$m] = '';
     if(!empty($ldapattr)) {
@@ -180,8 +223,10 @@ foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
         unset($formobject);
     }
 }
+*/
+
 $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($config->ldap->filter->user, ldapspecialchars($login_username)),
-        array_merge($secondary_accounts_ldapattrs, array('objectclass', 'secondaryOptOut', '+')));
+        array_merge($secondary_accounts_ldapattrs, array('objectclass', $opt_attribute, '+')));
 
 
 $t->assign('secondary_accounts_values', $secondary_accounts_values);

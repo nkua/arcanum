@@ -57,7 +57,7 @@ access to *
         by * none
 
 overlay ppolicy
-ppolicy_default "cn=students,ou=policies,dc=org,dc=gr"
+ppolicy_default "cn=students,ou=ppolicies,dc=org,dc=gr"
 ppolicy_use_lockout
 ppolicy_hash_cleartext
 ',

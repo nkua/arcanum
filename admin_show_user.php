@@ -277,15 +277,22 @@ if (!empty($uid)) {
         }
     }
 
+ $secondaryAccounts = array();
 
+//---------
     if (!empty($config->ldap->secondary_accounts )) {
-        foreach($config->ldap->secondary_accounts->toArray() as $method => $ldapattr ) {
+
+        $secondaryAccounts = $arcanumLdap->getSecondaryAccounts($uid);
+
+/*       
+         foreach($config->ldap->secondary_accounts->toArray() as $method => $ldapattr ) {
             $secondaryAccounts[$method] = strtolower($ldapattr);
         }
+*/
     }
-
+//------------
     $allattrs = array_merge($config->admin->show_attrs->toArray(), array('objectclass', $config->ldap->passwordAttribute),
-                            array_keys($arcanumLdap->pwAttributes), array_values($secondaryAccounts));
+                            array_keys($arcanumLdap->pwAttributes));
 
     $filter = sprintf($config->ldap->filter->user, ldapspecialchars($uid));
     if ($restrict) {
@@ -295,6 +302,8 @@ if (!empty($uid)) {
 
 	$entries = ldap_get_entries($ldap, $sr);
     Arcanum_Ldap::sanitize_entry_array($entries);
+
+
 
     if ($entries['count'] != 1) {
         $msgs[] = array('class' => 'warning', 'msg' => _("Username not found") );

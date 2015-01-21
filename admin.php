@@ -72,7 +72,14 @@ $summariesDef = array(
     ),
     'noguobjectclass' => array(
         'filter' => '(&'.$f.'(!(objectclass=extendedAuthentication)))',
-        'desc' => _("Users without the required ObjectClass"),
+        'desc' => _("Users without the required ObjectClass")." ExtendedAuth",
+        'bad' => true,
+        'fix' => true,
+        'group' => 'manage',
+    ),
+    'nopmobjectclass' => array(
+        'filter' => '(&'.$f.'(!(objectclass=pwdmanagement)))',
+        'desc' => _("Users without the required ObjectClass")." pwdManagement",
         'bad' => true,
         'fix' => true,
         'group' => 'manage',
@@ -119,7 +126,7 @@ foreach($config->ldap->secondary_accounts->toArray() as $method=>$ldapattr) {
 
     if($ldapattr) {
         $summariesDef['secondaryaccount_'.$method] = array(
-            'filter' => '(&'.$f.'('.$ldapattr.'=*))',
+            'filter' => '(&'.$f.'('.$ldapattr['attribute'].'='.$ldapattr['prefix'].'*))',
             'desc' => sprintf( _("Users with secondary account information filled in, for password recovery &mdash; method: %s"), $method),
             'group' => 'secondaryaccounts',
         );
@@ -285,19 +292,36 @@ if($flow == 'summary') {
             array('objectclass'));
 
         $entries = ldap_get_entries($ldap, $sr);
-
+        $new_class_value = array();
+        $new_class_value['objectclass'][] = 'ExtendedAuthentication';
         $count_fixed = 0;
         for($i=0; $i < $entries['count']; $i++) {
-            $newobjectclass = array();
-            for($j=0; $j< $entries[$i]['objectclass']['count']; $j++) {
-                $newobjectclass[] = $entries[$i]['objectclass'][$j];
-            }
-            $newobjectclass[] = 'ExtendedAuthentication';
-            ldap_modify($ldap, $entries[$i]['dn'], array('objectclass' => $newobjectclass));
+
+            ldap_mod_add($ldap, $entries[$i]['dn'], $new_class_value);
             $count_fixed++;
         }
         $msgs[] = array('class' => 'success', 'msg' => sprintf( _("The required objectclass (ExtendedAuthentication) was added to %s entries"), $count_fixed));
         break;
+
+    case  'nopmobjectclass':
+        $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($summariesDef[$fix]['filter'], '*'),
+            array('objectclass'));
+
+        $entries = ldap_get_entries($ldap, $sr);
+        $new_class_value = array();
+        $new_class_value['objectclass'][] = 'pwdManagement';
+        $count_fixed = 0;
+        for($i=0; $i < $entries['count']; $i++) {
+
+            ldap_mod_add($ldap, $entries[$i]['dn'], $new_class_value);
+            $count_fixed++;
+        }
+        $msgs[] = array('class' => 'success', 'msg' => sprintf( _("The required objectclass (pwdManagement) was added to %s entries"), $count_fixed));
+        break;
+
+
+
+
 
     case  'nonthash':
         require_once('include/HashAlgorithm.php');

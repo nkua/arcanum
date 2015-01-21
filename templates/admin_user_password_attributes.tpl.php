@@ -117,6 +117,7 @@ foreach($pwAttrs as $attr => $d) {
 <thead><tr><td colspan="2"><h3><?= _("Secondary Accounts") ?><h3></td></tr></thead>
 <tbody>
 <?php
+
 foreach($secondaryAccounts as $method => $ldapattr) {
     echo '<tr><td>';
     if($method == 'sms') {
@@ -128,10 +129,11 @@ foreach($secondaryAccounts as $method => $ldapattr) {
     }
     
     echo '</td><td>';
-    if(isset($info[$ldapattr])) {
-        foreach($info[$ldapattr] as $val) {
-            print htmlspecialchars($val) . '<br/>';
-        }
+    if(isset($ldapattr)) {
+        print htmlspecialchars($ldapattr) . '<br/>';
+        //foreach($info[$ldapattr] as $val) {
+        //    print htmlspecialchars($val) . '<br/>';
+        //}
     } else {
         echo '&mdash;';
     }

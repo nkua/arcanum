@@ -141,24 +141,47 @@ if(!$editing_existing) {
 <fieldset>
 <h3><?= _("LDAP Attributes for storing secondary account information, intended for forgotten password functionality") ?></h3>
 
-<div class="form-field" id="ldap__secondary_accounts__sms">
+<div class="form-field" id="ldap__secondary_accounts__sms__attribute">
 <label><?= _("Attribute for mobile phone number, for recovery via SMS text message") ?><br/>
 <?= _("(Leave blank to disable this password reset method)") ?></label>
-<input type="text" class="medium input-text" name="ldap__secondary_accounts__sms" value="<?= f_val($config->ldap->secondary_accounts->sms); ?>" />
+<input type="text" class="medium input-text" name="ldap__secondary_accounts__sms__attribute" value="<?= f_val($config->ldap->secondary_accounts->sms->attribute); ?>" />
+</div>
+<div class="form-field" id="ldap__secondary_accounts__sms__prefix">
+<label><?= _("Prefix for mobile phone number, for recovery via SMS text message") ?><br/>
+<?= _("(Leave blank to disable this password reset method)") ?></label>
+<input type="text" class="medium input-text" name="ldap__secondary_accounts__sms__prefix" value="<?= f_val($config->ldap->secondary_accounts->sms->prefix); ?>" />
 </div>
 
-<div class="form-field" id="ldap__secondary_accounts__email">
+
+
+<div class="form-field" id="ldap__secondary_accounts__email__attribute">
 <label><?= _("Attribute for <strong>secondary</strong> e-mail address") ?><br/>
 <?= _("(Leave blank to disable this password reset method)") ?></label>
-<input type="text" class="medium input-text" name="ldap__secondary_accounts__email" value="<?= f_val($config->ldap->secondary_accounts->email); ?>" />
+<input type="text" class="medium input-text" name="ldap__secondary_accounts__email__attribute" value="<?= f_val($config->ldap->secondary_accounts->email->attribute); ?>" />
 </div>
 
-<div class="form-field" id="ldap__secondary_accounts__openid">
+<div class="form-field" id="ldap__secondary_accounts__email__prefix">
+<label><?= _("Prefix for <strong>secondary</strong> e-mail address") ?><br/>
+<?= _("(Leave blank to disable this password reset method)") ?></label>
+<input type="text" class="medium input-text" name="ldap__secondary_accounts__email__prefix" value="<?= f_val($config->ldap->secondary_accounts->email->prefix); ?>" />
+</div>
+
+<!--
+
+<div class="form-field" id="ldap__secondary_accounts__openid__attribute">
 <label><?= _("Attribute for OpenID account") ?><br/>
 <?= _("(Leave blank to disable this password reset method)") ?></label>
-<input type="text" class="medium input-text" name="ldap__secondary_accounts__openid" value="<?= f_val($config->ldap->secondary_accounts->openid); ?>" />
+<input type="text" class="medium input-text" name="ldap__secondary_accounts__openid__attribute" value="<?= f_val($config->ldap->secondary_accounts->openid->attribute); ?>" />
 <span class="label"><?= _("Feature not implemented yet") ?></span>
 </div>
+<div class="form-field" id="ldap__secondary_accounts__openid__prefix">
+<label><?= _("Prefix for OpenID account") ?><br/>
+<?= _("(Leave blank to disable this password reset method)") ?></label>
+<input type="text" class="medium input-text" name="ldap__secondary_accounts__openid__prefix" value="<?= f_val($config->ldap->secondary_accounts->openid->prefix); ?>" />
+<span class="label"><?= _("Feature not implemented yet") ?></span>
+</div>
+-->
+
 
 </fieldset>
 

@@ -13,6 +13,7 @@ $msgs = array();
 
 $arcanumLdap = new Arcanum_Ldap();
 $ldap = $arcanumLdap->connect();
+$opt_attribute = $config->ldap->optinattibute;
 
 $secondary_accounts_ldapattrs = array();
 foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
@@ -21,27 +22,35 @@ foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
     }
 }
 $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($config->ldap->filter->user, ldapspecialchars($login_username)),
-        array_merge($secondary_accounts_ldapattrs, array('objectclass', 'secondaryOptOut', '+')));
+        array_merge($secondary_accounts_ldapattrs, array('objectclass', $opt_attribute, '+')));
 
 $entries = ldap_get_entries($ldap, $sr);
 $userdn = $entries[0]['dn'];
 
+$entry = array();
+
 if(!in_array('extendedAuthentication', $entries[0]['objectclass'])) {
-    $new_objectclass = array();
-    for($i=0; $i<$entries[0]['objectclass']['count']; $i++) {
-        $new_objectclass[] = $entries[0]['objectclass'][$i];
-    }
-    $new_objectclass[] = 'extendedAuthentication';
-    if(@ldap_modify($ldap, $userdn, array( 'objectclass' => $new_objectclass)) === false) {
+    $entry['objectclass'][] = 'extendedAuthentication';
+    if(ldap_mod_add($ldap, $userdn, $entry) === false) {
         $msgs[] = array('class' => 'error', 'msg' => sprintf( _("Attention: your record in the directory server cannot be modified. Please contact your administrator. (LDAP Error: %s)"),
             ldap_error($ldap)) );
     }
 }
 
+if(!in_array('pwdManagement', $entries[0]['objectclass'])) {
+    $entry['objectclass'][] = 'pwdManagement';
+    if(ldap_mod_add($ldap, $userdn, $entry) === false) {
+        $msgs[] = array('class' => 'error', 'msg' => sprintf( _("Attention: your record in the directory server cannot be modified. Please contact your administrator. (LDAP Error: %s)"),
+            ldap_error($ldap)) );
+    }
+}
+
+
+
 $t->assign('secondary_accounts', $config->ldap->secondary_accounts->toArray());
 
 $opted_out = false;
-if(isset($entries[0]['secondaryoptout']) && $entries[0]['secondaryoptout'][0] == TRUE) {
+if(isset($entries[0][$opt_attribute]) && $entries[0][$opt_attribute][0] == TRUE) {
     $opted_out = true;
 }
 
@@ -91,7 +100,7 @@ foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
     }
 }
 $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($config->ldap->filter->user, ldapspecialchars($login_username)),
-        array_merge($secondary_accounts_ldapattrs, array('objectclass', 'secondaryOptOut', '+')));
+        array_merge($secondary_accounts_ldapattrs, array('objectclass', $opt_attribute, '+')));
 
 
 $t->assign('secondary_accounts_values', $secondary_accounts_values);

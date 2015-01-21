@@ -199,6 +199,50 @@ class Arcanum_Ldap {
     public function getMsgs() {
         return $this->msgs;
     }
+
+//new method to return secondary recovery channels ---remove prefix--- 
+    public function getSecondaryAccounts($uid) {
+
+        global $config;
+        $filter = sprintf($config->ldap->filter->user, ldapspecialchars($uid));
+        $pattern_template = '/^%s/';
+
+        $secondaries = $config->ldap->secondary_accounts->toArray();
+        foreach($secondaries as $ac){
+            $attributes[] = $ac['attribute'];
+        }
+        $attributes = array_unique($attributes);
+        $sr = ldap_search($this->ldap, $config->ldap->basedn, $filter, $attributes);
+
+        if(ldap_count_entries($this->ldap, $sr) != 1){return array();}
+
+
+        $entries = ldap_get_entries($this->ldap, $sr);
+        $values = $entries[0];
+
+
+        foreach($secondaries as $method=>$ac){
+
+           $pattern = sprintf($pattern_template, $ac['prefix']);
+           if($method=='sms')
+                $replacePattern = '/^'.$ac['prefix'].'\+30/';
+           else
+                $replacePattern = $pattern;
+           
+           
+           $values = $entries[0][$ac['attribute']];
+           array_shift($values); 
+               foreach($values as $actualEntry)
+               {
+                 if( preg_match($pattern, $actualEntry))
+                    $result[$method]=preg_replace($replacePattern,'',$actualEntry);
+               }
+        }
+        return $result;
+
+    }
+
+
 }
 
 /*

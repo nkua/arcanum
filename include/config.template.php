@@ -17,11 +17,12 @@ return array(
         'basedn' => '',
         'bind' => '',
         'password' => '',
-        'secondary_accounts' => array(
-            'sms' => 'mobile',
-            'email' => 'SecondaryEmail',
-            //'openid' => 'AccountSecondaryOpenID'
-        ),
+        'secondary_accounts' => 
+            array (
+              'sms' => array('attribute'=>'pwdresetmethod', 'prefix'=>'sms:'),
+              'email' => array('attribute'=>'pwdresetmethod', 'prefix'=>'email:'),
+            ),
+        
         'filter' => array(
             //'user' => 'uid=%s',
             'user' => '(&(uid=%s)(objectclass=*))',
