@@ -108,10 +108,10 @@ class Arcanum_Session {
         global $config, $initLocation, $loggedin, $login_username, $cpAuthKey;
         
         require_once('CAS/CAS.php');
-
-        phpCAS::client(CAS_VERSION_2_0, $config->cas->host, $config->cas->port, $config->cas->uri, false);
-        phpCAS::setNoCasServerValidation();
-        phpCAS::handleLogoutRequests();
+    	//phpCAS::setDebug('/tmp/arcanum.log');
+        phpCAS::client(CAS_VERSION_2_0, $config->cas->host, $config->cas->port, $config->cas->uri, true);
+        phpCAS::setCasServerCACert('/DEVEL/arcanum/lib/CAS/HARICA.pem');
+    	phpCAS::handleLogoutRequests();
 
         if(phpCAS::checkAuthentication()) {
             if (isset($_GET['logout'])) {
@@ -121,7 +121,7 @@ class Arcanum_Session {
             }
             $casdata = $_SESSION['phpCAS'];
             
-            self::init();
+//            self::init();
 
             $login_username = $_SESSION['login_username'] = $casdata['user'];
             $_SESSION['cleared_for'] = array('dataentry', 'passwordreset');

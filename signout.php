@@ -18,21 +18,21 @@ $error_message = isset($_GET['error_message']) ? $_GET['error_message'] : '';
 if(isset($login_username)) 
     $t->assign('username', $login_username);
 
-
 if($success && isset($_SESSION['service'])) {
     $service = $_SESSION['service'];
     $t->assign('service', $service);
-    if(isset($_SESSION['authenticated_via_cas'])) {
-        require_once('CAS/CAS.php');
-        phpCAS::client(CAS_VERSION_2_0, $config->cas->host, $config->cas->port, $config->cas->uri, false);
-        phpCAS::setNoCasServerValidation();
-        phpCAS::handleLogoutRequests();
-
-        phpCAS::logout(array('service'=> $service));
-    }
 }
 
 Arcanum_Session::destroy();
+if(isset($_SESSION['authenticated_via_cas'])) {
+    require_once('CAS/CAS.php');
+    phpCAS::client(CAS_VERSION_2_0, $config->cas->host, $config->cas->port, $config->cas->uri, true);
+    phpCAS::handleLogoutRequests();
+    if(isset($service))
+        phpCAS::logout(array('service'=> $service));
+    else
+        phpCAS::logout();
+}
 
 if(isset($service) || $redirect == 'service') {
     // go back to service, via CAS
