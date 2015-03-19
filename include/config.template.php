@@ -26,7 +26,7 @@ return array(
         'filter' => array(
             //'user' => 'uid=%s',
             'user' => '(&(uid=%s)(objectclass=*))',
-            'user_receivesms' => '(objectclass=*)',
+            'user_receivesms' => '(&(uid=*)(pwdresetmethod=*%s)(objectclass=*))',
             //
             // Sample LDAP filter for setting specific users as administrators:
             // 'admin' => '(&(uid=%s)(uid=adminuid))',
@@ -36,7 +36,7 @@ return array(
             // objectClass as administrators:
             // 'admin' => '(&(uid=%s)(objectclass=adminClass))',
             'admin_password' => '(&(uid=%s)(edupersonentitlement=admin_password))',
-            'admin_policy' => '(&(uid=%s)(edupersonentitlement=dbadmin))',
+            'admin_policy' => '(&(uid=%s)(edupersonentitlement=arcanum_admin))',
         ),
 
         // 'sunds' or anything else

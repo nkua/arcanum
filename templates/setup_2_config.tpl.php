@@ -94,7 +94,7 @@ if(!$editing_existing) {
 <label><?= _("NT Hash attribute (optional)") ?></label>
 <input type="text" class="input-medium" name="ldap__sambaNtAttribute" value="<?= f_val($config->ldap->sambaNtAttribute); ?>" />
 </div>
-
+<!--
 <div class="form-field" id="ldap__ctpAttribute">
 <label><?= _("Attribute for symmetrically encrypted cleartext password (optional)") ?></label>
 <input type="text" class="input-medium" name="ldap__ctpAttribute" value="<?= f_val($config->ldap->ctpAttribute); ?>" />
@@ -122,7 +122,7 @@ if(!$editing_existing) {
 <input type="text" disabled="DISABLED" class="input-medium" />
 <span class="label"><?= _("Feature not implemented yet") ?></span>
 </div>
-
+-->
 
 <div class="form-field" id="ldap__digestha1Attribute">
 <label><?= _("DigestHA1 Attribute (optional)") ?></label>

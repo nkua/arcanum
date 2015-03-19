@@ -129,8 +129,8 @@ if(isset($_POST['submitstep']) && in_array($_POST['submitstep'], $ops)) {
         }
         $cfg->saveAttr('ldap__passwordHash');
         $cfg->saveAttr('ldap__sambaNtAttribute');
-        $cfg->saveAttr('ldap__ctpAttribute');
-        $cfg->saveAttr('ldap__ctpKey');
+        //$cfg->saveAttr('ldap__ctpAttribute');
+        //$cfg->saveAttr('ldap__ctpKey');
         $cfg->saveAttr('ldap__digestha1Attribute');
         $cfg->saveAttr('ldap__digestRealm');
         $cfg->saveAttr('ldap__secondary_accounts__sms__attribute');

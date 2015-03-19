@@ -18,7 +18,7 @@ class Arcanum_Setup_Configuration {
         'institution_name', 'institution_domain', 'title', 'subtitle', 'motd', 'session_name',
         'website_home', 'ldap__host', 'ldap__basedn',
         'ldap__bind', 'ldap__password',
-        'ldap__passwordHash', 'ldap__sambaNtAttribute', 'ldap__ctpAttribute', 'ldap__ctpKey',
+        'ldap__passwordHash', 'ldap__sambaNtAttribute',
         'ldap__digestha1Attribute', 'ldap__digestRealm',
         'ldap__secondary_accounts__sms', 'ldap__secondary_accounts__email',
         'ldap__secondary_accounts__openid', 'ldap__filter__user', 'ldap__filter__user_receivesms',
