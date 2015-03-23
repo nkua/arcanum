@@ -23,7 +23,6 @@ if($success && isset($_SESSION['service'])) {
     $t->assign('service', $service);
 }
 
-Arcanum_Session::destroy();
 if(isset($_SESSION['authenticated_via_cas'])) {
     require_once('CAS/CAS.php');
     phpCAS::client(CAS_VERSION_2_0, $config->cas->host, $config->cas->port, $config->cas->uri, true);
@@ -33,6 +32,7 @@ if(isset($_SESSION['authenticated_via_cas'])) {
     else
         phpCAS::logout();
 }
+Arcanum_Session::destroy();
 
 if(isset($service) || $redirect == 'service') {
     // go back to service, via CAS

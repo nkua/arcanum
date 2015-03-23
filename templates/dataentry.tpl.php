@@ -71,8 +71,7 @@ if($ask_old_password === true) {
 <?php
 if( isset($service) && ( !isset($opted_out) || $opted_out == false) &&
     (!empty($secondary_accounts['sms']) && empty($secondary_accounts_values['sms'])) &&
-    (!empty($secondary_accounts['email']) && empty($secondary_accounts_values['email'])) &&
-    (!empty($secondary_accounts['openid']) && empty($secondary_accounts_values['openid'])) 
+    (!empty($secondary_accounts['email']) && empty($secondary_accounts_values['email'])) 
 ) {
     // Nothing is set and we are in the form that asks the password as well (e.g. intermediate
     // step after CAS login), so display the optout / skip buttons
@@ -83,7 +82,7 @@ if( isset($service) && ( !isset($opted_out) || $opted_out == false) &&
      <div class="smaller-text">
      <div class="left"><a href="<?= htmlspecialchars($service, ENT_QUOTES) ?>"><?= _("Skip") ?></a></div>
      <div class="right"><a href="dataentry.php?enable_optout=1"><?= _("Disable reminder") ?></a>
-        <?= sprintf( _("for the next %s days"), 30) ?></div>
+        </div>
      </div>
      </div>
 <?php    

@@ -154,7 +154,15 @@ if($submit_optout) {
 
     // if we have a service, redirect straight to there
     if(isset($service)) {
-        header("Location: signout.php");
+
+
+    Arcanum_Session::destroy();
+
+    header(
+        "Location: https://".$config->cas->host . ':' . $config->cas->port .
+         ( !empty($config->cas->uri) ? '/'.$config->cas->uri  : '') .
+        '/login?service='.rawurlencode($service)
+    );
         exit;
     }
 }
@@ -167,7 +175,7 @@ if($modified === true) {
 }
 
 $opted_out = false;
-if(isset($entries[0][$opt_attribute]) && $entries[0][$opt_attribute][0] == TRUE) {
+if(isset($entries[0][$opt_attribute]) && $entries[0][$opt_attribute][0] === TRUE) {
     $opted_out = true;
 }
 
