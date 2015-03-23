@@ -60,9 +60,8 @@ return array(
         // Example: 'sambaNtPassword'.
         'sambaNtAttribute' => 'sambaNtPassword',
         
-        'ctpAttribute' => 'GUCtp',
-        'ctpKey' => '',
-
+        //'ctpAttribute' => 'GUCtp',
+        //'ctpKey' => '',
         'actpAttribute' => '',
         
         'otpInitKeyAttribute' => '',
