@@ -22,7 +22,9 @@ return array(
               'sms' => array('attribute'=>'pwdresetmethod', 'prefix'=>'sms:'),
               'email' => array('attribute'=>'pwdresetmethod', 'prefix'=>'email:'),
             ),
-        
+
+        "optinattibute" => 'pwdresetoptin',
+
         'filter' => array(
             //'user' => 'uid=%s',
             'user' => '(&(uid=%s)(objectclass=*))',
@@ -60,8 +62,6 @@ return array(
         // Example: 'sambaNtPassword'.
         'sambaNtAttribute' => 'sambaNtPassword',
         
-        //'ctpAttribute' => 'GUCtp',
-        //'ctpKey' => '',
         'actpAttribute' => '',
         
         'otpInitKeyAttribute' => '',
@@ -77,7 +77,7 @@ return array(
     ),
     'session_name' => 'change_password',
     'locale' => array(
-        'default_language' => 'en_US',
+        'default_language' => 'el_GR',
     ),
     'title' => 'Password Management Service',
     'subtitle' => 'Organization Name',
@@ -139,7 +139,7 @@ return array(
     'devel' => array(
         'simulate_sms' => true,
         'allow_all_captcha' => true,
-        'email_cc' => 'avel@noc.uoa.gr',
+        'email_cc' => '',
     ),
 );
 
