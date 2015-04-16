@@ -15,7 +15,7 @@ class Arcanum_Setup_Configuration {
 
     public $all_config_vars_flat = array(
         'locale__default_language',
-        'institution_name', 'institution_domain', 'title', 'subtitle', 'motd', 'session_name',
+        'institution_name', 'institution_domain', 'institution_logo', 'title', 'subtitle', 'motd', 'session_name',
         'website_home', 'ldap__host', 'ldap__basedn',
         'ldap__bind', 'ldap__password',
         'ldap__passwordHash', 'ldap__sambaNtAttribute',

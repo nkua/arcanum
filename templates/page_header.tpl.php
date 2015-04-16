@@ -31,7 +31,7 @@ if($loggedin) {
         <?php
         if(!empty($config->institution_logo)) {
         ?>
-         	<div class="logo"><a href="<?= $home ?>"><img src="<?= $config->institution_logo ?>" alt="<?= htmlspecialchars($title) ?>"/></a></div>
+         	<div class="logo"><a href="<?= $home ?>"><img src="<?= $config->institution_logo ?>" alt="<?= htmlspecialchars($title) ?>" width="50px"/></a></div>
         <?php
         }
         ?>

@@ -46,15 +46,30 @@ if($ask_old_password === true) {
 <?php
 }
 ?>
+<?php 
+if(!empty($secondary_accounts['email'])) {
+?>
 
                 <div class="form-line">
                 	<div class="form-text"><?= _("Secondary e-mail address:") ?></div>
                     <div class="form-input"> <input type="text" name="email" maxlength="45" value="<?= htmlspecialchars($secondary_accounts_values['email']) ?>"style="width:100%;"  /></div>
                 </div>
+<?php
+}
+?>
+
+<?php 
+if(!empty($secondary_accounts['sms'])) {
+?>
                 <div class="form-line">
                 	<div class="form-text"><?= _("Mobile phone number:") ?></div>
                     <div class="form-input"> <input type="text" name="sms" maxlength="15" value="<?= htmlspecialchars($secondary_accounts_values['sms']) ?>" style="width:100%;"  /></div>
                 </div>
+<?php
+}
+?>
+
+
                 
                 <div class="form-line">
                 	<div class="form-text">&nbsp;</div>
