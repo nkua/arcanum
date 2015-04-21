@@ -26,8 +26,9 @@ $secondary_accounts_ldapattrs = array();
 $opt_attribute = $config->ldap->optinattibute;
 
 foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
-    if(!empty($ldapattr)) {
-        $secondary_accounts_ldapattrs[] = $ldapattr;
+    if(!empty($ldapattr) && $ldapattr['attribute']!='') {
+        $secondary_accounts_ldapattrs[] = $ldapattr['attribute'];
+        $secondary_accounts[$m] = $ldapattr;
     }
 }
 
@@ -55,8 +56,8 @@ if(!in_array('pwdManagement', $entries[0]['objectclass'])) {
     }
 }
 
+$t->assign('secondary_accounts', $secondary_accounts);
 
-$t->assign('secondary_accounts', $config->ldap->secondary_accounts->toArray());
 
 // Handle submit of new values.
 
@@ -92,13 +93,14 @@ if($ask_old_password === true) {
 }
 
 if($modallowed === true) {
-
+$finalmethod='';
 $newvalues = array();
 //TODO fix ldapattr
     foreach($config->ldap->secondary_accounts->toArray() as $method => $ldapattr) {
-        if(empty($ldapattr)) continue;
-
+        if(empty($ldapattr) || $ldapattr['attribute']=='') continue;
         if(isset($_POST['submit_values']) && isset($_POST[$method]) ) {
+            $finalmethod=$method;
+
             $formobject = Arcanum_Form::Factory($method);
             $val = $_POST[$method];
             $formobject->setInputValue($val);
@@ -132,8 +134,8 @@ $newvalues = array();
         }
     }
              
-    if(isset($_POST['submit_values']) && isset($_POST[$method])) {
-        if( empty($newvalues) ){
+    if(isset($_POST['submit_values']) && isset($_POST[$finalmethod])) {
+        if( count($newvalues)==0 ){
            foreach($config->ldap->secondary_accounts->toArray() as $method => $ldapattr) {
                 ldap_modify($ldap, $userdn, array_merge(array($opt_attribute => 'FALSE') ,array( $ldapattr['attribute'] => array() )));  
                 $modified = true;

@@ -30,6 +30,7 @@
                 </div>
 
 <?php
+
 if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
     // BOTH email & sms
 ?>
@@ -61,7 +62,7 @@ if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
                 </div>
 
 <?php
-} else {
+} else if(!in_array('sms', $all_methods) && in_array('email', $all_methods)) {
     // ONLY e-mail
 ?>
                  <div class="formleft-input">
@@ -75,6 +76,21 @@ if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
                         <div class="formconf-input"><input type="text" name="email_email"  maxlength="25"/></div>
                     </div>
                 </div>
+<?php
+} else {
+?>
+                 <div class="formleft-input">
+                     
+                     <input type="hidden" name="method" value="sms" />
+                     <div class="form-sendby">
+                      <!--  <div class="formconf-text"><?= _("Enter your surname:") ?></div>
+                        <div class="formconf-input"><input type="text"  name="email_surname" maxlength="25"/></div>
+                       --> 
+                        <div class="formconf-text"><?= _("Enter the mobile phone number that you have registered:") ?></div>
+                        <div class="formconf-input"><input type="text" name="sms_sms"  maxlength="25"/></div>
+                    </div>
+                </div>
+
 <?php
 }
 ?>

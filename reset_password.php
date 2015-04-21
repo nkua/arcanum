@@ -23,7 +23,7 @@ if(isset($_POST['reset_password_abort'])) {
 
 $all_methods = array();
 foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
-    if(!empty($ldapattr)) {
+    if(!empty($ldapattr)  && $ldapattr['attribute']!="") {
         $all_methods[] = $m;
     }
 }
@@ -133,7 +133,7 @@ if(isset($_POST['reset_password_do'])) {
 
     $ldapattrs = array();
     foreach($config->ldap->secondary_accounts->toArray() as $m => $ldapattr) {
-        if(!empty($ldapattr)) {
+        if(!empty($ldapattr) && $ldapattr['attribute']!='') {
             $ldapattrs[] = strtolower($ldapattr['attribute']);
         }
     }
@@ -147,7 +147,7 @@ if(isset($_POST['reset_password_do'])) {
         }
     }
     $ldapattrs = array_values($ldapattrs);
-
+    $ldapattrs = array_unique($ldapattrs);
     $sr = ldap_search($ldap, $config->ldap->basedn, sprintf($config->ldap->filter->user, ldapspecialchars($login_username)),
         array_merge($ldapattrs, array('uid', '+')));
 
