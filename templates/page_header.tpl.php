@@ -22,21 +22,26 @@ if($loggedin) {
 <div id="contentwrapper">
 	<!-- Header-->
     <div id="topheaderwrapper">
-       <div id="topheader"> 
-       		<div class="loginlogo"><img src="images/logo_login.png" /></div>
-            <div class="servicetitle"><?= htmlspecialchars($subtitle) ?></div>
-   	   </div>
-    </div>
+
        <div id="header">
         <?php
         if(!empty($config->institution_logo)) {
         ?>
-         	<div class="logo"><a href="<?= $home ?>"><img src="<?= $config->institution_logo ?>" alt="<?= htmlspecialchars($title) ?>" width="50px"/></a></div>
+         	<div class="logo"><a href="<?= $home ?>"><img src="<?= $config->institution_logo ?>" alt="<?= htmlspecialchars($title) ?>" width="70px"/></a></div>
         <?php
         }
         ?>
-        <div class="title"><a href="<?= $home ?>"?><?= htmlspecialchars($title) ?></a></div>
+        <div class="logotext">
+			<div class="title"><?= htmlspecialchars($title) ?></div> 
+			<div class="servicetitle"><?= htmlspecialchars($subtitle) ?></div>
+        </div>
+                    
+
        </div>
+
+
+    </div>
+
    
     <!-- Main-->
     <div id="main">

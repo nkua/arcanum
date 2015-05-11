@@ -9,13 +9,13 @@ if(isset($success_title)) {
  	    <div class="box-success">
         	
           <div class="title-line">
-<?
+<?php
             foreach($msgs as $m) {
 ?>
         	<div class="title-msg">
                 <?= $m['msg'] ?>
             </div>
-<?
+<?php
             }
 ?>
             <div class="icon-msg"><img src="images/tick.png" /></div>

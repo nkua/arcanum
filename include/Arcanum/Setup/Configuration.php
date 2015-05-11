@@ -21,7 +21,7 @@ class Arcanum_Setup_Configuration {
         'ldap__passwordHash', 'ldap__sambaNtAttribute',
         'ldap__digestha1Attribute', 'ldap__digestRealm',
         'ldap__secondary_accounts__sms', 'ldap__secondary_accounts__email',
-        'ldap__secondary_accounts__openid', 'ldap__filter__user', 'ldap__filter__user_receivesms',
+        'ldap__filter__user', 'ldap__filter__user_receivesms',
         'ldap__filter__admin_password', 'ldap__filter__admin_policy', 'recaptcha__pubkey',
         'ldap__restrictfilters',
         'password_strength_policy__PW_CHECK_LEVENSHTEIN', 'password_strength_policy__PW_CHECK_MIN_LEN',

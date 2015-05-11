@@ -61,10 +61,10 @@ class Arcanum_Form {
             return new Arcanum_FormEmail('');
             break;
 
-        case 'openid':
+    /*    case 'openid':
             return new Arcanum_FormOpenid('');
             break;
-
+*/
 
         default:
             throw new Exception('Unknown variable type / method');

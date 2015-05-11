@@ -137,7 +137,7 @@ if(isset($_POST['submitstep']) && in_array($_POST['submitstep'], $ops)) {
         $cfg->saveAttr('ldap__secondary_accounts__sms__prefix');
         $cfg->saveAttr('ldap__secondary_accounts__email__attribute');
         $cfg->saveAttr('ldap__secondary_accounts__email__prefix');
-        
+
         $cfg->saveAttr('ldap__filter__user');
         $cfg->saveAttr('ldap__filter__user_receivesms');
         $cfg->saveAttr('ldap__filter__admin_password');

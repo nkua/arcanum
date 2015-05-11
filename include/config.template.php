@@ -118,13 +118,14 @@ return array(
         'receiver' => '',
         'institution' => '',
         'host' => '',
-        'port' => 4432,
+        'port' => 443,
         'uri' => '/sms',
         'username' => '',
         'password' => '',
         'tout_con' => 10,
         'prefix' => 'MyText',
         'ip_receive' => array(
+            '88.197.28.138'
         ),
     ),
     'login_servers' => array(
@@ -137,7 +138,7 @@ return array(
      * 3) The e-mail address specified is Cc'ed in every reset password request by e-mail
      */
     'devel' => array(
-        'simulate_sms' => true,
+        'simulate_sms' => false,
         'allow_all_captcha' => true,
         'email_cc' => '',
     ),

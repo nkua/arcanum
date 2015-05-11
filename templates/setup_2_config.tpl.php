@@ -94,35 +94,7 @@ if(!$editing_existing) {
 <label><?= _("NT Hash attribute (optional)") ?></label>
 <input type="text" class="input-medium" name="ldap__sambaNtAttribute" value="<?= f_val($config->ldap->sambaNtAttribute); ?>" />
 </div>
-<!--
-<div class="form-field" id="ldap__ctpAttribute">
-<label><?= _("Attribute for symmetrically encrypted cleartext password (optional)") ?></label>
-<input type="text" class="input-medium" name="ldap__ctpAttribute" value="<?= f_val($config->ldap->ctpAttribute); ?>" />
-</div>
 
-<div class="form-field" id="ldap__ctpKey">
-<label><?= _("24-byte key for symmetric password encryption (base64-encoded)") ?></label>
-<input type="text" class="input-xxlarge" name="ldap__ctpKey" value="<?= f_val($config->ldap->ctpKey); ?>" />
-</div>
-
-<div class="form-field muted" id="ldap__actpAttribute">
-<label><?= _("Attribute for asymmetrically encrypted cleartext password (optional)") ?></label>
-<input type="text" disabled="DISABLED" class="input-medium" />
-<span class="label"><?= _("Feature not implemented yet") ?></span>
-</div>
-
-<div class="form-field muted" id="ldap__otpInitKeyAttribute">
-<label><?= _("Attribute for Time-Based OTP Init Key (format: base-32-encoded) (optional)") ?></label>
-<input type="text" disabled="DISABLED" class="input-medium" />
-<span class="label"><?= _("Feature not implemented yet") ?></span>
-</div>
-
-<div class="form-field muted" id="ldap__otpBackupPasswordsAttribute">
-<label><?= _("Attribute for storage of One-Time Backup Passwords (optional)") ?></label>
-<input type="text" disabled="DISABLED" class="input-medium" />
-<span class="label"><?= _("Feature not implemented yet") ?></span>
-</div>
--->
 
 <div class="form-field" id="ldap__digestha1Attribute">
 <label><?= _("DigestHA1 Attribute (optional)") ?></label>
@@ -166,21 +138,7 @@ if(!$editing_existing) {
 <input type="text" class="medium input-text" name="ldap__secondary_accounts__email__prefix" value="<?= f_val($config->ldap->secondary_accounts->email->prefix); ?>" />
 </div>
 
-<!--
 
-<div class="form-field" id="ldap__secondary_accounts__openid__attribute">
-<label><?= _("Attribute for OpenID account") ?><br/>
-<?= _("(Leave blank to disable this password reset method)") ?></label>
-<input type="text" class="medium input-text" name="ldap__secondary_accounts__openid__attribute" value="<?= f_val($config->ldap->secondary_accounts->openid->attribute); ?>" />
-<span class="label"><?= _("Feature not implemented yet") ?></span>
-</div>
-<div class="form-field" id="ldap__secondary_accounts__openid__prefix">
-<label><?= _("Prefix for OpenID account") ?><br/>
-<?= _("(Leave blank to disable this password reset method)") ?></label>
-<input type="text" class="medium input-text" name="ldap__secondary_accounts__openid__prefix" value="<?= f_val($config->ldap->secondary_accounts->openid->prefix); ?>" />
-<span class="label"><?= _("Feature not implemented yet") ?></span>
-</div>
--->
 
 
 </fieldset>
