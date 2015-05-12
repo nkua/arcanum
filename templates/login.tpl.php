@@ -9,9 +9,7 @@
 
 $this->display('html_header');
 $this->display('page_header');
-
 ?>
-
  
 <h1><?= _("Password Management Service") ?></h1>
 
@@ -21,18 +19,21 @@ $this->display('page_header');
 <?php
 
 if($expired) {
-    echo '<p>'. _("Your password has expired. In order to continue using the provided services, you have to change your password.") . '</p>'.
-        '<p>' . _("Please log in with your old password and change it with a new one.") . '</p>';
+    echo '<div class="welcome-txt">'. _("Your password has expired. In order to continue using the provided services, you have to change your password.") . '</div><br />';
+    echo '<div class="password-img"></div>';
+    echo '<p>' . _("Please log in with your old password and change it with a new one.") . '</p>';
 
 } elseif($resetted) {
-    echo '<p>' . _("The current password can only be used to enter a new, personalized password. Once you change your password, you will be able to log in to services again.") . '</p>' .
-        '<p>' . _("Please log in with your old password and change it with a new one.") . '</p>';
+    echo '<div class="welcome-txt">' . _("The current password can only be used to enter a new, personalized password. Once you change your password, you will be able to log in to services again.") . '</div><br />';
+    echo '<div class="password-img"></div>';
+    echo '<p>' . _("Please log in with your old password and change it with a new one.") . '</p>';
 
 } elseif(!empty($intro)) {
     echo $intro;
 } else {
-    echo '<p><strong>'. _("Welcome to the User Password Management Service.") . '</strong><br /><br />'.
-    _("Here you can change or recover your password.") . '</p>';
+    echo '<div class="welcome-txt">'. _("Welcome to the User Password Management Service.") . '</div><br />';
+    echo '<div class="password-img"></div>';
+    echo '<p>' ._("Here you can change or recover your password.") . '</p>';
 }
 
 if(!empty($loginMotd)) {

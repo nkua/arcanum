@@ -8,13 +8,13 @@ if(!isset($editable)) $editable = true;
 ?>
 
 <table class="table">
-<thead><tr><td colspan="2"><h3><?= _("Password-related Attributes") ?><h3></td></tr></thead>
+<thead><tr><td colspan="2"><h3><?php echo _("Password-related Attributes") ?><h3></td></tr></thead>
 <tbody>
     
 <tr><td>Password</td>
 
 <td>
-    <? // TODO
+    <?php // TODO
      if(isset($info['userpassword']) && isset($info['userpassword'][0])) {
         echo Arcanum_LdapAttributeFormatter::formatLdapPw($info['userpassword'][0]);
      } else {
@@ -55,14 +55,14 @@ foreach($pwAttrs as $attr => $d) {
 <br/>
 <form name="arcanum_userform_1" action="admin_show_user.php" method="POST" class="form-inline" style="display: inline;">
 
-    <input name="uid" type="hidden" value="<?= htmlspecialchars($info['uid'][0]) ?>" />
-    <input name="dn" type="hidden" value="<?= htmlspecialchars($info['dn']) ?>" />
+    <input name="uid" type="hidden" value="<?php echo htmlspecialchars($info['uid'][0]) ?>" />
+    <input name="dn" type="hidden" value="<?php echo htmlspecialchars($info['dn']) ?>" />
 
-    <input name="action_lock" type="submit" class="btn btn-danger" value="<?= _("Lock Account") ?>" />
-   <input name="action_unlock" type="submit" class="btn btn-success" value="<?= _("Unlock account") ?>" />
+    <input name="action_lock" type="submit" class="btn btn-danger" value="<?php echo _("Lock Account") ?>" />
+   <input name="action_unlock" type="submit" class="btn btn-success" value="<?php echo _("Unlock account") ?>" />
 </form>
 <br/>
-<?
+<?php
             break;
 
         case 'pwdPolicySubEntry':
@@ -114,7 +114,7 @@ foreach($pwAttrs as $attr => $d) {
 </table>
 
 <table class="table">
-<thead><tr><td colspan="2"><h3><?= _("Secondary Accounts") ?><h3></td></tr></thead>
+<thead><tr><td colspan="2"><h3><?php echo _("Secondary Accounts") ?><h3></td></tr></thead>
 <tbody>
 <?php
 
@@ -124,9 +124,7 @@ foreach($secondaryAccounts as $method => $ldapattr) {
         echo _("Mobile / SMS");
     } elseif($method == 'email') {
         echo _("E-Mail");
-    } elseif($method == 'openid') {
-        echo _("OpenID");
-    }
+    } 
     
     echo '</td><td>';
     if(isset($ldapattr)) {

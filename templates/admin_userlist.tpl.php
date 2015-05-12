@@ -8,15 +8,15 @@ if(isset($pagination)) {
 ?>
 
 <table class="table table-striped arcanum-userlist span10">
-<thead>
-<tr><td colspan="<?= sizeof($summary_attrs) + 2 ?>"> <h3><?= $userlist_title ?></h3> </td></tr>
-<tr><td><?= _("#") ?></td>
-<?
+<thead>qqq
+<tr><td colspan="<?php echo sizeof($summary_attrs) + 2 ?>"> <h3><?php echo $userlist_title ?></h3> </td></tr>
+<tr><td><?php echo _("#") ?></td>
+<?php
     foreach($summary_attrs as $attr) {
         echo '<td>'. ((isset($arcanumLdap) && isset($arcanumLdap->attributes[$attr])) ? $arcanumLdap->attributes[$attr]['desc'] : $attr ) .'</td>';
     }
 ?>
-<td><?= _("Actions") ?></td>
+<td><?php echo _("Actions") ?></td>
 </tr>
 </thead>
 <tbody>

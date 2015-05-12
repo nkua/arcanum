@@ -563,3 +563,16 @@ h4 {
 .highlighted_password {
 	background: yellow;
 }
+
+.password-img {
+	width:30%;
+	float:left;
+	background:url("../images/pwd150.png");
+	width: 150px;
+	height: 121px;
+	background-repeat: no-repeat;
+	padding: 12px;
+}
+.welcome-txt {
+	font-size:15px;
+}
