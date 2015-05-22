@@ -26,7 +26,7 @@
                 <br />
                 <div class="form-line">
                 	<div class="formleft-text"><?= _("Enter your username:") ?></div>
-                    <div class="formleft-input"><input type="text" name="login_username" id="login_username" value="" class="nice small input-text"  maxlength="25"/></div>
+                    <div class="formleft-input"><input type="text" name="login_username" id="login_username" value="" class="nice small input-text"  maxlength="55"/></div>
                 </div>
 
 <?php
@@ -47,7 +47,7 @@ if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
                         <div class="formconf-input"><input type="text"  name="email_surname" maxlength="25"/></div>
                      -->   
                         <div class="formconf-text"><?= _("Enter the secondary e-mail that you have registered:") ?></div>
-                        <div class="formconf-input"><input type="text" name="email_email"  maxlength="25"/></div>
+                        <div class="formconf-input"><input type="text" name="email_email"  maxlength="256"/></div>
                     </div>
                     <div class="formleft-input">
                      <input type="radio" name="method" class="method_radio" id="sms_radio" value="sms" style="margin: 2px;" /> <label for="sms_radio"><?= _("Send via SMS") ?></label>
