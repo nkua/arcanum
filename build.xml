@@ -66,6 +66,6 @@
     </target>
 
     <target name="deploy">
-        <exec command="./deploy_test.sh" dir="./" />
+        <exec command="./deploy_hospital.sh" dir="./" />
     </target>
 </project>
