@@ -56,7 +56,7 @@
     <target name="dist" depends="build">
         <echo msg="Creating archive..." />
 
-        <tar destfile="./arcanum.tar.gz" compression="gzip">
+        <tar destfile="./arcanum.hospital.tar.gz" compression="gzip">
             <fileset dir="./build">
                 <include name="*" />
             </fileset>
