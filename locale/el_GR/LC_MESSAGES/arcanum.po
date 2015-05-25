@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: arcanum 2.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-30 15:18+0300\n"
+"POT-Creation-Date: 2015-05-25 10:53+0300\n"
 "PO-Revision-Date: 2014-10-05 11:13+0300\n"
 "Last-Translator: Trougakos Spiros <trougakoss@noc.uoa.gr>\n"
 "Language-Team: el <greek-locale@email.uoa.gr>\n"
@@ -2216,6 +2216,15 @@ msgstr ""
 
 msgid "Login Page"
 msgstr "Σελίδα Εισόδου"
+
+
+
+
+msgid "Please forward me to "
+msgstr "Θέλω να επιστρέψω στην σελίδα"
+
+msgid "I am not interested in using this service"
+msgstr "Δεν με ενδιαφέρει να χρησιμοποιήσω την υπηρεσία ανάκτησης κωδικών "
 
 #~ msgid "Unique ID"
 #~ msgstr "Μοναδικό ID"

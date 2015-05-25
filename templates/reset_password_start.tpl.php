@@ -73,7 +73,7 @@ if( in_array('sms', $all_methods) && in_array('email', $all_methods)) {
                         <div class="formconf-input"><input type="text"  name="email_surname" maxlength="25"/></div>
                        --> 
                         <div class="formconf-text"><?= _("Enter the secondary e-mail that you have registered:") ?></div>
-                        <div class="formconf-input"><input type="text" name="email_email"  maxlength="25"/></div>
+                        <div class="formconf-input"><input type="text" name="email_email"  maxlength="256"/></div>
                     </div>
                 </div>
 <?php

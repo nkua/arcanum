@@ -13,6 +13,23 @@ $this->display('alert_messages');
      <h1><?= _("Password Recovery Information") ?></h1>
     
      <div id="left-home">
+<?php
+
+if( isset($service) ) {
+
+?>
+     <div class="box-form"><?= _("Please forward me to ") ?> <?= $service ?>   <a href="<?= htmlspecialchars($service, ENT_QUOTES) ?>"> 
+    <div class="safety-tip">
+        <div class="safety-img"><img src="images/arrow2.png" /> &nbsp; Επιστροφή </div>
+
+    </div>
+</a></div>
+
+<?php    
+}
+?>
+
+
    		<div class="introtext">
 
 <?php
@@ -85,7 +102,7 @@ if(!empty($secondary_accounts['sms'])) {
 
 <?php
 if( isset($service) && ( !isset($opted_out) || $opted_out == false) &&
-    //(!empty($secondary_accounts['sms']) && empty($secondary_accounts_values['sms'])) &&
+   // (!empty($secondary_accounts['sms']) && empty($secondary_accounts_values['sms'])) &&
     (!empty($secondary_accounts['email']) && empty($secondary_accounts_values['email'])) 
 ) {
     // Nothing is set and we are in the form that asks the password as well (e.g. intermediate
@@ -93,11 +110,8 @@ if( isset($service) && ( !isset($opted_out) || $opted_out == false) &&
 ?>
      <div class="clear"></div>
          <!--Left part of home page-->
-     <div id="left-home">
-     <div class="smaller-text">
-     <div class="left"><a href="<?= htmlspecialchars($service, ENT_QUOTES) ?>"><?= _("Skip") ?></a></div>
-     <div class="right"><a href="dataentry.php?enable_optout=1"><?= _("Disable reminder") ?></a>
-        </div>
+     <div class="box-around">
+     <div class="center"><?= _("I am not interested in using this service") ?><br><a href="dataentry.php?enable_optout=1"><?= _("Disable reminder") ?></a>
      </div>
      </div>
 <?php    
