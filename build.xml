@@ -11,7 +11,7 @@
     
     <target name="clean">
         <delete dir="./build" includeemptydirs="true" verbose="false" />
-        <delete file="./arcanum.tar.gz" />
+        <delete file="./arcanum.hospital.tar.gz" />
     </target>
     
     <target name="compilelocales">
