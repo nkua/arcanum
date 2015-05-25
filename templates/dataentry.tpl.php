@@ -85,7 +85,7 @@ if(!empty($secondary_accounts['sms'])) {
 
 <?php
 if( isset($service) && ( !isset($opted_out) || $opted_out == false) &&
-    (!empty($secondary_accounts['sms']) && empty($secondary_accounts_values['sms'])) &&
+    //(!empty($secondary_accounts['sms']) && empty($secondary_accounts_values['sms'])) &&
     (!empty($secondary_accounts['email']) && empty($secondary_accounts_values['email'])) 
 ) {
     // Nothing is set and we are in the form that asks the password as well (e.g. intermediate

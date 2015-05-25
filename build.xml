@@ -45,6 +45,8 @@
 
                 <exclude name="**.po" />
                 <exclude name="style/custom.css" />
+                <include name="config/config.php" />
+                <include name="config/web_installer_disabled.php" />
             </fileset>
         </copy>
         <mkdir dir="./build/arcanum/config" />
