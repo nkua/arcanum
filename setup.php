@@ -145,7 +145,7 @@ if(isset($_POST['submitstep']) && in_array($_POST['submitstep'], $ops)) {
         // TODO
         //$cfg->saveAttr('login_servers');
         $cfg->saveAttr('cas__host');
-        $cfg->saveAttr('cas__port');
+        $cfg->saveNumAttr('cas__port');
         $cfg->saveAttr('cas__uri');
         //$msgs[] = array(class=>'warning', 'msg' => 'Δοκιμή', 'attribute' => 'ldap__host');
         //print_r($config->ldap->host);
