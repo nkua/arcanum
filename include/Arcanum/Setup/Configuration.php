@@ -123,6 +123,30 @@ class Arcanum_Setup_Configuration {
         $this->_saveInConfigObject($var, $val);
     }
 
+
+    public function saveNumAttr($var, $val = false) {
+
+        if ($this->editingExisting === true && in_array($var, $this->restricted_vars_flat) ) {
+            return;
+        }
+        if($val === false) {
+            if(isset($_POST[$var])) {
+                $val = (int)$_POST[$var];
+                if($var === 'mail__smtp__ssl') $val = 'ssl';
+            } else {
+                $val = '';
+            }
+        }
+
+        // 1) save in session
+        $_SESSION['setupcfg'][$var] = $val;
+
+        // 2) save in $this->config, which is used in forms GUI
+        $this->_saveInConfigObject($var, $val);
+    }
+
+
+
     protected function _saveInConfigObject($var, $val = '') {
         $parts = $this->spl($var);
         
