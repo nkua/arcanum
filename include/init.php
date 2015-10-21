@@ -66,14 +66,14 @@ $rootDirPages = array('index.php', 'changepassword.php', 'home.php', 'dataentry.
     'ajax_handler.php', 'admin.php', 'admin_show_user.php', 'admin_options.php', 'admin_notifications.php',
     'admin_change_password.php', 'admin_set_policies.php', 'admin_sessions.php', 'setup.php',
     'redirect.php', 'signout.php', 'force_change_password.php', 'reset_password.php', 'api.php',
-    'debug.php'
+    'debug.php','serve.php'
 );
 
 // ACL Resources and access controls
 foreach($rootDirPages as $page) {
     $acl->add(new Zend_Acl_Resource(substr($page, 0, -4)));
 }
-$acl->allow($roles['anonymous'], array('index', 'signout', 'redirect', 'reset_password', 'api', 'ajax_handler', 'debug'));
+$acl->allow($roles['anonymous'], array('index', 'signout', 'redirect', 'reset_password', 'api', 'ajax_handler', 'debug','serve'));
 $acl->allow($roles['user'], array('changepassword', 'home', 'dataentry', 'myaccount', 'safety', 'ajax_handler'));
 $acl->allow($roles['admin_password'], array('admin', 'admin_show_user', 'admin_change_password', 'admin_options', 'admin_notifications', 'admin_sessions', 'ajax_handler', 'changepassword', 'myaccount', 'safety')); 
 $acl->allow($roles['admin_policy'], array('admin_set_policies', 'setup'));

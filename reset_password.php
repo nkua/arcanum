@@ -219,7 +219,7 @@ if(isset($_POST['reset_password_do'])) {
         $tokenstore = new Arcanum_Token_Email;
         $token = $tokenstore->generate_token();
         $tokenstore->set_token($token, $uid);
-        
+
         arcanumSetupEmail();
         include_once('Zend/View.php');
         $body = new Zend_View();

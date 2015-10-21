@@ -34,6 +34,11 @@ if(isset($_SESSION['authenticated_via_cas'])) {
 }
 Arcanum_Session::destroy();
 
+
+if(!isset($service) && $redirect =="idm"){
+        header("Location: ".$config->idmUrl);
+}
+
 if(isset($service) || $redirect == 'service') {
     // go back to service, via CAS
     header(

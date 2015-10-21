@@ -208,7 +208,7 @@ if (!empty($uid)) {
 
         $ldapmod['userpassword'] = $original_user_password_value;
 
-        //  $ldapmod['pwdReset'] = 'TRUE';
+          $ldapmod['pwdReset'] = 'TRUE';
 
     } elseif (isset($_POST['action_clear_pwdreset'])) {
         $action = 'clear_pwdreset';

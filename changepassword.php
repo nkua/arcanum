@@ -139,7 +139,7 @@ if (isset($_POST['changepass_do'])) {
 
         // discover user's dn:
         $userdn = $arcanumLdap->getUserDn($username);
-        
+    
         // and mobile, if it exists and user is allowed to receive SMS:
         $mobile_number = false;
         if(!empty($config->ldap->filter->user_receivesms)) {
@@ -167,6 +167,7 @@ if (isset($_POST['changepass_do'])) {
                         $sms->send(_("This is an automated notification to inform you that your password was just changed. - ".$config->institution_name));
                     }
 
+
                     if(isset($service)) {
                         $redirect = 'service';
                         $t->assign('service', $service);
@@ -177,6 +178,16 @@ if (isset($_POST['changepass_do'])) {
                     }
 
                     $redirect_link = 'signout.php?success=1&amp;redirect='.$redirect;
+                    
+                    
+                    if(isset($_SESSION['redirectService'])) {
+                    if($_SESSION['redirectService']=="idm"){
+                        $timeout = "5";
+                        unset($_SESSION['service']);
+                       $redirect_link = 'signout.php?success=1&amp;redirect=idm';
+                    }
+                    }
+ 
 
                     $t->assign('redirect', $redirect);
                     $t->assign('timeout', $timeout);
@@ -232,9 +243,13 @@ if(empty($cleared_for) || sizeof($cleared_for) > 1) {
     $t->display('navigation_user');
 }
 
-if(isset($_GET['token']))
+if(isset($_GET['token'])) {
     $t->display('logged_in_as');
+}
 
+if(isset($_GET['service'])){
+   $_SESSION['redirectService'] = $_GET['service'];
+}
 
 $t->display('change_password');
 $t->display('page_footer');
