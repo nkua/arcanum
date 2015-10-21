@@ -22,6 +22,7 @@ if(!isset($_GET['key'])) {
 
 $key  = $_GET['key'];
 allowHosts($key);
+header('Content-Type: application/json');
 
     $methods = new Backdoor();
 	$Server = new JsonRpc\Server($methods);
