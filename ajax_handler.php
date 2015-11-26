@@ -174,7 +174,7 @@ class RpcMethods {
             $filter = Arcanum_Ldap::constructFilterFromQuery($query);
         }
 
-        $reqAttrs = array_values( array_merge( array('uid', 'cn', 'mail'), $config->admin->summary_attrs->toArray()) );
+        $reqAttrs = array_values( array_merge( array('uid', 'cn', 'schgracpersonid'), $config->admin->summary_attrs->toArray()) );
         $sr = @ldap_search($arcanumLdap->ldap, $config->ldap->basedn, $filter, $reqAttrs);
         if($sr === false) {
             echo json_encode(array('result' => -1));

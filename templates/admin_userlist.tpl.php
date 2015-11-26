@@ -8,7 +8,7 @@ if(isset($pagination)) {
 ?>
 
 <table class="table table-striped arcanum-userlist span10">
-<thead>qqq
+<thead>
 <tr><td colspan="<?php echo sizeof($summary_attrs) + 2 ?>"> <h3><?php echo $userlist_title ?></h3> </td></tr>
 <tr><td><?php echo _("#") ?></td>
 <?php

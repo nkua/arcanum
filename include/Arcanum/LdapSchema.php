@@ -20,8 +20,8 @@ class Arcanum_LdapSchema {
         global $config;
 
         $this->attributes = array(
-            'schGrAcPersonID' => array(
-                'desc' => _('Academic Unique ID'),
+            'schgracpersonid' => array(
+                'desc' => _('AcademicID'),
                 'title' => _('A unique identifier for a user of the entire organization. It is usually the department code concatenated with the registration number.'),
                 'noneditable' => true,
             ),

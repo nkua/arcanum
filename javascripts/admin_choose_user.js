@@ -18,9 +18,11 @@ ARCANUM.renderUsersTable = function(data) {
     }
 
     for(i=0; i < data.length; i++) {
-        h = h + '<tr><td><a href="'+ loc + data[i].uid + '">' + data[i].cn + '</a></td><td>' + data[i].mail + '</td>';
-        for(var attr in summaryAttrs) {
-            if(attr == 'cn' || attr == 'mail') continue;
+if(data[i].cn==null) {data[i].cn="--"}
+
+        h = h + '<tr><td>' + data[i].cn + '</td><td><a href="'+ loc + data[i].uid + '">' + data[i].uid + '</a></td>';
+ for(var attr in summaryAttrs) {
+            if(attr == 'cn' || attr == 'mail' || attr == 'uid') continue;
             h = h + '<td>' + data[i][attr] + '</td>';
         }
         h = h + '</tr>';

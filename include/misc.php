@@ -62,25 +62,25 @@ function arcanumSetupEmail() {
  */
 function time_duration($seconds, $use = null, $zeros = false, $topmost = 0) {
     // Define time periods
-    $periods = array(
-        'y' => 31556926,
-        'M' => 2629743,
-        'w' => 604800,
-        'd' => 86400,
-        'h' => 3600,
-        'm' => 60,
-        's' => 1
-    );
+    $periods = array (
+        'years'     => 31556926,
+        'Months'    => 2629743,
+        'weeks'     => 604800,
+        'days'      => 86400,
+        'hours'     => 3600,
+        'minutes'   => 60,
+        'seconds'   => 1
+        );
 
     // strings for gettext
     $datestrings = array(
-        'y' => array( _('year'), _('years')),
-        'M' => array( _('Month'), _('Months')),
-        'w' => array( _('week'), _('weeks')),
-        'd' => array( _('day'), _('days')),
-        'h' => array( _('hour'), _('hours')),
-        'm' => array( _('minute'), _('minutes')),
-        's' => array( _('second'), _('seconds')),
+        'years' => array( _('year'), _('years')),
+        'months' => array( _('Month'), _('Months')),
+        'weeks' => array( _('week'), _('weeks')),
+        'days' => array( _('day'), _('days')),
+        'hours' => array( _('hour'), _('hours')),
+        'minutes' => array( _('minute'), _('minutes')),
+        'seconds' => array( _('second'), _('seconds')),
     );
         
  
