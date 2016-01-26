@@ -29,9 +29,8 @@
     <div class="introtext">
         <strong><?= sprintf( _("Allowed characters: %s"), '<tt>a-z A-Z 0-9 !@#$%^&amp;*()_+-=[]{}:;&quot;\',./&gt;&lt;/?</tt>') ?>...</strong><br /><br />
 
-
-        <i><?= _("Password must consist of at least 6 characters; ") ?><br />
-            <?= _("Must contain at least one number or symbol") ?><br /></i>
+        <i><?= sprintf( _("Password must consist of at least %s characters; "), $pw_min_len); ?><br />
+            <?= sprintf( _("Must contain at least %s number or symbol"), $pw_min_nonalpha); ?><br /></i>
 
             <div class="more-link"><a href="safety.php"><?= _("More information about password safety") ?></a></div></div>
 

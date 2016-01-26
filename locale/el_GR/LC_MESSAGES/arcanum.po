@@ -1345,11 +1345,11 @@ msgstr ""
 msgid "Allowed characters: %s"
 msgstr "Επιτρεπτοί Χαρακτήρες: %s"
 
-msgid "Password must consist of at least 6 characters; "
-msgstr "Ο κωδικός σας πρέπει να αποτελείται τουλάχιστον από 6 χαρακτήρες,"
+msgid "Password must consist of at least %s characters; "
+msgstr "Ο κωδικός σας πρέπει να αποτελείται τουλάχιστον από %s χαρακτήρες,"
 
-msgid "Must contain at least one number or symbol"
-msgstr "Να περιέχει τουλάχιστον 1 αριθμό ή σύμβολο"
+msgid "Must contain at least %s number or symbol"
+msgstr "Να περιέχει τουλάχιστον %s αριθμούς ή σύμβολα"
 
 msgid "More information about password safety"
 msgstr "Περισσότερες πληροφορίες για την ασφάλεια του κωδικού"
@@ -1736,8 +1736,8 @@ msgstr "Ο κωδικός σας πρέπει:"
 msgid "Consist of at least %s characters"
 msgstr "Να αποτελείται τουλάχιστον από %s χαρακτήρες"
 
-msgid "Contain at least 1 number or symbol"
-msgstr "Να περιέχει τουλάχιστον 1 αριθμό ή σύμβολο"
+msgid "Contain at least %s numbers or symbols"
+msgstr "Να περιέχει τουλάχιστον %s αριθμούς ή σύμβολα"
 
 #, php-format
 msgid "Contain at least %s different characters"
@@ -1746,8 +1746,8 @@ msgstr "Να περιέχει τουλάχιστον %s διαφορετικού
 msgid "Not be too similar to your username"
 msgstr "Δεν πρέπει να μοιάζει πολύ με το όνομα χρήστη"
 
-msgid "Not contain 3 or more successive numbers"
-msgstr "Δεν πρέπει να έχει 3 ή περισσότερα νούμερα διαδοχικά σε αύξουσα σειρά"
+msgid "Not contain %s or more successive numbers"
+msgstr "Δεν πρέπει να έχει %s ή περισσότερα νούμερα διαδοχικά σε αύξουσα σειρά"
 
 msgid "Setup Password Management Application"
 msgstr "Εγκατάσταση Εφαρμογής Διαχείρισης Κωδικών"

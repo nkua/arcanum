@@ -20,6 +20,9 @@ if(isset($_SESSION['service'])) {
     $service = $_SESSION['service'];
 }
 
+$pw_min_len = $config->password_strength_policy->PW_CHECK_MIN_LEN;
+$pw_min_nonalpha = $config->password_strength_policy->PW_CHECK_MIN_NON_ALPHA;
+
 
 $reset_forgotten_password_enabled = (isset($_SESSION['reset_forgotten_password_enabled']) ? true : false);
 
@@ -226,6 +229,10 @@ $t->assign('workflow', $workflow);
 $t->assign('ask_old_password', $ask_old_password);
 $t->assign('msgs', $msgs);
 $t->assign('allStrengthMessages', $allStrengthMessages);
+$t->assign('pw_min_len',$pw_min_len);
+$t->assign('pw_min_nonalpha',$pw_min_nonalpha);
+
+
 $t->assign('login_username', $_SESSION['login_username']);
 $t->assign('javascripts', array_merge(
     $defaultJavascripts,

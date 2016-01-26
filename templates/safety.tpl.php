@@ -8,15 +8,15 @@
 
     <div class="safety-tip">
         <div class="safety-img"><img src="images/arrow2.png" /></div>
-        <div class="safety=text"><?= sprintf( _("Consist of at least %s characters"), "6") ?></div>
+        <div class="safety=text"><?= sprintf( _("Consist of at least %s characters"), $pw_min_len); ?></div>
     </div>
     <div class="safety-tip">
         <div class="safety-img"><img src="images/arrow2.png" /></div>
-        <div class="safety=text"><?= _("Contain at least 1 number or symbol") ?></div>
+        <div class="safety=text"><?=sprintf(  _("Contain at least %s numbers or symbols"), $pw_min_nonalpha ); ?></div>
     </div>
     <div class="safety-tip">
         <div class="safety-img"><img src="images/arrow2.png" /></div>
-        <div class="safety=text"><?= sprintf( _("Contain at least %s different characters"), "5" ) ?></div>
+        <div class="safety=text"><?= sprintf( _("Contain at least %s different characters"), $pw_check_min_uniq ); ?></div>
     </div>
     <div class="safety-tip">
         <div class="safety-img"><img src="images/arrow2.png" /></div>
@@ -24,7 +24,7 @@
     </div>
     <div class="safety-tip">
         <div class="safety-img"><img src="images/arrow2.png" /></div>
-        <div class="safety=text"><?= _("Not contain 3 or more successive numbers") ?></div>
+        <div class="safety=text"><?= sprintf( _("Not contain %s or more successive numbers"), $pw_min_consecutive_numbers ); ?></div>
     </div>
 </div>
 

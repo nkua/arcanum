@@ -9,9 +9,20 @@
 $initLocation = 'safety';
 require_once('include/init.php');
 
+$pw_min_len = $config->password_strength_policy->PW_CHECK_MIN_LEN;
+$pw_min_nonalpha = $config->password_strength_policy->PW_CHECK_MIN_NON_ALPHA;
+$pw_check_min_uniq = $config->password_strength_policy->PW_CHECK_MIN_UNIQ;
+$pw_min_consecutive_numbers = $config->password_strength_policy->PW_MIN_CONSECUTIVE_NUMBERS;
+
+
+
 // === Presentation Logic === 
 
 $t->assign('javascripts', $defaultJavascripts);
+$t->assign('pw_min_len',$pw_min_len);
+$t->assign('pw_min_nonalpha',$pw_min_nonalpha);
+$t->assign('pw_check_min_uniq',$pw_check_min_uniq);
+$t->assign('pw_min_consecutive_numbers',$pw_min_consecutive_numbers);
 
 $t->display('html_header');
 
