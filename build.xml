@@ -42,6 +42,7 @@
                 <include name="locale/**" />
                 <include name="style/**" />
                 <include name="templates/**" />
+                <include name="vendor/**" />
 
                 <exclude name="**.po" />
                 <exclude name="style/custom.css" />
