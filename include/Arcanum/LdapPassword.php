@@ -15,6 +15,8 @@ include_once('include/HashAlgorithm.DigestHA1.php');
 include_once('include/HashAlgorithm.SHA.php');
 include_once('include/HashAlgorithm.SSHA.php');
 include_once('include/HashAlgorithm.NTHash.php');
+include_once('include/Encrypt_OpenSSL.php');
+
 include_once('Crypt/TripleDES.php');
 
 /**
@@ -280,7 +282,12 @@ class Arcanum_LdapPassword extends Arcanum_Ldap {
         if(!empty($config->ldap->ctpAttribute)) {
             $newinfo[$config->ldap->ctpAttribute] = $this->_encode_ctp($this->newpass);
         }
-
+        
+       // encoded CTP
+        if(!empty($config->ldap->actpAttribute)) {
+            $newinfo[$config->ldap->actpAttribute] = Encrypt_OpenSSL::Generate($this->newpass);
+        }
+        
         if (ldap_modify($this->ldap, $this->dn, $newinfo)) {
             return true;
         } else {
