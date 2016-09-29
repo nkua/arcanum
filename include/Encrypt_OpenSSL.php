@@ -12,15 +12,10 @@
  * @author Spiros Trougakos <trougakos at uoa.gr>
  */
  
-class Encrypt_OpenSSL implements HashAlgorithm {
+class Encrypt_OpenSSL  {
   
     
-    public static function Generate($cleartext) {
-        global $config; 
-        $keyname = $config->openssl_public_key;
-        $fp=fopen($keyname,"r");
-        $pub_key=fread($fp,8192);
-        fclose($fp);
+    public static function Generate($cleartext,$pub_key) {
         openssl_get_publickey($pub_key);
         openssl_public_encrypt($cleartext,$crypttext, $pub_key );
         return(base64_encode($crypttext));

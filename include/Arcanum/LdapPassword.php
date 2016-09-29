@@ -285,7 +285,11 @@ class Arcanum_LdapPassword extends Arcanum_Ldap {
         
        // encoded CTP
         if(!empty($config->ldap->actpAttribute)) {
-            $newinfo[$config->ldap->actpAttribute] = Encrypt_OpenSSL::Generate($this->newpass);
+            $keyname = $config->openssl_public_key;
+            $fp=fopen($keyname,"r");
+            $pub_key=fread($fp,8192);
+            fclose($fp);
+            $newinfo[$config->ldap->actpAttribute] = Encrypt_OpenSSL::Generate($this->newpass,$pub_key);
         }
         
         if (ldap_modify($this->ldap, $this->dn, $newinfo)) {
